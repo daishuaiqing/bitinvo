@@ -1,0 +1,24 @@
+.container-fluid.boxlogin-screen.screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.comp-clock.text-center 欢迎
+    .status-bar.text-left
+    //- this is comp section
+  .col-md-12.pull-middle-center
+    .col-md-offset-2.col-md-4.col-sm-12
+      .panel.text-center.animated.fadeInLeft.sm-delay-1
+        .sanning-fingger-cont
+          canvas#canvas
+          h1.xxl.scan-fingerprint-label.no-margin.text-shadow#fingerprint-tips #{i18n.fingerprintTips}
+          h2.xxl.countdown-box.text-center
+          h2.xxl.hide.check.countdown
+          button.btn.btn-empty.big.btn-fixed-len-300.highligh.hide#fingerprint-btn
+            h1 #{i18n_buttonText.restartScanBtn}
+    .col-md-4.col-sm-12.face-box
+      .panel.text-center.animated.fadeInRight.sm-delay-1
+        .sanning-fingger-cont.pull-middle-center
+          .row.v-margin-nicer
+            h1.xl.text-shadow #{i18n.clickNextButton}
+            h1.xl.text-shadow #{i18n.usingPasswordSignin}
+          .row.v-margin-nicer
+            a.btn.btn-empty.big.btn-fixed-len-300.highlight#login
+              h1 #{i18n_buttonText.passwordLoginBtn}

@@ -1,0 +1,12 @@
+.flexmodal.modal.fade(tabindex='-1', role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4.modal-title #{modalTitle? modalTitle : '标题'}
+      .modal-body
+
+      .modal-footer.seperate-before
+        button.btn.btn-empty(type='button', data-dismiss='modal') 取消
+        button.btn.btn-empty.hide.save-btn(type='button') 保存

@@ -1,0 +1,20 @@
+.panel.text-center.animated.flipInYRefl.sm-delay-1
+  .panel-body.form-signup-panelbody
+    form
+      .form.pull-middle-center
+        .form-group.form-animate-text
+          input#username.form-text(name="username", type='text', required='',autocomplete="off", title="密码不能为空")
+          span.bar
+          label #{i18n['Police Code']}
+        .form-group.form-animate-text
+          input#password.form-text(name='password',type='password', required='',autocomplete="off", title="密码不能为空")
+          span.bar
+          label #{i18n['Password']}
+        .form-group.form-animate-text
+          input#confirm-password.form-text(name='confirm-password', type='password', required='',autocomplete="off", title="密码不能为空")
+          span.bar
+          label #{i18n['Confirm Password']}
+        p.error-info.hide #{'Invalide User/Password'}
+        .row
+          button.btn.btn-empty.highlight.action-btn#signup 
+            h1.text-shadow #{i18n['Sign Up']}

@@ -1,0 +1,68 @@
+.simly-application {
+  .menu-entry-mask {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 100;
+    &.active {
+      display: block;
+    }
+  }
+  .menu-entry_container {
+    padding-top: 60px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 500px;
+    height: 100%;
+    top: 0;
+    right: -500px;
+    z-index: 9999;
+    background: rgb(93, 73, 147);
+    transition: all .5s ease;
+    z-index: 101;
+    &.active {
+      right: 0;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 100%;
+      left: 0;
+      background-image: url('../../common/img/vline.png');
+      background-size: cover;
+    }
+    .menu-list_ul {
+   
+    }
+    .menu-list_li {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 80px;
+      background:rgba(0,0,0,0.09);
+      border: none;
+      font-size: 36px;
+      font-weight: 300;
+      &.active, &:active{
+        background-color: rgb(91, 71, 146);
+        outline: none;
+      }
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-image: url('../../common/img/line.png');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

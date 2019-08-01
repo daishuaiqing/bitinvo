@@ -1,0 +1,11 @@
+.col-lg-12.clearfix.pull-middle-center
+  .panel.blank.text-center.animated.fadeInDown.sm-delay-1.h-300
+    .panel-body.pull-middle-center
+      if ip && cabinetName
+        h1 请到对应柜机操作当前申请
+        h1 柜机IP：#{ip}
+        h1 柜机名：#{cabinetName}
+      else
+        h1.xxl #{text}
+      a.btn.btn-empty.big#return-btn
+        h1 返回

@@ -1,0 +1,43 @@
+.container-fluid.report-screen.screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.rpt-comp-clock.comp-clock.text-center #{i18n["reportCenter"]}
+    .rpt-status-bar.text-left
+    //this is comp section
+    .rpt-action-bar.text-right
+    //this is comp section
+  .row.fullscreen
+    .report-cont
+      .col-md-3.col-xs-12.not_paddding
+        .nav-cont.left_nav-cont
+          button.btn.btn-empty.highlight.btn-group.margin-left-10.click-object.gun-module-btn.on(name="gunModule")
+            h4.group_btn__h4 #{i18n["gunWarehouse"]}
+          button.btn.btn-empty.highlight.btn-group.click-object(name="bulletModule")
+            h4.group_btn__h4 #{i18n["bulletWarehouse"]}
+          button.btn.btn-empty.highlight.btn-group.click-object(name="specified")
+            h4.group_btn__h4 #{i18n["cabinet"]}
+        .col-md-12.col-sm-12.margin-bottom-10
+          .panel.time.text-center.animated.flipInY.sm-delay-1.height-270
+            .pull-middle-center
+              h1.xxl.text-shadow#gunTotal 0
+              h1.xl.text-shadow #{i18n["currentGunCount"]}
+        .col-md-12.col-sm-12
+          .panel.time.text-center.animated.flipInY.bounce.sm-delay-2.height-270
+            .pull-middle-center
+              h1.xxl.text-shadow#bulletTotal 0
+              h1.xl.text-shadow #{i18n["currentBulletCount"]}
+      .col-md-9.col-xs-12.not_paddding
+        .nav-cont
+          .paging-btn-box.display-inline
+          .input_date__form.filter-box
+            .input_box
+              .clear.hide.click-object(name="clear") #{i18n["clear"]}
+              input.click-object.click_object.input-style.mrgR10#startDateFilter(name="startDateFilter" type="text",placeholder='#{i18n["startTime"]}')
+            .input_box
+              .clear.hide.click-object(name="clear") #{i18n["clear"]}
+              input.click-object.click_object.input-style.mrgR10#endDateFilter(name="endDateFilter" type="text",placeholder='#{i18n["endTime"]}')
+            .input_box
+              .clear.hide.click-object(name="clear") #{i18n["clear"]}
+              input.click-object.click_object.input-style.mrgR10#logType(name="logType", type="text", placeholder="下载日志类型")
+          button.click-object.btn.btn-empty.highlight.btn-group.margin-left-10.gun-module-btn.on(name="download")
+            h4.group_btn__h4 #{i18n["downloadReport"]}
+        .list-cont

@@ -1,0 +1,24 @@
+.container-fluid.alert-screen.screen
+  .row.right-major.fullscreen
+    .slide-1.pull-middle-center.text-center
+      h1.xxl.v-margin-nicer.title
+        p
+          span.illegal-icon.glyphicon.glyphicon-exclamation-sign
+          span #{cabinetName ? '柜机:' + cabinetName + '/' : ''}
+          span #{alertText}
+      form.height-80
+        .form-group.clearfix
+          label.form-group-label.col-sm-12 不再报警
+          label
+            input.switch-anim#humidity.switch(name="humidity", type='checkbox', required='',autocomplete="off", title="不能为空" value="humidity")
+            span.switch-title 湿度不警报
+          label
+            input.switch-anim.switch#power_off(name="power_off", type='checkbox', required='',autocomplete="off", title="不能为空" value="power_off")
+            span.switch-title 掉电不报警
+          label
+            input.switch-anim.switch#power_low(name="power_low", type='checkbox', required='',autocomplete="off", title="不能为空" value="power_low")
+            span.switch-title 低电不报警
+      .btn.btn-empty.reset-alarm.v-margin-nicer.mrgT30
+        h2 解除报警
+    .slide-2.pull-middle-center.text-center.col-md-12.clearfix.animated-transition
+      .login

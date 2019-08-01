@@ -1,0 +1,9 @@
+/var/log/pm2/*.log {
+  weekly
+  rotate 0
+  size 500M
+  sharedscripts
+  postrotate
+  /usr/bin/pm2 reloadLogs
+  endscript
+}

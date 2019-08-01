@@ -1,0 +1,11 @@
+.checkboxList
+  .form
+    .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+      input#pending(name="status", type='radio', value="privategun" required='',autocomplete="off", title="不能为空" checked)
+      label(for="pending") 审核中
+    .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+      input#approved(name="status", type='radio', value="specific" required='',autocomplete="off", title="不能为空")
+      label(for="approved") 已同意
+    .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+      input#rejected(name="status", type='radio', value="specific" required='',autocomplete="off", title="不能为空")
+      label(for="rejected") 拒绝

@@ -1,0 +1,42 @@
+mixin menu(menu)
+  if(menu)
+    .row.big-btn-cont
+      button.menu-btn(name = menu.name)
+        .wrap
+          img.img-responsive.menu-icon(src = menu.img)
+          h1.xxl.text-shadow #{menu.label}
+  else
+    .row.big-btn-cont
+
+// User Home index.jade
+.container-fluid.userhome-screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown.clearfix
+    .userhome-com-clock-box.text-right
+    .container.userhome-comp-clock.comp-clock.text-center 欢迎您, #{ user.alias ? user.alias : user.username}
+    .userhome-action-bar.text-right
+  .row
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-1
+            .avatar-cont
+              img.img-responsive.badge(src=require('common/img/logo.jpeg'))
+            h3.user-name.text-shadow.pull-middle-center #{ user.alias ? user.alias : user.username}
+            h3.user-phone.text-shadow.pull-middle-center #{ user.phone }
+            p.role-name
+            .row.v-margin-nicer
+              button.btn.btn-empty.big.highlight.seperate-before.action-btn#modifyProfile
+                h4 #{i18n['editMyProfile']}
+            h4.text-shadow.user-status 用户状态 - 正常
+        -for(var i = 0 ; i <items.length; i = i + 2){
+          .swiper-slide(data-hash="notrack={cover:" + i + "}")
+            .panel.time.text-center.animated.sm-delay-i
+              +menu(items[i])
+              +menu((i + 1) < items.length ? items[i + 1] : null)
+        -}
+
+      // Add Pagination
+      .swiper-pagination
+  .swiper-button-next
+  .swiper-button-prev
+// User Home index.jade

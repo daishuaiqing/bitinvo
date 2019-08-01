@@ -1,0 +1,13 @@
+extends ../layout
+append styles
+    //link(href='#{webpackUrl}/css/#{module}.css', rel='stylesheet')
+block body
+    //h1 #{i18n('Welcome')}
+    //h1 #{module}
+    //h2 #{webpackUrl}
+    .main
+    .lockWindow.hide
+    .window.hide
+    .window_mask.hide
+append post_script
+    script(src='#{webpackUrl}/js/#{module}.js')

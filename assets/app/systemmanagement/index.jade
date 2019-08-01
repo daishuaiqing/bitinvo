@@ -1,0 +1,671 @@
+.container-fluid.sysm-screen.screen
+  #mask.mask.hide
+    .mask_context
+      span.mask_close X
+      .box
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.comp-clock.comp-clock.text-center #{i18n["systemSite"]}
+    .status-bar.text-left
+    .action-bar.text-right
+    //this is comp section
+  .right-major.fullscreen
+    .tab-holder.text-left
+    .content-cont
+      form(method="post", enctype="multipart/form-data", action="updateFile")
+        .setting-ip.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              p.error-info.hide #{i18n["error"]}
+              .col-md-12.clearfix
+                h2.v-margin-nicer.pull-left
+                  span.glyphicon.glyphicon-sort.h-margin-nicer.text-blue.text-icon
+                  span.h-margin-nicer #{i18n["settingIP"]}
+                .form-group.clearfix.pull-right
+                  .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                    input#isAutoIp.form-text(name="isAutoIp", type='checkbox', required='',autocomplete="off", title="不能为空" checked="checked",value="Y")
+                    label(for="isAutoIp") #{i18n["autoGetIP"]}
+              .form-group.form-animate-text.col-md-12.required
+                input#ip.form-text.has-keyboard(name="ip", type='text', required='',autocomplete="off")
+                span.bar
+                label #{i18n["IPAddress"]}
+              .form-group.form-animate-text.col-md-6.required
+                input#netmask.form-text.has-keyboard(name="netmask", type='text', required='',autocomplete="off")
+                span.bar
+                label #{i18n["subnetMask"]}
+              .form-group.form-animate-text.col-md-6.required
+                input#gateway.form-text.has-keyboard(name="gateway", type='text', required='',autocomplete="off")
+                span.bar
+                label #{i18n["gateway"]}
+
+        .setting-time.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              p.error-info.hide #{i18n["error"]}
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-calendar.text-orange.text-icon
+                  span.h-margin-nicer #{i18n["resetSystemTime"]}
+              .form-group.form-anima
+              .form-group.form-animate-text.col-md-12.required
+                input#time.form-text(name="time", type='text', required='',autocomplete="off")
+                span.bar
+                label #{i18n["resetSystemTime"]}
+              .form-group.clearfix.pull-right
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#syncMasterTime.form-text(name="syncMasterTime", type='checkbox', required='',autocomplete="off", title="不能为空" checked="checked",value="Y")
+                  label(for="syncMasterTime") #{i18n["syncTime"]}
+              .form-group.clearfix.pull-left
+                button.btn.btn-empty.highlight#synchronizeSystemTime(type="button")
+                  h4
+                   | #{i18n["immediatelySync"]}
+        .setting-boxname.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-star.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["resetCabinetName"]}
+              .form-group.form-animate-text.col-md-12.required.noMargB
+                input#boxname.form-text.has-keyboard-normal(name="boxname", type='text', required='', maxlength="100", autocomplete="off")
+                span.bar
+                label #{i18n["resetCabinetName"]}
+              .form-group.clearfix.mrgB10
+                label.form-group-label.col-sm-12 #{i18n["isResetMaster"]}
+                .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+                  input#isNotMaster(name="isMaster", type='radio', value="false" required='',autocomplete="off", title="不能为空" checked)
+                  label(for="isNotMaster") #{i18n["no"]}
+                .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+                  input#isMaster(name="isMaster", type='radio', value="true" required='',autocomplete="off", title="不能为空")
+                  label(for="isMaster") #{i18n["yes"]}
+              .form-group.col-md-6.noMargB.noPading
+                .checkbox3.checkbox-info.checknox.inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#isApplicationMachine.form-text(name="isApplicationMachine", type="checkbox", required="",autocomplete="off",value="Y")
+                  label(for="isApplicationMachine") #{i18n["settingApplyMachine"]}         
+        .setting-externalendpointopen.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-random.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["settingOpenCabinetInfoAPI"]}
+              .form-group.form-animate-text.col-md-12.required
+                input#externalEndpointWsdl.form-text.has-keyboard-type-http(name="externalEndpointWsdl", type='text', maxlength="250", required='',autocomplete="off")
+                span.bar
+                label #{i18n["inputAddress"]}
+                span
+                  h4 http://172.20.100.109:8000/dataSynService/wsdl?wsdl
+        .setting-updateProgram.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-cloud-upload.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["updateHardwareProgram"]}
+              .form-group.form-animate-text.col-md-6
+                input#hardwareCanId.form-text.has-keyboard(name="hardwareCanId", type="text",required='',autocomplete="off",)
+                span.bar
+                label(for="hardwareCanId") #{i18n["startCanId"]}
+              .form-group.form-animate-text.col-md-6
+                input#endHardwareCanId.form-text.has-keyboard(name="endHardwareCanId", type="text",required='',autocomplete="off",)
+                span.bar
+                label(for="endHardwareCanId") #{i18n["endCanId"]}
+              .form-group.form-animate-text.col-md-12
+                .col-md-5.col-sm-5
+                  input#hardwareFile.input-type-file-opacity-0(type="file",name="updateFile")
+                  input#hardwareFilePath(type="hidden")
+                  label.hardware-file-button.btn.btn-empty.highlight.h-margin-nicer#hardwareFileButton.seperate-before(for="hardwareFile") #{i18n["addFileBtn"]}
+                .col-md-2.col-sm-2.mrgR20.hide#viewUpdateResult
+                  span.update-program-button.btn.btn-empty.highlight.h-margin-nicer.seperate-before#viewUpdateResultButton #{i18n["lookBtn"]}
+                .col-md-2.col-sm-2
+                  span.update-program-button.btn.btn-empty.highlight.h-margin-nicer.seperate-before#updateProgramButton #{i18n["updateBtn"]}
+              .form-group.noMargB.mrgT10
+                #uploadResult
+        .setting-updateApplicationProgram.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-cloud-upload.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["updateApplicationProgram"]}
+              .col-md-12
+                .col-md-9
+                  .form-group.form-animate-text.col-md-12
+                    input#update_app_url.form-text.has-keyboard-type-http(name="update_app_url", type='text', maxlength="250", required='',autocomplete="off")
+                    span.bar
+                    label #{i18n["inputURL"]}
+                  .form-group.form-animate-text.col-md-12
+                    input#update_app_password.form-text.has-keyboard-type-http(name="update_app_password", type='password', maxlength="250", required='',autocomplete="off")
+                    span.bar
+                    label #{i18n["pleaseInputPassword"]}
+                .col-md-3
+                  span.btn.btn-empty.highlight.h-margin-nicer.seperate-before#updateApplicationProgramButtonSpan
+                    h5 #{i18n["updateBtn"]}
+        .setting-restart.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-cloud-upload.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["resetSetting"]}
+              .col-md-12
+                .form-group.form-animate-text.col-md-12
+                  input#restartType.form-text(name="restartType", type='text', maxlength="250", required='',autocomplete="off")
+                  span.bar
+                  label #{i18n["resetInterval"]}
+              .col-md-12
+                .form-group.form-animate-text.col-md-12
+                  input#restartTime.form-text(name="restartTime", type='text', maxlength="250", required='',autocomplete="off").hide
+                  span.bar
+                  label.restartItem3.hide #{i18n["specificDay"]}
+                  label.restartItem2.hide #{i18n["specificWeek"]}
+                  label.restartItem1.hide #{i18n["specificMonth"]}
+        .setting-fingerQuality.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-cloud-upload.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["fingerprintSite"]}
+              .col-md-12
+                .form-group.form-animate-text.col-md-12.required
+                  input#enteringQuality.form-text.has-keyboard(name="enteringQuality", type='text', maxlength="250", required='',autocomplete="off")
+                  span.bar
+                  label #{i18n["entrySetting"]}
+              .col-md-12
+                .form-group.form-animate-text.col-md-12.required
+                  input#loadingQuality.form-text.has-keyboard(name="loadingQuality", type='text', maxlength="250", required='',autocomplete="off")
+                  span.bar
+                  label #{i18n["loginSetting"]}
+        .setting-systemInfo.container.form-panelbody.animated.fadeIn.sm-delay-1
+            #appVersion.col-md-6.col-md-offset-3.pull-middle-center.pull-middle-center
+              div.col-md-12
+                p
+                  span.app-version_title 应 用 版 本 ：
+                  span.app_version
+                p
+                  span.app-version_title 构 建 时 间 ：
+                  span.build_time
+                p
+                  span.app-version_title.letter_spacing_1 CommitID  ：
+                  span.commit_id
+                p
+                  span.app-version_title.letter_spacing_2 SGSCom  ：
+                  span.sgscom_version
+                p.testcan_p
+                  span.app-version_title.letter_spacing_3 TestCan  ：
+                  span.testcan
+                  span.btn.btn-empty#checkTestcanButton 检测
+        .setting-clusterSize.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-tasks.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 集群规模设置
+                p 最佳集群数1、3、5（如果柜机数为偶数就减一）
+              .col-md-12
+                .form-group.form-animate-text.col-md-12.required
+                  input#clusterSize.form-text.has-keyboard(name="clusterSize", type="text", maxlength="250", required='',autocomplete="off")
+                  span.bar
+                  label 输入集群数
+        .setting-controller.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-cloud-upload.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["gunWithBulletPanelNumSetting"]}
+              .form-group.form-animate-text.col-md-12.required
+                input#gun.form-text.has-keyboard(name="gun", type='text', required='',autocomplete="off")
+                span.bar
+                label #{i18n["gunLockControlCount"]}
+              .form-group.form-animate-text.col-md-12.required
+                input#bullet.form-text.has-keyboard(name="bullet", type='text', required='',autocomplete="off")
+                span.bar
+                label #{i18n["bulletWarehouseControlCount"]}
+        .setting-mqtt.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-facetime-video.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer Mqtt 服务设置
+              .form-group.col-md-12.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white.isMqttServer-checkbox
+                  input#enableRemotePanel.form-text(name="enableRemotePanel", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="enableRemotePanel") 开启看板功能
+              .form-group.col-md-12
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white.isMqttServer-checkbox
+                  input#isMqttServer.form-text(name="isMqttServer", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="isMqttServer") Mqtt服务主机
+              .form-group.form-animate-text.col-md-12.mqttUrl_input
+                input#mqttUrl.form-text.has-keyboard-type-http(name="mqttUrl", type='text', required='',autocomplete="off")
+                span.bar
+                label mqtt主机IP地址(例如：http://192.168.0.0)
+        .setting-faceperception.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.fa.fa-user-circle-o.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 人脸识别设置
+              .form-group.col-md-12
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#facePerception.form-text(name="facePerception", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="facePerception") 是否需要人脸识别
+        .setting-faceArg.container.form-panelbody.animated.faceIn.sm-delay-1
+          .col-md-8.col-md-offset-2.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.fa.fa-address-book-o.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 人脸识别参数设置
+              .form-group.col-md-12.noMargB
+                .form-group.form-animate-text.col-md-4.required.mrgR10
+                  input#faceMaxRotateAngle.form-text.has-keyboard(name="faceMaxRotateAngle", type='text', required='',autocomplete="off")
+                  span.bar
+                  label 人脸旋转角度
+                .form-group.form-animate-text.col-md-4.required
+                  input#minLoginFaceSize.form-text.has-keyboard(name="minLoginFaceSize", type='text', required='',autocomplete="off")
+                  span.bar
+                  label 人脸像素最小值
+              .form-group.col-md-12.noMargB
+                .form-group.form-animate-text.col-md-3.required.mrgR10
+                  input#faceFuzzyThreshold.form-text.has-keyboard(name="faceFuzzyThreshold", type='text', required='',autocomplete="off")
+                  span.bar
+                  label 人脸清晰度
+                .form-group.form-animate-text.col-md-3.required.mrgR10
+                  input#faceBrightThreshold.form-text.has-keyboard(name="faceBrightThreshold", type='text', required='',autocomplete="off")
+                  span.bar
+                  label 人脸明暗度
+                .form-group.form-animate-text.col-md-3.required
+                  input#faceMatchThreshold.form-text.has-keyboard(name="faceMatchThreshold", type='text', required='',autocomplete="off")
+                  span.bar
+                  label 人脸匹配度
+        .setting-quickapplication.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.fa.fa-rocket.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 极简版设置
+              .form-group.col-md-12.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#quickApplication.form-text(name="quickApplication", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="quickApplication") 开启极简
+              .form-group.col-md-12.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#disableSignature.form-text(name="disableSignature", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="disableSignature") 禁用用户签名
+              .form-group.col-md-12.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#adminSignature.form-text(name="adminSignature", type="checkbox", required="",autocomplete="off", value="Y")
+                  label(for="adminSignature") 开启队长签名
+        .setting-bulletWeight.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-10.col-md-offset-1.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.fa.fa-balance-scale.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["bulletWeightCorrect"]}
+              .form-group.col-md-12
+                .form-group.form-animate-text.col-md-3.required.mrgR10.noMargB
+                  input#moduleId.form-text.has-keyboard(type='number', required='',autocomplete="off")
+                  span.bar
+                  label #{i18n["moduleID"]}
+                .form-group.form-animate-text.col-md-3.required.mrgR10.noMargB
+                  input#bulletCabinetModuleId.form-text.has-keyboard(type='number', required='',autocomplete="off")
+                  span.bar
+                  label #{i18n["bulletWarehouseCode"]}
+                .form-group.form-animate-text.col-md-4.noMargB
+                  button(type="button").btn.btn-empty.mrgR10#openBulletModuleBtn
+                    h4 开抽屉
+                  button(type="button").btn.btn-empty#peeledBtn
+                    h4 归零
+              .form-group.col-md-12.noMargB
+                .form-group.form-animate-text.col-md-3.required.mrgR10
+                  input#bulletNumber.form-text.has-keyboard(type='number', required='',autocomplete="off")
+                  span.bar
+                  label #{i18n["bulletCount"]}
+                .form-group
+                  button(type="button").btn.btn-empty#correctionBtn
+                    h4 矫正
+        .setting-showcount.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-10.col-md-offset-1.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-cog.text-red.text-icon
+                  span.h-margin-nicer #{i18n["pageModuleShowSetting"]}
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#includeLocalCabinet.form-text(name="includeLocalCabinet", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="includeLocalCabinet") #{i18n["openCreatedAppShowLocalCabinet"]}
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#showCount.form-text(name="showCount", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="showCount") #{i18n["openGunAndBulletCount"]}
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#showGateSwitch.form-text(name="showGateSwitch", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="showGateSwitch") #{i18n["openWarehouseDoor"]}
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#enableCam.form-text(name="enableCam", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="enableCam") #{i18n["openWarehouseMonitor"]}
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#enableAlcohol.form-text(name="enableAlcohol", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="enableAlcohol") #{i18n["openCheckedAlcohol"]}
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#needMaintainCount.form-text(name="needMaintainCount", type="checkbox", required="",autocomplete="off",title="不能为空",value="Y")
+                  label(for="needMaintainCount") 开启维护还枪输入数量
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checknox.inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#enableRemoteAlarm.form-text(name="enableRemoteAlarm", type="checkbox", required="",autocomplete="off",value="Y")
+                  label(for="enableRemoteAlarm") #{i18n["openRemoteWarning"]}
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checknox.inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#enableFaceLog.form-text(name="enableFaceLog", type="checkbox", required="",autocomplete="off",value="Y")
+                  label(for="enableFaceLog") #{i18n["openGraphicLogDownload"]}
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checknox.inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#enableApproveSign.form-text(name="enableApproveSign", type="checkbox", required="",autocomplete="off",value="Y")
+                  label(for="enableApproveSign") 开启工单审核管理员签名
+              .form-group.col-md-6.noMargB
+                .checkbox3.checkbox-info.checknox.inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#enableFetchList.form-text(name="enableFetchList", type="checkbox", required="",autocomplete="off",value="Y")
+                  label(for="enableFetchList") 开启显示待取工单按钮                
+        .setting-autoCreateModule.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-12.col-md-offset-1.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-certificate.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 自动生成模块
+              .form-group.form-animate-text.col-md-12.mrgB20
+                .form-group.form-animate-text.col-md-4.mrgR10.required.mrgB10
+                  input#moduleTypeName.form-text(name="moduleTypeName", type='text', required='',autocomplete="off")
+                  input#moduleType.form-text(name="moduleType", type='hidden', required='',autocomplete="off")
+                  span.bar
+                  label 模块类型
+                  button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#moduleTypeNameClear(type="button")
+                    span 清除选择         
+                .form-group.form-animate-text.col-md-4.required.mrgB10.mrgR10
+                  input#typeIdName.form-text(name="typeIdName", type='text', required='',autocomplete="off")
+                  input#typeId.form-text(name="typeId", type='hidden', required='',autocomplete="off")
+                  span.bar
+                  label 存储类型
+                  button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#typeIdNameClear(type="button")
+                    span 清除选择
+                .form-group.form-animate-text.col-md-3.required.mrgB10
+                  input#canIdStartAt.form-text.has-keyboard(name="canIdStartAt",type="text", required="",autocomplete="off")
+                  span.bar
+                  label 起始canId
+                  button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#canIdStartAtClear(type="button")
+              .form-animate-text.col-md-12.mrgB10.no_padding_left
+                .form-group.form-animate-text.col-md-3.mrgR10.required.mrgB10
+                  input#moduleIdStartAt.form-text.has-keyboard(name="moduleIdStartAt",type="text",required="",autocomplete="off")
+                  span.bar
+                  label 起始模块id
+                  button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#moduleIdStartAtClear(type="button")
+                .form-group.form-animate-text.col-md-2.mrgR10.required.mrgB10
+                  input#moduleCounts.form-text.has-keyboard(name="moduleCounts",type="text",required="",autocomplete="off")
+                  span.bar
+                  label 模块数量
+                  button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#moduleCountsClear(type="button")
+                .form-group.form-animate-text.col-md-3.mrgR10.required.mrgB10
+                  input#canCounts.form-text.has-keyboard(name="canCounts",type="text",required="",autocomplete="off")
+                  span.bar
+                  label canId数量
+                  button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#canCountsClear(type="button")
+                .form-group.form-animate-text.col-md-2.mrgR10.required.mrgB10.capacityBox
+                  input#capacity.form-text.has-keyboard(name="capacity",type="text",required="",autocomplete="off")
+                  span.bar
+                  label 容量
+                  button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#capacityClear(type="button")
+              .form-animate-text.col-md-12.mrgB10.no_padding_left                      
+                .form-group.mrgB10
+                  button.btn.btn-empty.highlight.h-margin-nicer.seperate-before#autoCreateGunModuleBtn(type="button")
+                    h3 生成
+        .setting-setTitle.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-edit.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 设置应用基本信息
+              .form-group.col-md-6
+                .form-group.form-animate-text.col-md-12.required.mrgR10.noMargB
+                  input#title1.form-text(name="titl1",type='text', required='',autocomplete="off")
+                  span.bar
+                  label 标题一
+              .form-group.col-md-6
+                .form-group.form-animate-text.col-md-12.required.mrgR10.noMargB
+                  input#title2.form-text(name="title2",type='text', required='',autocomplete="off")
+                  span.bar
+                  label 标题二
+              .form-group.col-md-12
+                label.btn.btn-empty.highlight.h-margin-nicer#hardwareFileButton.seperate-before(for="hardwareFile")
+                  h3
+                    | 上传Logo
+                    input#logo_pic.input-type-file-opacity-0(type="file",name="logo")
+        .setting-setoverTime.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-11.col-md-offset-1.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.fa.fa-exclamation-triangle.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 报警设置
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#alarmCheckedAll.form-text(name="alarmCheckedAll", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="alarmCheckedAll") 全选                
+              .form-group.col-md-12.noMargB.alaramList
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#applicationOvertime.form-text(name="applicationOvertime", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="applicationOvertime") 超时未还报警              
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#doorCloseTimeOut.form-text(name="doorCloseTimeOut", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="doorCloseTimeOut") 关门超时报警
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#mannualCloseDoor.form-text(name="mannualCloseDoor", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="mannualCloseDoor") 手动关门报警
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#illegalDoorOpened.form-text(name="illegalDoorOpened", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="illegalDoorOpened") 非法开门报警
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#shaking.form-text(name="shaking", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="shaking") 震动报警&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#bulletDoorCloseTimeOut.form-text(name="bulletDoorCloseTimeOut", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="bulletDoorCloseTimeOut") 子弹柜超时未关报警                  
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#mannualOpenDoor.form-text(name="mannualOpenDoor", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="mannualOpenDoor") 手动开门报警
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#lowpower.form-text(name="lowpower", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="lowpower") 低电量报警&nbsp;&nbsp;&nbsp;
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#mannualOpenBulletDoor.form-text(name="mannualOpenBulletDoor", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="mannualOpenBulletDoor") 手动开子弹锁报警
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#power.form-text(name="power", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="power") 备用电源报警                     
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#disconnect.form-text(name="disconnect", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="disconnect") 断网报警&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#mannualOpenGunDoor.form-text(name="mannualOpenGunDoor", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="mannualOpenGunDoor") #{i18n["manualOpenGunLockWarning"]}                               
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#temperature.form-text(name="temperature", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="temperature") 温度异常报警
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#humidity.form-text(name="humidity", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="humidity") 湿度异常报警                                                                                                                
+        .setting-setopenbatch.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.fa.fa-cubes.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer #{i18n["getGunSetting"]}
+              .form-group.col-md-12.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#openBatch.form-text(name="openBatch", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="openBatch") #{i18n["openOpenBatchGunAndBullet"]}
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#onlyFetch.form-text(name="onlyFetch", type="checkbox",autocomplete="off", value="Y" )
+                  label(for="onlyFetch") #{i18n["openGetGunNoNeedReturnGun"]}
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#adminCreateApp.form-text(name="adminCreateApp", type="checkbox",autocomplete="off", value="Y" )
+                  label(for="adminCreateApp") #{i18n["adminCanCreatedApp"]}
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+                  input#enableABGun.form-text(name="enableABGun", type="checkbox",autocomplete="off", value="Y" )
+                  label(for="enableABGun") 开启AB枪模式
+        .setting-setstorageTime.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-save.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 视频图片存储设置            
+              .form-group.col-md-12
+                .form-group.form-animate-text.col-md-12.required.mrgR10.noMargB
+                  input#pic.form-text(name="pic",type='number', required='',autocomplete="off")
+                  span.bar
+                  label 图片存储时间(/天)
+              .form-group.col-md-12
+                .form-group.form-animate-text.col-md-12.required.mrgR10.noMargB
+                  input#video.form-text(name="video",type='number', required='',autocomplete="off")
+                  input#storageTime.form-text(name="storageTime", type="hidden")
+                  span.bar
+                  label 视频存储时间(/天)
+        .setting-importUserCsv.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-save.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer Excel用户信息导入
+              .form-group.col-md-12
+                .form-group.form-animate-text.col-md-12.mrgR10.noMargB
+                  input#userCsv.input-type-file-opacity-0(type="file", name="userList")
+                  label.userCsv-file-button.btn.btn-empty.highlight.h-margin-nicer#hardwareFileButton.seperate-before(for="userCsv") 导入Excel
+        .setting-ping.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-save.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 网络Ping测试
+              .form-group.col-md-12.mrgB10.noPadding#ipVal
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before.ip_val
+                  | 192.
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before.ip_val
+                  | 168.
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before.ip_val
+                  | 1.
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before.ip_val
+                  | 10.
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before.ip_val
+                  | 76.
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before.ip_val
+                  | 0.
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before.ip_val.clear
+                  | ←
+              .form-group.form-animate-text.col-md-12.required
+                input#pingValue.form-text.has-keyboard(type="text", name="ping")            
+              .form-group.col-md-12.noPadding
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before#pingBtn
+                  h4 测试
+        .setting-resetUUID.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-save.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 重置UUID
+              .form-group.col-md-12.noPadding
+                .btn.btn-empty.highlight.h-margin-nicer.seperate-before#resetUUIDBtn
+                  h4 重置
+        .setting-lockCabinetBox.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-facetime-video.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 锁定系统设置
+              .form-group.col-md-12.noMargB
+                .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white.isMqttServer-checkbox
+                  input#lockCabinet.form-text(name="lockCabinet", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+                  label(for="lockCabinet") 锁定系统
+        .setting-downloadIE.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-download-alt.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer IE下载地址设置
+              .form-group.form-animate-text.col-md-12.required
+                input#ieDownloadUrl.form-text.has-keyboard-type-http(name="ieDownloadUrl", type='text', maxlength="250", required='',autocomplete="off")
+                span.bar
+                label 下载地址
+                span
+                  h4 http://172.20.100.109:8000/ie10
+        .setting-downloadVideo.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-download-alt.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 视频下载地址设置
+              .form-group.form-animate-text.col-md-12.required
+                input#videosDownloadUrl.form-text.has-keyboard-type-http(name="videosDownloadUrl", type='text', maxlength="250", required='',autocomplete="off")
+                span.bar
+                label 下载地址
+                span
+                  h4 http://172.20.100.109:8000/video
+        .setting-cabinetId.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-download-alt.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 柜机ID设置
+              .form-group.form-animate-text.col-md-12.required
+                input#productId.form-text.has-keyboard-type-http(name="productId", type="text", required="", autocomplete="off")
+                span.bar
+                label 柜机ID
+                span
+        .setting-restartCabientApplication.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-download-alt.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 重启操作
+              .form-group.form-animate-text.col-md-12
+                .btn.btn-empty.highlight#restartApplication.mrgR20
+                  h4 重启应用
+                .btn.btn-empty.highlight#restartCabinetBtn
+                  h4 重启柜机
+        .setting-logging.container.form-panelbody.animated.fadeIn.sm-delay-1
+          .col-md-6.col-md-offset-3.pull-middle-center
+            .form
+              .form-group.col-md-12
+                h2.v-margin-nicer
+                  span.glyphicon.glyphicon-edit.h-margin-nicer.text-red.text-icon
+                  span.h-margin-nicer 日志设置
+              .form-group.form-animate-text.col-md-12
+                input.form-text#videoRecordTypeText(name="videoRecordTypeText", type="text", required="", autocomplete="off")
+                input#videoRecordType(name="videoRecordType",type="hidden")
+                span.bar
+                label 登录视频打印类型
+              .form-group.form-animate-text.col-md-12
+                input.form-text#reportLogTitle(type="text", name="reportLogTitle", required="", autocomplete="off")
+                span.bar
+                label 下载报表日志抬头(默认:智能枪弹柜日志报表)
+    .right-major-footer.animated.fadeInUp
+      .taskbar

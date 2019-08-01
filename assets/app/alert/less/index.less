@@ -1,0 +1,112 @@
+/* start of alert index.less*/
+
+#noty_top_layout_container {
+  z-index: 999999999999;
+}
+.alert-screen{
+  font-family: 'PingFangSC-Regular, Verdana, Arial, 微软雅黑, 宋体';
+  .panel {
+    height: 470px;
+  }
+  background-color: red;
+  .panel{
+    background: #B70000;
+  }
+  .mrgT30 {
+    margin-top: 30px;
+  }
+  h1.title{
+    line-height: 90px;
+    font-size: 90px;
+    max-height: 500px;
+    overflow: auto;
+  }
+  .fingerprint{
+    width:40%;
+  }
+  .illegal-icon{
+    margin: -6px 24px 0 0;
+    line-height: 95px;
+    vertical-align: bottom;
+  }
+  .navbar.navbar-default.navbar-fixed-top{
+    background-image: none;
+    background: #D82727;
+  }
+  .height-80{
+    height: 80px;
+  }
+  .animated-transition{
+      transition: all .4s;
+  }
+  .form{
+    .form-group{
+      &.form-animate-text{
+        .form-text{
+          background: #7B1F1F;
+        }
+      }
+    }
+  }
+
+  .switch-title {
+    display:inline-block;
+    margin:0 20px 0 10px;
+    position: relative;
+    top:-10px;
+  }
+  .switch {
+    width:3.25em;
+    height: 2em;
+    border:1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    display: inline-block;
+    border-radius: 1.25em;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    background-clip: content-box;
+    appearance:none;
+    user-select: none;
+    outline: none;
+    position: relative;
+  }
+  .switch:before{
+      content: '';
+      width: 1.8em;
+      height: 1.8em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 1.25em;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+  .switch:focus {
+    outline:none;
+  }
+  .switch:checked{
+      border-color:#2c2a29 ;
+      background-color: #2c2a29;
+      box-shadow: #2c2a29 0 0 0 1em inset;
+  }
+  .switch:checked:before{
+      left: 1.4em;
+  }
+  .switch.switch-anim{
+      transition: background-color ease 0.4s;
+  }
+  .switch.switch-anim:before{
+      transition: left 0.3s;
+  }
+  .switch.switch-anim:checked{
+      box-shadow: #dfdfdf 0 0 0 0 inset;
+      background-color: #090909;
+      transition: border-color 0.4s, background-color ease 0.4s;
+  }
+  .switch.switch-anim:checked:before{
+      transition: left 0.3s;
+  }
+  .loginModuleContainer .deepBg {
+    background-color: inherit;
+  }
+}
+/* end of alert index.less*/

@@ -1,0 +1,9 @@
+li.list-cell-body.clearfix(data-id=id, data-name=(alias ?  alias : username))
+  .col-md-4
+    h4 #{username}
+  .col-md-8
+    p.name 用户名称
+    h4.cell-id.padding-right40.text-overflow #{alias ?  alias : username}
+    .quick-btn-cont.pull-middle-center
+      span.check-btn.quick-btn.h-margin-nicer(data-id=id, data-name=(alias ?  alias : username))
+        span.glyphicon.glyphicon-check(aria-hidden='true')

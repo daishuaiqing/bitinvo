@@ -1,0 +1,9 @@
+li.list-cell-body.clearfix(data-id=id, data-name=name)
+  .col-md-4
+    h4 #{id}
+  .col-md-8
+    p.name 子弹类型
+    h4.cell-id #{name}
+    .quick-btn-cont.pull-middle-center
+      span.check-btn.quick-btn.h-margin-nicer(data-id=id, data-name=name)
+        span.glyphicon.glyphicon-check(aria-hidden='true')

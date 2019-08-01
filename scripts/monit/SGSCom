@@ -1,0 +1,4 @@
+check process SGSCom with pidfile /var/run/SGSCom.pid
+start program = "/home/bitinvo/scripts/monit/SGSCom_startup"
+stop program = "/usr/bin/killall SGSCom"
+if 3 restarts within 3 cycles then timeout

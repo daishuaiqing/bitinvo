@@ -1,0 +1,13 @@
+#face-panel.panel.text-center.animated.flipInYRefl.sm-delay-1
+  h1 人脸登录
+  .loading-box
+    .loading
+    span 正在加载
+  video.canvas-video#videoElement(style="width:640px;height:360px;object-fit: fill;",muted,autoplay)
+  .row.v-margin-nicer
+    span.tips.hide
+      h4 
+        | 正在进行人脸比对，请等待
+        i.loading
+    .btn.btn-empty.big.highlight.hide.seperate-before#restartFaceAuth
+      h3 重新识别人脸

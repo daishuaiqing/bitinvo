@@ -1,0 +1,17 @@
+---
+- hosts: hosts
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+  - name: transfer files
+    copy: src=../bitinvo_dist dest=/home/ubuntu owner=ubuntu group=ubuntu
+  - name: excute script
+    command: /bin/bash ./extract_ansible.sh clean
+    args:
+      chdir: /home/ubuntu/bitinvo_dist
+    notify:
+    - reboot
+  handlers:
+  - name: reboot
+    command: /sbin/reboot

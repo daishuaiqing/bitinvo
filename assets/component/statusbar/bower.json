@@ -1,0 +1,18 @@
+{
+  "name": "statusbar",
+  "authors": [
+    "beherca@gmail.com"
+  ],
+  "description": "",
+  "main": "main.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

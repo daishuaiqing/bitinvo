@@ -1,0 +1,53 @@
+- var statusLabel = i18n["new"]
+- var typeText = type.type;
+case status
+  when 'new'
+    - statusLabel = i18n["new"]
+  when 'pending'
+    - statusLabel = i18n["pending"]
+  when 'rejected'
+    - statusLabel = i18n["rejected"]
+  when 'approved'
+    - statusLabel = i18n["approved"]
+  when 'processed'
+    - statusLabel = i18n["processed"]
+  when 'complete'
+    - statusLabel = ((typeText === 'storageGun') || (typeText === 'storageBullet') || (typeText === 'emergency') || (typeText === 'maintain') ? i18n["complete"] : i18n["completeReturn"])
+  when 'partial'
+    - statusLabel = i18n["partial"]
+  when 'expire'
+    - statusLabel = i18n["expire"]
+  when 'timeout'
+    - statusLabel = i18n["timeout"]
+  when 'prereturn'
+    - statusLabel = '预归还'
+  default
+    - statusLabel = i18n["error"]
+- var typeLabel = i18n["usingGun"]
+case type.type
+  when 'bullet'
+    - typeLabel = i18n["getBullet"]
+  when 'gun'
+    - typeLabel = i18n["usingGun"]
+  when 'both'
+    - typeLabel = i18n["usingGunWithGetBullet"]
+  when 'emergency'
+    - typeLabel = i18n["emergency"]
+  when 'storageGun'
+    - typeLabel = i18n["storageGun"]
+  when 'storageBullet'
+    - typeLabel = i18n["storageBullet"]
+  when 'maintain'
+    - typeLabel = i18n["maintain"]
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(class="status-#{ status }", data-id=id)
+    .grid-list-cell-body
+      p.item-id #{localId}
+      .clearfix
+        h2.user-name #{applicant ? applicant.alias ? applicant.alias : applicant.username : '不明'}
+        h3 #{i18n["application"]}#{typeLabel}
+        h3 #{i18n["status"]}:#{statusLabel}
+      // - small.updated-time 开始时间 #{ moment(start).locale("zh-cn").format('L')} 结束 #{moment(end).locale("zh-cn").format('L')}
+    .quick-btn-cont.pull-middle-center
+      span.delete-btn.quick-btn.h-margin-nicer(data-id=id)
+        span.glyphicon.glyphicon-trash(aria-hidden='true')

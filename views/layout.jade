@@ -1,0 +1,43 @@
+//- - var baseURL = sails.config.webpackUrl
+doctype html
+html(class= (isLocal ? "local" : "remote") + (isProd ? "" : " debug"))
+  head
+    title=title
+    // Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="renderer" content="webkit|ie-comp|ie-stand")
+    meta(name="full-screen" content="yes")
+    meta(name="x5-fullscreen" content="true")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(http-equiv="cache-control" content="no-cache")
+    meta(HTTP-EQUIV="Pragma" CONTENT="no-cache") 
+    meta(HTTP-EQUIV="Cache-Control" CONTENT="no-cache")    
+    meta(HTTP-EQUIV="Expires" CONTENT="0")  
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(charset="utf-8")
+    meta(name="description" content="Bitinvo Cabinet")
+    meta(name="author" content="cabinet")
+    meta(name="keyword" content="#{title}")
+    meta(name="version" content="0.1.0")
+    style.
+      .load-container{background-color:#7059AB;position:fixed;top:0;bottom:0;right:0;left:0;text-align:center;height:100%;}
+      .loadEffect{ width: 100px; height: 100px; position: absolute; top:50%;left:50%;transform:translate(-50%, -50%);} .loadEffect span{ display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #fff; position: absolute; -webkit-animation: load 1.04s ease infinite; } @-webkit-keyframes load{ 0%{ -webkit-transform: scale(1.2); opacity: 1; } 100%{ -webkit-transform: scale(.3); opacity: 0.5; } } .loadEffect span:nth-child(1){ left: 0; top: 50%; margin-top:-10px; -webkit-animation-delay:0.13s; } .loadEffect span:nth-child(2){ left: 14px; top: 14px; -webkit-animation-delay:0.26s; } .loadEffect span:nth-child(3){ left: 50%; top: 0; margin-left: -10px; -webkit-animation-delay:0.39s; } .loadEffect span:nth-child(4){ top: 14px; right:14px; -webkit-animation-delay:0.52s; } .loadEffect span:nth-child(5){ right: 0; top: 50%; margin-top:-10px; -webkit-animation-delay:0.65s; } .loadEffect span:nth-child(6){ right: 14px; bottom:14px; -webkit-animation-delay:0.78s; } .loadEffect span:nth-child(7){ bottom: 0; left: 50%; margin-left: -10px; -webkit-animation-delay:0.91s; } .loadEffect span:nth-child(8){ bottom: 14px; left: 14px; -webkit-animation-delay:1.04s; }
+    block styles
+        link(href='#{webpackUrl}/css/base.css', rel='stylesheet')
+    block pre_script
+  body.no-select(style="backgrouud-color: #5F4C9D;overflow:hidden;")
+    #firstScreenLoad.load-container
+      .loadEffect
+        span
+        span
+        span
+        span
+        span
+        span
+        span
+        span
+    block body
+    block post_script
+        script(src='#{webpackUrl}/js/commons.js')
+        script(src='#{webpackUrl}/js/base.js')

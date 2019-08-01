@@ -1,0 +1,12 @@
+/var/log/SGSCom.log {
+  su root root
+  weekly
+  rotate 0
+  size 100M
+  sharedscripts
+  postrotate
+  /usr/bin/killall SGSCom
+  /usr/bin/killall SGSCom
+  /bin/bash /home/ssd/bitinvo/scripts/monit/SGSCom_startup
+  endscript
+}

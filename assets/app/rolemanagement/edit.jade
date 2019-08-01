@@ -1,0 +1,27 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-5.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.form-animate-text.required.select
+          input#name.form-text(name="type", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["roleName"]}
+        .form-group.clearfix
+          label.form-group-label.col-sm-12 #{i18n["rolePermissions"]}
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+            input#permissions-default(name="permissions", type='checkbox', required='',autocomplete="off", title="不能为空" value="default")
+            label(for="permissions-default") #{i18n["baseRole"]}
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+            input#permissions-view-app(name="permissions", type='checkbox', required='',autocomplete="off", title="不能为空" value="view-app")
+            label(for="permissions-view-app") #{i18n["canApplyForDetail"]}
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+            input#permissions-manage-carbinet(name="permissions", type='checkbox', required='',autocomplete="off", title="不能为空" value="manage-cabinet")
+            label(for="permissions-manage-carbinet") #{i18n["canManageCabinets"]}
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white.hide
+            input#permissions-view-report(name="permissions", type='checkbox', required='',autocomplete="off", title="不能为空" value="view-report")
+            label(for="permissions-view-report") #{i18n["canViewReport"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

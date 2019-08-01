@@ -1,0 +1,58 @@
+{
+  "Role": [
+    {"id":"acbdd657-af59-4f0c-9d32-ab9794a877b1","name": "管理员", "permissions": ["view-app","manage-cabinet"]},
+    {"id":"b8fe9b06-98ca-465f-8b75-22f54bbbfb52","name": "申请授权人", "permissions": ["view-app"]},
+    {"id":"ccc26416-3a53-4132-be5c-9e2d0eecd737","name": "柜机管理员", "permissions": ["manage-cabinet"]},
+    {"id":"efe43deb-1d44-4d36-8575-dc71f6171c9d","name": "用户", "permissions": []},
+    {"id":"cdbdd657-bf59-4f3c-213a-a39194a877b1","name": "超级管理员", "permissions": ["view-app","manage-cabinet","manage-system"]}
+  ],
+  "ApplicationType": [
+    {"id":"22f6708d-f07b-4dae-956b-f79207e82c99","name": "取枪", "type": "gun", "approverOption": "single", "voteType": "affirmative"},
+    {"id":"391e01d4-45aa-4b84-9d1a-2a0b61eacd88","name": "取子弹", "type": "bullet", "approverOption": "single", "voteType": "affirmative"},
+    {"id":"44a760de-b2a4-4635-8769-49e1ba624a08","name": "存枪", "type": "storageGun", "approverOption": "single", "voteType": "affirmative"},
+    {"id":"565685ef-6b76-40b5-9941-1d616eba354c","name": "存子弹", "type": "storageBullet", "approverOption": "single", "voteType": "affirmative"},
+    {"id":"fd2d61a8-7db1-42c5-8cdc-bfe913150101","name": "紧急开启", "type": "emergency", "approverOption": "single", "voteType": "affirmative"}
+  ],
+  "GunType": [
+    {"id":"23879cef-b3c7-4057-9ff5-f3b84fb63dc7","name": "54式", "bulletType": "0f5c0778-f99b-4f16-a424-75559f0dfa37", "detail": "短枪", "localId": 1},
+    {"id":"4a6c5da3-fd36-4dfa-8ed1-57e9398d1e8a","name": "64式", "bulletType": "2ced6b87-52bb-4dbe-95b6-5a06c957dfc8", "detail": "短枪", "localId": 2},
+    {"id":"52b7e3f9-1b75-4a14-87a7-5ccdab06b82f","name": "77式", "bulletType": "30d90afc-90c9-48a5-ba5c-f66b26617718", "detail": "短枪", "localId": 3},
+    {"id":"66fc900b-0948-4670-a5ba-7df8942c3cbd","name": "92式", "bulletType": "6ec31d88-7d03-4ce1-a485-beb13fba2ef9", "detail": "短枪", "localId": 4},
+    {"id":"7d77972f-82f7-4448-83c5-17ead54efd11","name": "05式", "bulletType": "70a3127d-9ff5-4c93-9b9e-f21d3b2a25ce", "detail": "短枪", "localId": 5},
+    {"id":"8a431d56-e135-4b85-b619-fe7f032a867a","name": "85式", "bulletType": "9054a2e2-6a91-4669-addb-b18ecf54a047", "detail": "长枪", "localId": 6},
+    {"id":"8a8f58a0-9720-49ae-8b28-e8ccb8b4fb49","name": "88式", "bulletType": "b9460b77-7cc3-4c9c-85d8-97f5299fea07", "detail": "长枪", "localId": 7},
+    {"id":"9412e06a-e22d-4f2d-bb0b-9b15f8237167","name": "92式1", "bulletType": "c7bb903b-0f72-4743-b15b-98b79110cf46", "detail": "长枪", "localId": 8},
+    {"id":"ac150de4-251b-4f62-a28c-54ffbf198210","name": "97式防爆枪", "bulletType": "d08f0795-b4f1-4e21-ad6b-219d0f48eb1e", "detail": "长枪", "localId": 9},
+    {"id":"fbc5b3c7-0cae-4ad6-b978-ba4f9e96f6dc","name": "79式", "bulletType": "e7d6b75f-8c32-4c70-ac42-5770ceae2028", "detail": "长枪", "localId": 10}
+  ],
+  "BulletType": [
+    {"id":"0f5c0778-f99b-4f16-a424-75559f0dfa37","name": "54式子弹", "code": "1", "localId": 1},
+    {"id":"2ced6b87-52bb-4dbe-95b6-5a06c957dfc8","name": "64式子弹", "code": "2", "localId": 2},
+    {"id":"30d90afc-90c9-48a5-ba5c-f66b26617718","name": "77式子弹", "code": "3", "localId": 3},
+    {"id":"6ec31d88-7d03-4ce1-a485-beb13fba2ef9","name": "92式子弹", "code": "4", "localId": 4},
+    {"id":"70a3127d-9ff5-4c93-9b9e-f21d3b2a25ce","name": "05式子弹", "code": "5", "localId": 5},
+    {"id":"9054a2e2-6a91-4669-addb-b18ecf54a047","name": "85式子弹", "code": "6", "localId": 6},
+    {"id":"b9460b77-7cc3-4c9c-85d8-97f5299fea07","name": "88式子弹", "code": "7", "localId": 7},
+    {"id":"c7bb903b-0f72-4743-b15b-98b79110cf46","name": "92式1子弹", "code": "8", "localId": 8},
+    {"id":"d08f0795-b4f1-4e21-ad6b-219d0f48eb1e","name": "97式防爆枪子弹", "code": "9", "localId": 9},
+    {"id":"e7d6b75f-8c32-4c70-ac42-5770ceae2028","name": "79式子弹", "code": "10", "localId": 10}
+  ],
+  "Position":[
+    {"id":"5b558389-9c19-48e5-a3ee-fbcee77b6d15","name":"警员"}
+  ],
+  "User": {
+    "username": "0001",
+    "password": "123456",
+    "isLocal": true
+  },
+  "SuperUser": {
+    "username": "8888",
+    "password": "065536",
+    "isLocal": true
+  },
+  "SuperUser1": {
+    "username": "9999",
+    "password": "065536",
+    "isLocal": true
+  }
+}

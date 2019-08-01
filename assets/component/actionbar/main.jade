@@ -1,0 +1,13 @@
+.comp-action-bar
+  a.action.action-bar-noti.hide(name="noti", href="javascript:void(0)")
+    img(src=require("./img/noti.png"))
+  if signup
+    a.btn.action.btn-empty.btn-signup(name="signup") 
+      span.glyphicon.glyphicon-user.icon
+      | 注册
+  if quit
+    a.btn.action.btn-empty.btn-quit(name="quit") 
+      span.glyphicon.glyphicon-log-out.icon
+      | 退出
+  .comp-action-bar-msgbox.animated.fadeIn
+    .panel

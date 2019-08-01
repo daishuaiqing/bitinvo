@@ -1,0 +1,44 @@
+.container-fluid.cabinetmanagement-screen.screen
+  .leftmenu-holder.animated.fadeInLeft
+    .leftmenu
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.appm-comp-clock.comp-clock.text-center #{i18n["cabinetManage"]} / #{i18n["cabinetList"]}
+    .appm-status-bar.text-left
+    //this is comp section
+    .appm-action-bar.text-right
+    //this is comp section
+  .row.right-major
+    //.row.search-box.seperate-after this is search box
+    //.row.tag-list.seperate-after this is tag
+    #mask.mask.hide
+      .mask_context
+        span.mask_close X
+        .box
+    .list-cont
+      .actions-bar.seperate-after.animated.fadeIn.col-sm-12
+        .pull-left
+          button.btn.btn-empty.highlight.button-group__item(name="incoming")
+            h4
+              | #{i18n["toJoin"]}
+          button.btn.btn-empty.highlight.button-group__item(name="joined")
+            h4
+              | #{i18n["joined"]}
+          button.btn.btn-empty.highlight.button-group__item(name="checkedNetwork")
+            h4
+              | #{i18n["updateJoinedStatus"]}
+          button.btn.btn-empty.highlight.button-group__item(name="resetHost")
+            h4
+              | #{i18n["resetMaster"]}
+              .glyphicon.glyphicon-new-window.h-margin-nicer
+          button.btn.btn-empty.highlight.button-group__item(name="refresh")
+            h4
+              | #{i18nButton["refreshBtn"]}
+              .glyphicon.glyphicon-refresh.h-margin-nicer
+          button.btn.btn-empty.highlight.button-group__item(name="allCalibrate")
+            h4
+              | #{i18n["correctAllCabinet"]}
+              .glyphicon.glyphicon-refresh.h-margin-nicer
+        .pull-right.paging-btn-box.clear-pull-right
+    .edit-cont
+    .detaile-cont
+    .search-cont

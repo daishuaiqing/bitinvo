@@ -1,0 +1,21 @@
+.col-sm-12.form-panelbody.pull-middle-center
+  form#selectBulletForm.form
+    .form-group.clearfix#bulletAppTypeGroup
+      label.form-group-label.col-sm-12 #{i18n["bulletType"]}
+      .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5#spotBulletType.hide
+        input#privategun(name="bulletAppType", type='radio', value="privategun", required='',autocomplete="off", title="不能为空")
+        label(for="privategun") #{i18n["specialGunBullet"]}
+      .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+        input#specific(name="bulletAppType", type='radio', value="specific", required='',autocomplete="off", title="不能为空", checked)
+        label(for="specific") #{i18n["assignationBulletType"]}
+    .form-group.form-animate-text.required#bulletTypeGroup
+      input#bulletTypeText.form-text(name="bulletTypeText", type='text', required='',autocomplete="off", title="不能为空")
+      input#bulletType.form-text(name="bulletType", type='hidden', required='',autocomplete="off", title="不能为空")
+      span.bar
+      label #{i18n["bulletType"]}
+      button.hide.btn.btn-empty.clear-btn.h-margin-nicer#bulletTypeClearBtn
+        span #{i18n["clearSelected"]}
+    .form-group.form-animate-text.required#numGroup
+      input#bulletNum.vk.form-text(name="bulletNum", type='number', required='',autocomplete="off", title="不能为空", min="1")
+      span.bar
+      label #{i18n["bulletNumber"]}

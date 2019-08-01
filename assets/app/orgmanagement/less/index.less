@@ -1,0 +1,42 @@
+/* start of usermanagement index.less*/
+.orgmanagement-screen{
+  .padding-top-20 {
+    padding-top: 20px;
+  }
+  .type-list{
+    margin: 0 -30px;
+  }
+
+  .grid-list .grid-list-cell{
+    &.status-pending{
+      background-color : rgba(55,58,136,0.5);
+    }
+    &.status-approved{
+      background-color : rgba(55,58,136,0.5);
+    }
+    &.status-rejected{
+      background-color : rgba(138, 56, 56, 0.5);
+    }
+    &.status-processed{
+      .approve-btn,
+      .deny-btn{
+        display: none;
+      }
+    }
+    &.status-complete{
+      background: #999;
+      background-image: none;
+      .approve-btn,
+      .deny-btn{
+        display: none;
+      }
+      .user-name{
+        color:#eee;
+      }
+      &.grid-list-cell:hover {
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+/* end of usermanagement index.less*/

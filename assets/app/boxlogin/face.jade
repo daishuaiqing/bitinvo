@@ -1,0 +1,26 @@
+.container-fluid.boxlogin-screen.screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.comp-clock.text-center 欢迎
+    .status-bar.text-left
+    //- this is comp section
+  .col-md-12.pull-middle-center
+    .col-md-offset-2.col-md-4.col-sm-12
+      .panel.text-center.animated.fadeInLeft.sm-delay-1.faceBox
+        h1 人脸登录
+        .faceIcon.mrgT40
+          img(width="150" height="150" src=faceIcon)
+        .faceLoginBtn
+          .mrgT10
+            button.faceLogin-button.btn.btn-empty.big.highlight.seperate-before.action-btn.deepBg
+              h3
+                i.loader.hide
+                span 开始人脸识别
+    .col-md-4.col-sm-12
+      .panel.text-center.animated.fadeInRight.sm-delay-1
+        .sanning-fingger-cont.pull-middle-center
+          .row.v-margin-nicer
+            h1.xl.text-shadow #{i18n.clickNextButton}
+            h1.xl.text-shadow #{i18n.usingPasswordSignin}
+          .row.v-margin-nicer
+            a.btn.btn-empty.big.btn-fixed-len-300.highlight#login
+              h1 #{i18n_buttonText.passwordLoginBtn}

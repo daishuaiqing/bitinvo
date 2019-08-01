@@ -1,0 +1,11 @@
+.info.text-center.animated.fadeIn
+  if html
+    div!= html
+  else
+    h1 #{text}
+  .pull-bottom-center.info-footer
+    .buttons
+      button.btn.btn-empty.action-btn.big#confirm 
+        h1 #{confirmBtnLabel}
+      button.lighter.btn.btn-transparent.action-btn.big.hide#cancel 
+        h1 #{cancelBtnLabel}

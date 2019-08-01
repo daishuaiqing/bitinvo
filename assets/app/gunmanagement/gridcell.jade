@@ -1,0 +1,28 @@
+- var statusLabel = i18n["awaitin"]
+case storageStatus
+  when 'in'
+    - statusLabel = i18n["in"]
+  when 'out'
+    - statusLabel = i18n["out"]
+  when 'awaitin'
+    - statusLabel = i18n["awaitin"]
+  default
+    - statusLabel = i18n["unknown"]
+
+- var isSharedLabel = i18n["publicGun"]
+case isPublic
+  when true
+    - isSharedLabel = i18n["publicGun"]
+  when false
+    - isSharedLabel = i18n["deducatedGun"]
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(data-id=id,data-cabinetname=asbCabinetName, data-asbname=asbName, data-type=type)
+    .grid-list-cell-body
+      p.item-id #{localId}
+      h1.main-title.text-overflow #{name}
+      h4.text-overflow #{statusLabel}#{typeName ? " - " + typeName : ""}
+      h4.last-maintant-time.text-overflow #{isSharedLabel} / 所属柜机：#{cabinetName ? cabinetName : '-'}
+      h4.last-maintant-time.text-overflow #{i18n["gunCode"]} #{code}
+    .quick-btn-cont.pull-middle-center
+      span.deny-btn.quick-btn.h-margin-nicer.delete-btn(data-id=id)
+        span.glyphicon.glyphicon-trash(aria-hidden='true')

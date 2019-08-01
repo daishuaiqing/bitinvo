@@ -1,0 +1,11 @@
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + data.index)
+  .grid-list-cell(data-id=data.id, data-host=data.host, data-name=data.name, data-port=data.port, data-code=data.code, data-local=String(data.isLocal), data-master=String(data.isMaster))
+    .grid-list-cell-body(class = data.isMaster || data.isVerified ? 'verified' : 'no-verified')
+      h1.user-name.truncate.text-overflow #{data.name} #{data.isMaster && "/Master柜机" || ""}
+      p.updated-time.truncate.text-overflow 所属部门 #{(data.org && data.org.name) ? data.org.name : '未指定'}
+        //- small.updated-time
+      p.text-overflow.font-color #{data.host}
+    .quick-btn-cont.pull-middle-center
+      if data.createdAt
+        span.h-margin-nicer.delete-btn(data-id=data.id)
+          span.glyphicon.glyphicon-trash(aria-hidden='true')

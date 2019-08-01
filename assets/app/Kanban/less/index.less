@@ -1,0 +1,308 @@
+#MessageFlexmodal {
+  .modal-content {
+    background: #000;
+    text-align: center;
+  }
+  .modal-body {
+    text-align: center;
+  }  
+}
+.Kanban-screen{
+  .downloadModule {
+    position: fixed;
+    bottom: 0;
+    background-color: #564386;
+    width: 100%;
+    .btn {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .logData-cont {
+    white-space: pre-wrap;
+  }
+  .highlight_log {
+    background-color: rgba(0,0,0,.6) !important;
+  }  
+  .modal-dialog{
+    width: 1050px;
+  }
+  .modal-body {
+    text-align: center;
+  }
+  .ellipsis {
+    color:#fff;
+  }
+  .grid-list {
+    .offline {
+      background: #999;
+    }
+  }
+  .faceImg {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  .leftModule {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+  .computed_container {
+    width: 100%;
+    background: #7059AB;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    height:50%;
+    box-sizing: border-box;
+    position: relative;
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    &:last-child{
+      margin-bottom: 10px;
+    }
+    &:before{
+      z-index: 100;
+      height: 1px;
+      content: "";
+      width: 100%;
+      margin:auto;
+      background-image: url(../../common/img/line.png);
+      background-size: 100%;
+      top: 1px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      display: inline-block;
+    }
+    &:after{
+      z-index: 100;
+      height: 1px;
+      content: "";
+      width: 100%;
+      margin:auto;
+      background-image: url(../../common/img/line.png);
+      background-size: 100%;
+      bottom: 1px;
+      left:0;
+      right:0;
+      position: absolute;
+      display: inline-block;
+      animation-duration: 3s;
+      animation-delay: 2s;
+    }
+    .count {
+      font-size:60px;
+      font-weight: bold;
+      transition: all .6s;
+    }
+    p {
+      color:#f1f1f1;
+    }
+  }
+  .nav {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 20px;
+    position: relative;
+    padding-bottom:10px;
+    &:after{
+      z-index: 100;
+      height: 1px;
+      content: "";
+      width: 100%;
+      margin:auto;
+      background-image: url(../../common/img/line.png);
+      background-size: 100%;
+      bottom: 1px;
+      left:0;
+      right:0;
+      position: absolute;
+      display: inline-block;
+      animation-duration: 3s;
+      animation-delay: 2s;
+    }
+  }
+  .processTips {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .glyphicon {
+      margin-right: 10px;
+    }
+    span {
+      font-size:10px;
+      padding-left: 30px;
+    }
+  }
+  .btn-video,.btn-video_setUrl, .btn-video_fetchLog, .btn_lockCabinet, .btn_unlockCabient {
+    position: absolute;
+    right:0;
+    top:0;
+    border-left:1px solid #959595;
+    text-shadow: 0 0 4px #000;
+    font-size:20px;
+    line-height: 60px;
+    height: 60px;
+    background-color: transparent;
+    padding-left:30px;
+    overflow: hidden;
+    cursor: pointer;
+    span {
+      margin:0 20px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top:-5px;
+      bottom:-5px;
+      left:0px;
+      right:0;
+      border-left: 1px solid #343434;
+    }
+  }
+  .btn-video_setUrl {
+    right: 170px;
+  }
+  .btn-video_fetchLog {
+    right: 400px;
+  }
+  .btn_lockCabinet {
+    right: 600px;
+  }
+  .btn_unlockCabient {
+    right: 750px;
+  }
+  .Kanban_detail_page {
+    .computed_container {
+      height:200px;
+    }
+  }
+  .iframe_container {
+    z-index: 99999999999999;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    background: #000;
+    iframe, .no-iframe {
+      width: 100%;
+      height:90vh;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: 1px solid #fff;
+    }
+    .no-iframe {
+      font-size:30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .close_btn {
+      position: absolute;
+      bottom:10px;
+      left:50%;
+      margin-left:-40px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+      border: 1px solid #fff;
+      background:#fff;
+      color:#ccc;
+    }
+  }
+  .small-font-size {
+    font-size: 14px;
+  }
+  .asyncDate {
+    overflow: hidden;
+    padding-top: 40px;
+    .form .form-group.form-animate-text .form-text {
+      background-color: #eee;
+      color: #333;
+    }
+    .form .form-group.form-animate-text label {
+      color: #999;
+    }
+  }
+  .btnGroup {
+    margin-bottom: 20px;
+  }
+  .actionBtn {
+    background-color: #604a8a;
+  }
+  .org_cabient_status {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-top: 10px;
+    -webkit-box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.2);
+    background: #7059AB;
+    text-align: center;
+    .status {
+      display: inline-block;
+      text-align: center;
+      width: 20%;
+    }
+  }
+  .tipsAnimation {
+    transform: translateZ(0);
+    animation: tipsAnimate 1s infinite ease-in-out; 
+  }
+  .logContentH4 {
+    text-align: left;
+    line-height: 1.5;
+  }
+}
+
+@keyframes tipsAnimate {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: #6C54A8;
+  }   
+}
+
+.loginModule {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6C54A8;
+  z-index: 10000;
+  .login_panle {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 60px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .loginTips {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}

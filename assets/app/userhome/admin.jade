@@ -1,0 +1,103 @@
+// User Home index.jade
+.container-fluid.userhome-screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.userhome-comp-clock.comp-clock.text-center #{ user.alias ? user.alias : user.username}, 欢迎您
+    .userhome-action-bar.text-right
+  .row
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-1
+            .avatar-cont
+              img.img-responsive.badge(src=require('common/img/badge.png'))
+            h3.user-name.text-shadow #{ user.alias ? user.alias : user.username}
+            he.user-phone.text-shadow#{ user.phone }
+            p.role-name
+            .row.v-margin-nicer
+              button.btn.btn-empty.big.action-btn.seperate-before#modifyProfile
+                h4 #{i18n['Edit My Profile']}
+            h4.user-status 用户状态 - 正常
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-1
+            .row.big-btn-cont
+              button.menu-btn(name='getGun')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/getgun_100.png'))
+                  h1.xxl 取枪
+            .row.big-btn-cont
+              button.menu-btn(name='returnGun')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/returngun_100.png'))
+                  h1.xxl 还枪
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-2
+            .row.big-btn-cont
+              button.menu-btn(name='getBullet')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/getbullet_100.png'))
+                  h1.xxl 取子弹
+            .row.big-btn-cont
+              button.menu-btn(name='returnBullet')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/returnbullet_100.png'))
+                  h1.xxl 还子弹
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-3
+            .row.big-btn-cont
+              button.menu-btn(name='reportCenter')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/report_100.png'))
+                  h1.xxl 报表中心
+            .row.big-btn-cont
+              button.menu-btn(name='applicationManagement')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/document_100.png'))
+                  h1.xxl 申请管理
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-3
+            .row.big-btn-cont
+              button.menu-btn(name='orgManagement')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/org_100.png'))
+                  h1.xxl 机构管理
+            .row.big-btn-cont
+              button.menu-btn(name='userManagement')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/users_100.png'))
+                  h1.xxl 人员管理
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-4
+            .row.big-btn-cont
+              button.menu-btn(name='gunManagement')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/gun_100.png'))
+                  h1.xxl 枪支管理
+            .row.big-btn-cont
+              button.menu-btn(name='bulletTypeManagement')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/bullet_100.png'))
+                  h1.xxl 子弹管理
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-3
+            .row.big-btn-cont
+              button.menu-btn(name='safeboxManagement')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/safebox_100.png'))
+                  h1.xxl 枪柜管理
+            .row.big-btn-cont
+              button.menu-btn(name='systemManagement')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/gear_100.png'))
+                  h1.xxl 系统管理
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-3
+            .row.big-btn-cont
+              button.menu-btn(name='messageManagement')
+                .wrap
+                  img.img-responsive.menu-icon(src=require('./img/message_100.png'))
+                  p 消息管理
+      // Add Pagination
+      .swiper-pagination
+      .swiper-button-next
+      .swiper-button-prev
+// User Home index.jade

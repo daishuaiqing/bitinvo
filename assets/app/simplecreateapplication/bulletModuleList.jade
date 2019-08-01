@@ -1,0 +1,7 @@
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class='sm-delay-' + index)
+  .grid-list-cell(id=cmId,data-id=cmId,data-type=cmType,data-canid=cmCanId,data-cabinet=cId)
+    .grid-list-cell-body
+      .col-md-12
+        h2.user-name #{ (cmName ? cmName: '-' ) }
+        p 子弹类型: #{ bName ? bName : ''}
+        p 存量: #{ cmLoad ? cmLoad : 0}

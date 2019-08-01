@@ -1,0 +1,23 @@
+{
+  "hooks": {
+    "grunt": false,
+    "applicationtimer": false,
+    "autocreateby": false,
+    "fifo": false,
+    "fifodatapush": false,
+    "initdata": false,
+    "modulestatuscheck": false,
+    "servicediscovery": false,
+    "systemalarm": false,
+    "systemstatuscheck": false,
+    "networkcheck": false,
+    "usbcheck": false,
+    "session": false,
+    "sockets": false,
+    "pubsub": false,
+    "views": false,
+    "csrf": false,
+    "i18n": false,
+    "blueprints": false
+  }
+}

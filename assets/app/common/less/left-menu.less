@@ -1,0 +1,54 @@
+.leftmenu-holder,
+.leftmenu-holder-create{
+  /* Rectangle 56: */
+  background: #7A5DA0;
+  left: 0;
+  padding-top: 0;
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  z-index: 99;
+  margin-top: 55px;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-image: url('../img/line.png');
+  }
+  .leftmenu,
+  .leftmenu-create{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -60px;
+    .comp-vmenu{
+      margin-top: 65px;
+      li .target-link{
+        font-size: 30px;
+      }
+    }
+    &>.comp-vprocessbar{
+      margin:0 auto;
+      li.active .item-text{
+        color: #fff;
+      }
+      li .item-text{
+        font-size: 34px;
+        max-width: 254px;
+        color : #999;
+        white-space: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: left;
+      }
+    }
+  }
+}

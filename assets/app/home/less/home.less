@@ -1,0 +1,102 @@
+/**
+home.less start
+*/
+.lock-screen{
+  margin-top: 100px;
+  position: relative;
+  .panel{
+    overflow: hidden;
+  }
+  .home_arrow_left{
+    position: absolute;
+    left:10px;
+    transform: rotate(-90deg);
+    top: 55%;
+    .m_title{
+      transform: rotate(90deg);
+      transform-origin: center;
+      position: absolute;;
+      top: 36px;
+      right: -10px;
+    }
+  }
+  .home_arrow_right{
+    position: absolute;
+    right: 36px;
+    transform: rotate(90deg);
+    top: 50%;
+    .m_title{
+      transform: rotate(-90deg);
+      transform-origin: center;
+      position: relative;
+      top: -1px;
+      left: -12px;
+    }
+  }
+}
+
+.inline-date-year{
+  font-size: 2em;
+}
+
+.inline-date-year,
+.inline-time{
+  color:#eee;
+  opacity: 0;
+  text-shadow: 0 0 4px #000;
+}
+
+.inline-time{
+  font-size: 4em;
+}
+
+.inline-org-name{
+  color:#eee;
+  margin:0;
+  text-shadow: 0 0 4px #000;
+}
+
+.status-cont{
+  position: relative;
+  display: inline;
+  .status-icon{
+    position: absolute;
+    bottom : 0;
+    right: 0;
+    width : 20px;
+    height : 20px;
+    background-size: 100%;
+  }
+}
+
+.status-bar{
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.status{
+  display: inline-block;
+  min-width: 180px;
+}
+
+.status span{
+  display: block;
+  margin: 5px;
+  text-shadow: 0 0 4px #000;
+}
+.logo_with_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .logo_pic {
+    max-width: 200px;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+}
+/**
+home.less  end
+*/

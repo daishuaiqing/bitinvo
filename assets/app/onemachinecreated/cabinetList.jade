@@ -1,0 +1,8 @@
+- var typeLabel = ""
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class='sm-delay-' + index)
+  .grid-list-cell(data-id=data.id,data-type=data.type,data-canid=data.canId,data-cabinet=data.code, data-cabinetinfo = data)
+    .grid-list-cell-body
+      .col-md-12
+        h4.user-role 编号 #{data.localId}
+        h2.user-name #{ (data.name ? data.name: '-' ) + typeLabel}
+        small.updated-time IP地址 #{ data.host }

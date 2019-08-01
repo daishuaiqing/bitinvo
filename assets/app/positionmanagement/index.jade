@@ -1,0 +1,30 @@
+.container-fluid.apptypem-screen.screen
+  .leftmenu-holder.animated.fadeInLeft
+    .leftmenu
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.posm-comp-clock.comp-clock.text-center 人员管理 / 职位管理
+    .posm-status-bar.text-left
+    //this is comp section
+    .posm-action-bar.text-right
+    //this is comp section
+  .row.right-major
+    //.row.search-box.seperate-after this is search box
+    //.row.tag-list.seperate-after this is tag
+    .list-cont
+      .actions-bar.seperate-after.animated.fadeIn.col-sm-12
+        .pull-left
+          button.btn.btn-empty.highlight.button-group__item(name="add")
+            h4
+              | #{i18n["addPositionBtn"]}
+              .glyphicon.glyphicon-check.h-margin-nicer
+          button.btn.btn-empty.highlight.button-group__item(name="refresh")
+            h4
+              | #{i18nButton["refreshBtn"]}
+              .glyphicon.glyphicon-refresh.h-margin-nicer
+          button.btn.btn-empty.highlight(name="search")
+            h4
+              | #{i18nButton["searchBtn"]}
+              .glyphicon.glyphicon-search.h-margin-nicer
+        .pull-right.paging-btn-box
+    .edit-cont
+    .search-cont

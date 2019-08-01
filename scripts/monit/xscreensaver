@@ -1,0 +1,4 @@
+check process xscreensaver with pidfile /tmp/xscreensaver.pid
+start program = "/home/bitinvo/scripts/monit/xscreensaver_start.sh"
+stop program = "/bin/su - ubuntu -c '/usr/bin/xscreensaver-command -exit'"
+if 3 restarts within 3 cycles then timeout

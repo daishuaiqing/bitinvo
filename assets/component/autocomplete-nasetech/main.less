@@ -1,0 +1,26 @@
+.autocomplete{
+  position: absolute;
+  background: #fff;
+  color:#3d3838;
+  font-size:15px;
+  padding:0;
+  width:99.6%;
+  text-align: left;
+  border-radius: 4px;
+  z-index: 99999999;
+  li{
+    padding-left:6px;
+    cursor: pointer;
+    height:30px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover{
+      background:#292041;
+    }
+  }
+  .pointer-events {
+    pointer-events: none;
+  }
+}

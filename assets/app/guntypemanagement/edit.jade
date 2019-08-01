@@ -1,0 +1,25 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-5.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden')
+        .form-group.form-animate-text.required
+          input#name.form-text(name="name", type='text', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["gunTypeName"]}
+        .form-group.form-animate-text.select
+          input#bulletTypeText.form-text(name="bulletTypeText", type='text', required='',autocomplete="off")
+          input#bulletType.form-text(name="bulletType", type='hidden', required='',autocomplete="off")
+          span.bar
+          label #{i18n["matchingBulletType"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#bulletTypeTextClearBtn(type="button")
+            span #{i18nButton["clearSelectedBtn"]}
+      .form.col-md-7.no-margin
+        .form-group.form-animate-text
+          textarea#detail.textarea.small.form-text(name='detail',type='text', required='',autocomplete="off")
+          span.bar
+          label(for="detail") #{i18n["remarks"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

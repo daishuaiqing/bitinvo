@@ -1,0 +1,10 @@
+ol.breadcrumb
+  each item, i in items
+    if i == defaultItem
+      li.active(seq=i)
+        a(href=item.target) #{item.name}
+        .bg
+    else
+      li(seq=i)
+        a(href=item.target) #{item.name}
+        .bg

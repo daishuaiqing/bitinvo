@@ -1,0 +1,18 @@
+{
+  "name": "tagsinput",
+  "authors": [
+    "beherca@gmail.com"
+  ],
+  "description": "Wrap of bootstrap tagsinput",
+  "main": "main.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,18 @@
+1.欢迎: 欢迎使用 请左滑或右滑开始操作			       (welcome)		
+2.指纹验证失败:  请调整手指位置重试			       (fingerprintfail)	
+3.用户指纹满: 您的指纹数已到达上线，可清空指纹重新录入。	(fingerprintisfull)	
+4.录指纹时:请将手指放入扫描仪				         (fingerprint)		
+5.系统设置非管理员扫描，扫描成功提示音:您无权访问。	      (unauthorizedAccess)	
+6.取枪:您还没有申请工单，请先提交申请;			      (noApplication)		
+您的申请未审核，请等待审核。				            (noApplicationReview)	
+7.取枪登录去提交申请时:请选择申请类型。			     (chooseType)		
+8.(1)取枪申请时间:请选择申请时间。			       (applicatimeTime)	
+  (2)申请时间错误：时间设置有误请重新设置。		    (applicationTimeErr)		
+9.创建成功:创建申请成功，请现场授权或点击返回。		  (establishSuccess)	
+10.授权:请授权。					                (authorize)		
+11.工单授权失败:工单授权失败。                       (orderAuthorizeFail)	
+12.工单授权成功:请确认授权内容无误后，点击确认授权。	(orderAuthorizeSuccess)	
+13.确认授权:授权成功。(已有)				         (comfirmAuthorize)	
+
+
+

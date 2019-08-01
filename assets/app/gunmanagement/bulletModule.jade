@@ -1,0 +1,8 @@
+li.list-cell-body.clearfix(data-id=id, data-name=name)
+  .col-md-4
+    h4 弹仓: #{name}
+  .col-md-8
+    h4.cell-id.padding-right40.text-overflow #{bulletTypeName}
+    .quick-btn-cont.pull-middle-center
+      if (bindInfo)
+        span.quick-btn.h-margin-nicer.more-btn(data-id=id) 查看关联

@@ -1,0 +1,163 @@
+#!/bin/bash
+cd ..
+mkdir bitinvo_docker
+rsync -avz bitinvo bitinvo_docker   \
+--exclude                     \
+'bitinvo/dist'                \
+--exclude                     \
+'electron'                    \
+--exclude                     \
+'deb'                    \
+--exclude                     \
+'.tmp'                        \
+--exclude                     \
+'.git'                        \
+--exclude                     \
+'config/cabinet.js'   \
+--exclude                     \
+'bower_components'            \
+--exclude                     \
+"autoprefixer"                \
+--exclude                     \
+"barrels"                     \
+--exclude                     \
+"bootstrap-webpack"           \
+--exclude                     \
+"bower-webpack-plugin"        \
+--exclude                     \
+"css-loader"                  \
+--exclude                     \
+"cssnano"                     \
+--exclude                     \
+"decamelize"                  \
+--exclude                     \
+"defined"                     \
+--exclude                     \
+"expose-loader"               \
+--exclude                     \
+"extract-text-webpack-plugin" \
+--exclude                     \
+"file-loader"                 \
+--exclude                     \
+"forever"                     \
+--exclude                     \
+"grunt-contrib-clean"         \
+--exclude                     \
+"grunt-contrib-coffee"        \
+--exclude                     \
+"grunt-contrib-concat"        \
+--exclude                     \
+"grunt-contrib-copy"          \
+--exclude                     \
+"grunt-contrib-cssmin"        \
+--exclude                     \
+"grunt-contrib-jst"           \
+--exclude                     \
+"grunt-contrib-less"          \
+--exclude                     \
+"grunt-contrib-uglify"        \
+--exclude                     \
+"grunt-contrib-watch"         \
+--exclude                     \
+"grunt-sails-linker"          \
+--exclude                     \
+"grunt-sync"                  \
+--exclude                     \
+"grunt-webpack"               \
+--exclude                     \
+"html-loader"                 \
+--exclude                     \
+"i18n-webpack-plugin"         \
+--exclude                     \
+"indexes-of"                  \
+--exclude                     \
+"jade-loader"                 \
+--exclude                     \
+"json-loader"                 \
+--exclude                     \
+"less"                        \
+--exclude                     \
+"less-loader"                 \
+--exclude                     \
+"node-libs-browser"           \
+--exclude                     \
+"object-assign"               \
+--exclude                     \
+"postcss"                     \
+--exclude                     \
+"postcss-calc"                \
+--exclude                     \
+"postcss-colormin"            \
+--exclude                     \
+"postcss-convert-values"      \
+--exclude                     \
+"postcss-discard-comments"    \
+--exclude                     \
+"postcss-discard-duplicates"  \
+--exclude                     \
+"postcss-discard-empty"       \
+--exclude                     \
+"postcss-discard-unused"      \
+--exclude                     \
+"postcss-filter-plugins"      \
+--exclude                     \
+"postcss-loader"              \
+--exclude                     \
+"postcss-merge-idents"        \
+--exclude                     \
+"postcss-merge-longhand"      \
+--exclude                     \
+"postcss-merge-rules"         \
+--exclude                     \
+"postcss-minify-font-values"  \
+--exclude                     \
+"postcss-minify-gradients"    \
+--exclude                     \
+"postcss-minify-params"       \
+--exclude                     \
+"postcss-minify-selectors"    \
+--exclude                     \
+"postcss-normalize-charset"   \
+--exclude                     \
+"postcss-normalize-url"       \
+--exclude                     \
+"postcss-ordered-values"      \
+--exclude                     \
+"postcss-reduce-idents"       \
+--exclude                     \
+"postcss-reduce-transforms"   \
+--exclude                     \
+"postcss-svgo"                \
+--exclude                     \
+"postcss-unique-selectors"    \
+--exclude                     \
+"postcss-value-parser"        \
+--exclude                     \
+"postcss-zindex"              \
+--exclude                     \
+"sails-hook-autoreload"       \
+--exclude                     \
+"sails-memory"                \
+--exclude                     \
+"style-loader"                \
+--exclude                     \
+"url-loader"                  \
+--exclude                     \
+"webpack"                     \
+--exclude                     \
+"webpack-dev-server"      
+cd bitinvo_docker/bitinvo
+rm -rf node_modules/bcrypt
+cp -r -f platform/docker/bcrypt node_modules/
+cp config/local.js.dist config/local.js
+cp config/cabinet.js.dist config/cabinet.js
+cp .sailsrc.dist.prod .sailsrc
+rm etcd/*
+cp ~/etcd-docker/etcd etcd/
+cp ~/etcd-docker/etcdctl etcd/
+cd ..
+tar czvf bitinvo.tar.gz bitinvo
+cp bitinvo/scripts/docker/extract.sh ./
+cp bitinvo/scripts/docker/remote_depoly_dist.sh ./
+cp bitinvo/scripts/distbuild/bitinvo_backup.sql ./
+rm -rf bitinvo

@@ -1,0 +1,26 @@
+#!/bin/sh
+
+echo "" > /tmp/start_node_log
+echo "" > /tmp/start_sgscom_log
+echo "start bitinvo" >> /tmp/start_log
+ip link set can0 type can bitrate 250000
+ip link set can0 up type can
+
+cd /tmp
+sudo rm sgs_output_fifo
+sudo rm sgs_input_fifo
+
+#mount /dev/mmcblk2p1  /home/ssd
+echo "start sgscom" >> /tmp/start_sgscom_log
+cd /home/SGSCom/
+cgexec -g cpu:SGSCom sudo ./SGSCom > /var/log/SGSCom.log 2>&1  &
+#cgexec -g cpu:SGSCom sudo ./SGSCom  &
+sleep 1s
+echo $(pidof SGSCom) > /var/run/SGSCom.pid
+
+cd /home/bitinvo/
+echo "start node" >> /tmp/start_node_log
+#sudo node app.js --prod --verbose >> /tmp/start_node_log &
+./start.sh > start.log
+sleep 1s
+sudo /home/ubuntu/cgclassify_tasks.sh

@@ -1,0 +1,1 @@
+mysqldump --no-data -h localhost -u root -p123456 bitinvo > bitinvo.sql

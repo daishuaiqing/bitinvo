@@ -1,0 +1,71 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-6.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.clearfix
+          label.form-group-label.col-sm-12 #{i18n["appTypeName"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-3
+            input#gun(name="type", type='radio', value="gun" required='',autocomplete="off", title="不能为空" checked)
+            label(for="gun") #{i18n["getGun"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-3
+            input#bullet(name="type", type='radio', value="bullet" required='',autocomplete="off", title="不能为空")
+            label(for="bullet") #{i18n["getBullet"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+            input#emergency(name="type", type='radio', value="emergency" required='',autocomplete="off", title="不能为空")
+            label(for="emergency") #{i18n["emergency"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-3
+            input#storageGun(name="type", type='radio', value="storageGun" required='',autocomplete="off", title="不能为空")
+            label(for="storageGun") #{i18n["storageGun"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-3
+            input#storageBullet(name="type", type='radio', value="storageBullet" required='',autocomplete="off", title="不能为空")
+            label(for="storageBullet") #{i18n["storageBullet"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-3
+            input#maintain(name="type", type='radio', value="maintain" required='',autocomplete="off", title="不能为空")
+            label(for="maintain") #{i18n["maintain"]}
+        .form-group.clearfix
+          label.form-group-label.col-sm-12#approverOptionroup #{i18n["approverType"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+            input#none(name="approverOption", type='radio', value="none" required='',autocomplete="off", title="不能为空" checked)
+            label(for="none") #{i18n["none"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+            input#single(name="approverOption", type='radio', value="single" required='',autocomplete="off", title="不能为空" checked)
+            label(for="single") #{i18n["single"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+              input#arbitary(name="approverOption", type='radio', value="arbitary" required='',autocomplete="off", title="不能为空")
+              label(for="arbitary") #{i18n["arbitary"]}
+        .form-group.clearfix#voteTypeGroup.hide
+          label.form-group-label.col-sm-12 #{i18n["multiApprovalType"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+            input#affirmative(name="voteType", type='radio', value="affirmative" required='',autocomplete="off", title="不能为空" checked)
+            label(for="affirmative") #{i18n["affirmative"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+            input#unanimous(name="voteType", type='radio', value="unanimous" required='',autocomplete="off", title="不能为空")
+            label(for="unanimous") #{i18n["unanimous"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+            input#consensus(name="voteType", type='radio', value="consensus" required='',autocomplete="off", title="不能为空")
+            label(for="consensus") #{i18n["consensus"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5
+            input#both(name="voteType", type='radio', value="both" required='',autocomplete="off", title="不能为空")
+            label(for="both") #{i18n["both"]}
+        .form-group.clearfix#approversGroup
+            .input.btn.btn-empty#addApprover #{i18n["addApprover"]}
+            .form-text.v-margin-nicer
+              #approvers(name="approvers" type="tag")
+      .form.col-md-6.no-margin
+        .form-group.form-animate-text.required.v-margin-nicer
+          input#name.form-text(name="name", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["appTypeName"]}
+        .form-group.form-animate-text
+          textarea.textarea.med#detail.form-text(name="detail", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["summary"]}
+        .form-group.clearfix
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white.isMqttServer-checkbox
+            input#remote.form-text(name="remote", type='checkbox', required='',autocomplete="off", title="不能为空",value="Y")
+            label(for="remote") #{i18n["remoteApproval"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

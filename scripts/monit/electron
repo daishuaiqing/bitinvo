@@ -1,0 +1,4 @@
+check process electron with pidfile /tmp/electron.pid
+start program = "/bin/bash /home/bitinvo/scripts/monit/electron_startup.sh"
+stop program = "/bin/bash /home/bitinvo/scripts/monit/electron_stop.sh"
+if 3 restarts within 3 cycles then timeout

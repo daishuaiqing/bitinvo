@@ -1,0 +1,5 @@
+.video-player
+  video#video.video-js.vjs-default-skin(controls='', preload='auto', width='1024', height='480', poster="/asset/image/#{data.id}?")
+      source(src='/asset/play/#{data.id}', type='video/mp4')
+      p.vjs-no-js
+        | 当前浏览器不支持视频记录播放

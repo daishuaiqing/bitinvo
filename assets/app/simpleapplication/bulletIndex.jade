@@ -1,0 +1,33 @@
+.simly-application
+  .simply-header
+  .line.seperate-before
+  include menu-entry.jade
+  .simply-main-home.pull-middle-center
+    .col-md-4.animated.fadeIn.sm-delay-1#simpleApplicationLeftPanel
+      .col-md-12
+        .row.bg.border-radius.chart-container_bullet
+          col-md-12
+            #cabinet-bullet-number.cabinet-show-number-box.special-canvas_big_bullet
+              .number_container
+                .show-number-span 0
+                .title 正在加载弹药量
+    .col-md-8.animated.fadeIn.sm-delay-2.row.padding-right_0#simpleApplicationRightPanel
+      .button-list-ul
+        button.big-btn(name="getBullet")
+          | #{i18n.entrance__getBullet}
+        button.big-btn(name="returnBullet")
+          | #{i18n.entrance__returnBullet}
+        button.big-btn.seperate-before.mrgB12(name="saveBullet")
+          | #{i18n.entrance__storageBullet}
+        button.big-btn.seperate-before.mrgB12(name="emergency")
+          | #{i18n.entrance__emergency}
+        button.small-btn(name="moreMenu")
+          | 其他功能
+        button.small-btn.empty-text
+          | 暂时未开放
+  .simply-main-authenticate
+  .simply-main-create-applition
+  .simply-main-application-authorized
+  .simply-main_login
+  .simply-main_signup
+  .simply-footer

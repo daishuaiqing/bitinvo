@@ -1,0 +1,71 @@
+.captureApplication_cp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  .add-capture_btn {
+    cursor:pointer;
+  }
+  .section-box {
+    width: 140px;
+    height: 180px;
+    border:1px solid hsla(0,0%,100%,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+    border-radius: 4px;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .retry-btn {
+      width: 100%;
+      height: 40px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 40px;
+      position: absolute;
+      bottom:0;
+      left: 0;
+      background: rgba(0, 0, 0, .8);
+      cursor: pointer;
+    }
+  }
+  .loader {
+    font-size: 30px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin:20% auto;
+    animation: load6 1.7s infinite ease;
+  }
+  @keyframes load6 {
+    0% {
+      transform: rotate(0deg);
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+    }
+    5%,
+    95% {
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+    }
+    30% {
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.51em -0.66em 0 -0.42em #ffffff, -0.75em -0.36em 0 -0.44em #ffffff, -0.83em -0.03em 0 -0.46em #ffffff, -0.81em 0.21em 0 -0.477em #ffffff;
+    }
+    55% {
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.29em -0.78em 0 -0.42em #ffffff, -0.43em -0.72em 0 -0.44em #ffffff, -0.52em -0.65em 0 -0.46em #ffffff, -0.57em -0.61em 0 -0.477em #ffffff;
+    }
+    100% {
+      transform: rotate(360deg);
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+    }
+  }  
+}

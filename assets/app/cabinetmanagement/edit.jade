@@ -1,0 +1,29 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-5.no-margin
+        p.error-info.hide 发生了错误
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.form-animate-text.required
+          input#name.form-text(name="name", type='text', required='',autocomplete="off")
+          span.bar
+          label 安全柜名字
+        .form-group.form-animate-text.required.select
+          input#code.form-text(name="code", type='text', required='',autocomplete="off")
+          span.bar
+          label 安全柜编号
+        .form-group.form-animate-text.required.select
+          input#orgText.form-text(name="orgText", type='text', required='',autocomplete="off", title="不能为空")
+          input#org.form-text(name="org", type='hidden', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label 所属机构
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#orgClearBtn
+            span 清除选择
+      .form.col-md-7.no-margin
+        .form-group.form-animate-text.required
+          textarea.textarea#info.form-text(name="info", type='text', required='',autocomplete="off")
+          span.bar
+          label 配置文件
+  .right-major-footer.animated.fadeInUp
+    .taskbar

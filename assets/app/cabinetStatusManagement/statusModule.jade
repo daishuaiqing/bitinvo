@@ -1,0 +1,14 @@
+h1.cabinetName 当前柜机：#{cabinetName}
+.statusModule
+  .module.panel
+    img(src=src.temp)
+    h3.title 温度值
+    h1.num #{temp}
+  .module.panel
+    img(src=src.hum)
+    h3.title 湿度值
+    h1.num #{humi}
+  .module.panel
+    img(src=src.power)
+    h3.title #{powerType === 0 ? '备用电量': '连接电源'}
+    h1.num #{ powerType === 0 ? power + '%' : '100%' }

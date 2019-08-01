@@ -1,0 +1,48 @@
+.detail-header.animated.fadeIn
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.comp-clock.text-left#warehouserName #{orgName}
+    .rpt-status-bar.text-left
+    .rpt-action-bar.text-right
+      .btn-video_setUrl#setWebcamUrl(data-orgid=orgId)
+        | 设置监控地址
+        span.glyphicon.glyphicon-cog
+      .btn-video#supervision
+        | 查看监控
+        span.glyphicon.glyphicon-facetime-video
+      .btn-video_fetchLog#fetchLogBtn
+        | 同步日志
+        span.glyphicon.glyphicon-refresh
+      .btn_lockCabinet#lockCabinet
+        | 锁定柜机
+      .btn_unlockCabient#unlockCabinet
+        | 解锁柜机
+  .col-md-12.org_cabient_status.seperate-before
+    .status#temperature
+      h4 温度状态
+    .status#humidity
+      h4 湿度状态
+    .status#power
+      h4 电源状态
+  .col-md-12#iframeContainer.iframe_container.hide
+    .close_btn#closeBtn
+      i.glyphicon.glyphicon-off
+  .col-md-12.pull-middle-center#KanbanTable
+    .col-md-2.Kanban_detail_page
+      .computed_container
+        .count.bullet_count #{bulletCount}
+        p 子弹总数
+      .computed_container
+        .count.gun_count #{gunCount}
+        p 枪支总数
+    .col-md-10
+      .btnGroup.mrgB10
+        .btn.btn-empty.highlight.button-group__item.filterDateBtn
+          h4 根据日期过滤
+        .btn.btn-empty.highlight.button-group__item.allLogBtn.actionBtn
+          h4 全部日志
+        .btn.btn-empty.highlight.button-group__item.alarmLogBtn
+          h4 警报日志
+        .btn.btn-empty.highlight.button-group__item.notAlarmLogBtn
+          h4 非警报日志
+      .table-holder
+        table.table#log-table.display(cellspacing='0', width='100%')

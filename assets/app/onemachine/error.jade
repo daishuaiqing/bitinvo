@@ -1,0 +1,17 @@
+- type = type || '500'
+case type
+  when 'offline'
+    .col-lg-4.col-lg-offset-3.clearfix.pull-middle-center
+      .panel.text-center.animated.flipInYRefl.sm-delay-1.h-300.w-500
+        .panel-body.pull-middle-center
+          h1.xl 没有连接主机
+  when '500'
+    .col-lg-4.col-lg-offset-3.clearfix.pull-middle-center
+      .panel.text-center.animated.flipInYRefl.sm-delay-1.h-300.w-500
+        .panel-body.pull-middle-center
+          h1.xl 服务器出错
+  when 'noOneMachineApp'
+    .col-lg-4.col-lg-offset-3.clearfix.pull-middle-center
+      .panel.text-center.animated.flipInYRefl.sm-delay-1.h-300.w-500
+        .panel-body.pull-middle-center
+          h1.xl 您的工单不是一体机工单，请到柜机授权

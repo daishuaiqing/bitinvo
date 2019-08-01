@@ -1,0 +1,46 @@
+.container-fluid.logmanagement-screen
+  .leftmenu-holder.animated.fadeInLeft
+    .leftmenu
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.appm-comp-clock.comp-clock.text-center #{i18n["cabinetManage"]} / #{i18n["logList"]}
+    .appm-status-bar.text-left
+    //this is comp section
+    .appm-action-bar.text-right
+    //this is comp section
+  .row.right-major
+    //.row.search-box.seperate-after this is search box
+    //.row.tag-list.seperate-after this is tag
+    .actions-bar.seperate-after.animated.fadeIn.col-sm-12
+      .pull-left.col-md-12
+        button.btn.btn-empty.highlight.h-margin-nicer#download-button(name="download")
+          h4
+            | #{i18n["logDownload"]}
+            .glyphicon.glyphicon-check.h-margin-nicer
+        button.btn.btn-empty.highlight.h-margin-nicer(name="refresh")
+          h4
+            | #{i18nButton['refreshBtn']}
+            .glyphicon.glyphicon-refresh.h-margin-nicer
+        .different-device-box.display-inline-block
+        .download-time-box.hide
+          button.btn.btn-empty.sure-download-btn.highlight.h-margin-nicer(name="sure")
+            h4 #{i18n["csvDownload"]}
+          button.btn.btn-empty.pdf-download-btn.highlight.h-margin-nicer(name="pdf")
+            h4 #{i18n["pdfDownload"]}
+      .filter-box.pull-left
+        .input_box
+          input.click_object.input-style.has-keypad.mrgR10#usernameFilter(name="nameFilter" type="text",placeholder="用户名过滤")
+        .input_box
+          .clear.hide #{i18n["clear"]}
+          input.click_object.input-style.mrgR10#typeFilter(name="typeFilter" type="text",placeholder="操作过滤")
+        .input_box
+          .clear.hide #{i18n["clear"]}
+          input.click_object.input-style.mrgR10#startDateFilter.date-input(name="startDateFilter" type="text",placeholder="开始时间")
+        .input_box
+          .clear.hide #{i18n["clear"]}
+          input.click_object.input-style.mrgR10#endDateFilter.date-input(name="endDateFilter" type="text",placeholder="结束时间")
+        .input_box
+          button.click_object.btn.btn-empty.highlight.h-margin-nicer.no-mrgl(name="filterButton")
+            h4 #{i18n["filter"]}
+              .glyphicon.glyphicon-filter.h-margin-nicer
+    .table-cont.col-sm-12
+    .edit-cont

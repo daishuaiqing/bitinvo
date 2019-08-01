@@ -1,0 +1,12 @@
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(data-state=state, class=stateClass)
+    .grid-list-cell-body
+      p.item-id #{index}
+      .col-md-12
+        h2.user-name.text-overflow 当前状态:#{stateText}
+        //small.last-maintant-time
+    .quick-btn-cont.pull-middle-center
+      span.enable-btn.quick-btn.h-margin-nicer(class=icon_01_isHide)
+        span.glyphicon.glyphicon-ok-circle(aria-hidden='true')
+      span.disable-btn.quick-btn.h-margin-nicer(class=icon_02_isHide)
+        span.glyphicon.glyphicon-ban-circle(aria-hidden='true')

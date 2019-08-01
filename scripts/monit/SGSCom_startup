@@ -1,0 +1,7 @@
+#! /bin/bash
+sudo rm /tmp/sgs_output_fifo
+sudo rm /tmp/sgs_input_fifo
+cd /home/SGSCom
+cgexec -g cpu:SGSCom sudo ./SGSCom  >> /var/log/SGSCom.log 2>&1 &
+sleep 1s
+echo $(pidof SGSCom) > /var/run/SGSCom.pid

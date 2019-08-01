@@ -1,0 +1,36 @@
+.container-fluid.cabinetmanagement-screen
+  .leftmenu-holder
+    .leftmenu
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.appm-comp-clock.comp-clock.text-center #{i18n["cabinetManage"]} / #{i18n["moduleList"]}
+    .appm-status-bar.text-left
+    //this is comp section
+    .appm-action-bar.text-right
+    //this is comp section
+  .row.right-major
+    //.row.search-box.seperate-after this is search box
+    //.row.tag-list.seperate-after this is tag
+    .list-cont
+      .actions-bar.seperate-after.animated.fadeIn.col-sm-12
+        .pull-left
+          button.btn.btn-empty.highlight.button-group__item(name="add")
+            h4
+              | #{i18nButton['newBtn']}
+              .glyphicon.glyphicon-check.h-margin-nicer
+          button.btn.btn-empty.highlight.button-group__item(name="refresh")
+            h4
+              | #{i18nButton['refreshBtn']}
+              .glyphicon.glyphicon-refresh.h-margin-nicer
+          button.btn.btn-empty.highlight.button-group__item(name="search")
+            h4
+              | #{i18nButton['searchBtn']}
+              .glyphicon.glyphicon-search.h-margin-nicer
+          button.btn.btn-empty.highlight.button-group__item(name="repair")
+            h4
+              | #{i18nButton['repairBtn']}
+              .glyphicon.glyphicon-wrench.h-margin-nicer
+          .different-device-box.display-inline-block
+        .pull-right.paging-btn-box
+      .actions-bar-two.hide.seperate-after.animated.fadeIn.col-sm-12
+    .edit-cont
+    .search-cont

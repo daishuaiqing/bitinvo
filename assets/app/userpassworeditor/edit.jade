@@ -1,0 +1,22 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .container.form-panelbody
+    form.col-md-12.margin-top-60
+      .col-md-6.col-md-offset-3.user-password-editor-box.animated-transition
+        .form
+          p.error-info.hide 发生了错误
+          input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+          .form-group.form-animate-text.col-md-12.required
+            input#password.form-text(name="password", type='password', required='',autocomplete="off")
+            span.bar
+            label 原密码
+          .form-group.form-animate-text.col-md-12.required
+            input#newpassword.form-text(name="newpassword", type='password', required='',autocomplete="off")
+            span.bar
+            label 新密码
+          .form-group.form-animate-text.col-md-12.required
+            input#confirmpassword.form-text(name="confirmpassword", type='password', required='',autocomplete="off")
+            span.bar
+            label 再次输入新密码
+  .right-major-footer.animated.fadeInUp
+    .taskbar

@@ -1,0 +1,22 @@
+- var typeLabel = ''
+case flatType
+  when 'bullet'
+    - typeLabel = "取子弹"
+  when 'gun'
+    - typeLabel = "用枪"
+  when 'both'
+    - typeLabel = "用枪和取子弹"
+  when 'emergency'
+    - typeLabel = "应急开启"
+  when 'storageGun'
+    - typeLabel = '存枪'
+  when 'storageBullet'
+    - typeLabel = '存子弹'
+  when 'maintain'
+    - typeLabel = '维护'
+.col-lg-4.col-lg-offset-3.clearfix.pull-middle-center
+  .panel.text-center.animated.flipInYRefl.sm-delay-1.h-300.w-500
+    .panel-body.pull-middle-center
+      h1.xl 申请人:#{applicant.alias ? applicant.alias : applicant.username}
+      h1.xl 工单类型:#{typeLabel}
+      h1.xl 工单内容:#{detail}

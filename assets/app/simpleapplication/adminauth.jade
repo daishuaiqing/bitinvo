@@ -1,0 +1,22 @@
+.col-md-offset-3.col-md-4.col-sm-12.clearfix.pull-middle-center
+  .panel.blank.text-center.animated.flipInYRefl.sm-delay-1
+      h2 管理员或值班人员授权
+      button.btn-cancel.action-btn#close
+        span.glyphicon.glyphicon-remove(aria-hidden="true")
+      .panel-body.form-signin-panelbody
+        form
+          .form-signin.pull-middle-center
+            .form-group.form-animate-text
+              input#username.form-text(type='text', required='',autocomplete="off", title="密码不能为空")
+              span.bar
+              label #{i18n['Police Code']}
+            .form-group.form-animate-text
+              input#password.form-text(type='password', required='',autocomplete="off", title="密码不能为空")
+              span.bar
+              label 密码
+            p.error-info.hide 登录失败,账号或者密码无效
+          .pull-bottom-center
+            .row
+              button.btn.btn-empty.action-btn#signin 登录
+            .row
+              button.lighter.btn.btn-transparent.action-btn#cancel 返回

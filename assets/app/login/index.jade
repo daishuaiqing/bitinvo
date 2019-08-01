@@ -1,0 +1,33 @@
+.container-fluid.login-screen.screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.comp-clock.text-center 使用密码登录
+    .status-bar.text-left
+    .action-bar.text-right
+  .col-md-12.pull-middle-center
+    .col-md-offset-2.col-md-4.col-sm-12
+      .panel.panel-bg.text-center.animated.slideInLeft.sm-delay-1
+        .pull-bottom-center.bottom-text
+          h1.xxl.col-md-12 使用密码登录
+          h1.col-md-12 请在右端输入账户和密码
+          button.btn.btn-empty.text-shadow.margin-top-10.hide#identity-scan-btn
+            h1| 扫描身份证
+    .col-md-4.col-sm-12
+      .panel.text-center.animated.slideInRight.sm-delay-2
+        //- button.btn-cancel.action-btn#close
+        //-  span.glyphicon.glyphicon-remove(aria-hidden="true")
+        .panel-header.form-signin-panelhead
+          h4.error-info.hide #{i18n['Invalide User/Password']}
+        .panel-body.form-signin-panelbody
+          form
+            .form.form-signin.pull-middle-center
+              .form-group.form-animate-text
+                input#username.form-text(type='text', required='',autocomplete="off", title="密码不能为空")
+                span.bar
+                label #{i18n['Police Code']}
+              .form-group.form-animate-text
+                input#password.form-text(type='password', required='',autocomplete="off", title="密码不能为空")
+                span.bar
+                label #{i18n['Password']}
+              .row
+                button.btn.btn-empty.big.action-btn.btn-fixed-len-300.highlight.seperate-before#signin
+                  h1 #{i18n['Log In']}

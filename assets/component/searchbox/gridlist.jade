@@ -1,0 +1,17 @@
+- var typeLabel = "枪"
+case type
+  when 'gun'
+    - typeLabel = "枪仓"
+  when 'bullet'
+    - typeLabel = "弹仓"
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(data-id=id)
+    .grid-list-cell-body
+      .col-md-12
+        p.item-id #{localId}
+        h2.main-title.text-overflow #{ name }
+        p.updated-time.text-overflow #{  (cabinet ? cabinet.name : ' ') + ' / ' + ( moduleId + '号') }  #{typeLabel}
+        p.updated-time.text-overflow 容量 #{capacity} / 存量 #{ load ? load : 0}
+    .quick-btn-cont.pull-middle-center
+      span.delete-btn.quick-btn.h-margin-nicer(data-id=id)
+        span.glyphicon.glyphicon-trash(aria-hidden='true')

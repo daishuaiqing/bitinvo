@@ -1,0 +1,116 @@
+{
+  "name": "flat-admin-bootstrap-templates",
+  "dependencies": {
+    "jquery": "latest",
+    "underscore": "~1.8.3",
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "bootstrap-switch": "latest",
+    "matchHeight": "latest",
+    "select2": "latest",
+    "animate.css": "~3.5.1",
+    "ace-builds": "~1.2.2",
+    "checkbox3": "git+ssh:https://github.com/likai24/checkbox3.git",
+    "typeahead.js": "~0.11.1",
+    "bootstrap-tagsinput": "~0.7.1",
+    "easy-jq-plugin": "~0.0.2",
+    "store-js": "~1.3.20",
+    "moment": "~2.11.0",
+    "jQuery.dotdotdot": "dotdotdot#~1.8.1",
+    "waypoints": "~4.0.0",
+    "filament-sticky": "fixed-sticky#~0.1.6",
+    "jquery.pin": "~1.0.3",
+    "wow": "~1.1.2",
+    "jquery-sticky": "~1.0.3",
+    "backbone": "~1.2.3",
+    "noty": "~2.3.7",
+    "perfect-scrollbar": "~0.6.8",
+    "parsleyjs": "~2.1.3",
+    "selectize": "~0.12.1",
+    "simple-line-icons": "*",
+    "page": "~1.6.4",
+    "sails.io.js": "~0.13.5",
+    "loglevel": "~1.4.0",
+    "PubSubJS": "pubsub-js#~1.5.3",
+    "snabbt.js": "~0.6.4",
+    "Waves": "waves#~0.7.5",
+    "Swiper": "swiper#~4.2.5",
+    "bluebird": "~3.3.4",
+    "validator-js": "~5.1.0",
+    "ion-sound-nasetech": "~3.0.8",
+    "urijs": "~1.17.1",
+    "eonasdan-bootstrap-datetimepicker": "~4.17.37",
+    "fullcalendar": "^3.1.0",
+    "keyboard": "~1.25.27",
+    "jquery.inputmask": "~3.3.1",
+    "datatables.net": "~1.10.12",
+    "iCheck": "~1.0.2",
+    "datatables.net-dt": "~1.10.12",
+    "video.js": "^5.12.3",
+    "paginationjs": "~2.0.7",
+    "jquery-form": "^3.46.0",
+    "jquery-circle-progress": "^1.2.0",
+    "hammerjs": "^2.0.8"
+  },
+  "private": true,
+  "overrides": {
+    "jquery": {
+      "main": [
+        "dist/jquery.min.js"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.min.js",
+        "dist/css/bootstrap.min.css",
+        "fonts/*"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css",
+        "fonts/*"
+      ]
+    },
+    "animate.css": {
+      "main": [
+        "animate.min.css"
+      ]
+    },
+    "bootstrap-switch": {
+      "main": [
+        "dist/css/bootstrap3/bootstrap-switch.min.css",
+        "dist/js/bootstrap-switch.min.js"
+      ]
+    },
+    "checkbox3": {
+      "main": [
+        "dist/checkbox3.min.css"
+      ]
+    },
+    "ace-builds": {
+      "main": [
+        "src/ace.js",
+        "src/mode-html.js",
+        "src/theme-github.js"
+      ]
+    },
+    "Chart.js": {
+      "main": [
+        "Chart.min.js"
+      ]
+    },
+    "select2": {
+      "main": [
+        "dist/js/select2.full.min.js",
+        "dist/css/select2.min.css"
+      ]
+    },
+    "iCheck": {
+      "main": "./icheck.min.js"
+    }
+  },
+  "devDependencies": {
+    "bootstrap-datepicker": "bootstrap-3-datepicker#~1.5.1"
+  }
+}

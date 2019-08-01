@@ -1,0 +1,76 @@
+/* start of usermanagement index.less*/
+.dutyshiftmanagement-screen{
+  .type-list{
+    margin: 0 -30px;
+  }
+  .calendar-cont {
+    width: 90%;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -45%;
+  }
+  .fc-unthemed {
+    td {
+      .fc-today {
+        background: rgba(24, 32, 60, 0.41);
+      }
+    }
+  }
+  .grid-list .grid-list-cell{
+    &.status-pending{
+      background-color : rgba(55,58,136,0.5);
+    }
+    &.status-approved{
+      background-color : rgba(55,58,136,0.5);
+    }
+    &.status-rejected{
+      background-color : rgba(138, 56, 56, 0.5);
+    }
+    &.status-processed{
+      .approve-btn,
+      .deny-btn{
+        display: none;
+      }
+    }
+    &.status-complete{
+      background: #999;
+      background-image: none;
+      .approve-btn,
+      .deny-btn{
+        display: none;
+      }
+      .user-name{
+        color:#eee;
+      }
+      &.grid-list-cell:hover {
+        border: 1px solid transparent;
+      }
+    }
+  }
+  /*fc*/
+  .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0.5em;
+  }
+  .fc-button {
+    background:#6c5396;
+    color:#fff;
+  }
+  .fc-state-active {
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.11) 0%, rgba(0, 0, 0, 0.25) 31%, rgba(0, 0, 0, 0.25) 100%);
+  }
+  .fc-state-disabled {
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.11) 0%, rgba(0, 0, 0, 0.25) 31%, rgba(0, 0, 0, 0.25) 100%);
+  }
+}
+@media (min-width:1440px) {
+  .dutyshiftmanagement-screen {
+    .calendar-cont {
+      width: 76%;
+      margin-left: -38%;
+      position: absolute;
+      left: 50%;
+    }
+  }
+}
+/* end of usermanagement index.less*/

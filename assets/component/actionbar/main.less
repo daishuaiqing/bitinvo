@@ -1,0 +1,76 @@
+.comp-action-bar{
+  position: relative;
+  min-width: 200px;
+  a.action-bar-noti{
+    vertical-align: middle;
+  }
+
+  .btn.btn-signup,
+  .btn.btn-quit{
+    transition: all 1s;
+    display: inline-block;
+    min-width: 200px;
+    font-size: 20px;
+    border: 0 solid transparent;
+    border-left: 1px solid #959595;
+    border-radius: 0;
+    margin: -5px 1px 0 0;
+    height: 60px;
+    text-shadow: 0 0 4px #000;
+    line-height: 45px;
+    position: relative;
+    background-color: transparent;
+
+    &:active{
+      background-image: linear-gradient(
+        -180deg,
+        rgba(255, 255, 255, 0.11) 0%,
+        rgba(0, 0, 0, 0.25) 31%,
+        rgba(0, 0, 0, 0.25) 100%
+      );
+    }
+
+    span.icon{
+      float : right;
+      font-size: 30px;
+      line-height: 40px;
+      margin: 0;
+    }
+
+    &:before{
+      position: absolute;
+      top: 0;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      border-left: 1px solid #343434;
+      content: "";
+    }
+  }
+}
+
+.comp-action-bar-msgbox{
+  display: none;
+  min-width: 200px;
+  min-height: 200px;
+  position: absolute;
+  right: 0;
+  .panel {
+    max-height: 200px;
+  }
+}
+
+.comp-action-bar .action{
+  display: inline-block;
+}
+
+.comp-action-bar .action img{
+  width: 20px;
+  margin-right: 25px;
+}
+
+.comp-action-bar .action span{
+  display: block;
+  margin: 5px;
+  text-shadow: 0 0 4px #000;
+}

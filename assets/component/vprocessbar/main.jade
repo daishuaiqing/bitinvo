@@ -1,0 +1,19 @@
+.comp-vprocessbar.pull-middle-center
+  ul.nav.nav-list
+    each item, i in items
+      if i == current
+        li.active.clearfix(id=item.id, seq=i)
+          a.item(href=item.target) #{i+1}
+          .item-text #{item.name}
+          .bg
+      else if i < current
+        li.clearfix(seq=i, id=item.id)
+          a.item(href=item.target)
+            img.animated.bounceIn(src=require('./img/Check.png'))
+          .item-text #{item.name}
+          .bg
+      else
+        li.clearfix(seq=i, id=item.id)
+          a.item(href=item.target) #{i+1}
+          .item-text #{item.name}
+          .bg

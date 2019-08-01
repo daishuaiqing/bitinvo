@@ -1,0 +1,25 @@
+.container-fluid.locklocation-screen
+  .leftmenu-holder
+    .leftmenu
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.appm-comp-clock.comp-clock.text-center #{i18n["cabinetManage"]} / #{i18n["lockList"]}
+    .appm-status-bar.text-left
+    //this is comp section
+    .appm-action-bar.text-right
+    //this is comp section
+  .row.right-major
+    //.row.search-box.seperate-after this is search box
+    //.row.tag-list.seperate-after this is tag
+    .list-cont
+      .actions-bar.seperate-after.animated.fadeIn.col-sm-12
+        .pull-left.form.col-md-4.no-margin.no-padding_right
+          .form-group.form-animate-text.required.no-margin
+            input.form-control.can-id-input.has-keypad.form-text.radius-top_right__0#canIdInput(type="text", required='',autocomplete="off", title="不能为空")
+            span.bar
+            label #{i18n["pleaseInputCanId"]}
+        .pull-left
+          button.btn.btn-empty.highlight.h-margin-nicer(name="locklocation")
+            h4
+              | #{i18n["getLockPosition"]}
+        .pull-right.paging-btn-box
+    .edit-cont

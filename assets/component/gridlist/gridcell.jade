@@ -1,0 +1,13 @@
+.col-lg-4.col-md-6.col-sm-12
+  .grid-list-cell
+    .grid-list-cell-body
+      .col-md-4
+        .avatar-cont
+          img.img-responsive.avatar(src=require('common/img/badge.png'))
+      .col-md-8
+        p.user-role 用户
+        h4.user-name.text-overflow #{alias}
+        // small.updated-time 上次登录时间
+    .quick-btn-cont.pull-middle-center
+      span.remove-btn.quick-btn.h-margin-nicer
+        span.glyphicon.glyphicon-trash(aria-hidden='true')

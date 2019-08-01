@@ -1,0 +1,7 @@
+- var typeLabel = ""
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class='sm-delay-' + index)
+  .grid-list-cell(data-id=id,data-type=type,data-canid=canId,data-cabinet=code)
+    .grid-list-cell-body
+      .col-md-12
+        h2.user-name #{ (name ? name: '-' ) + typeLabel}
+        small.updated-time IP地址 #{ host}

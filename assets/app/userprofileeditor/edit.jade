@@ -1,0 +1,42 @@
+.animated.fadeIn.sm-delay-1
+  .container.seperate-after
+    .navbar-header.breadcrumbs-cont
+  .container.form-panelbody.clearfix
+    form
+      .form.col-md-5.no-margin
+        p.error-info.hide 发生了错误
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.clearfix
+          label.form-group-label
+            span 登录系统用户名
+            span#username.username
+        .form-group.form-animate-text.col-md-12
+          input#alias.form-text(name="alias", type='text', required='',autocomplete="off")
+          span.bar
+          label 昵称
+        .form-group.form-animate-text.col-md-12
+          input#phone.form-text(name="phone", type="text", required="",autocomplete="off")
+          span.bar
+          label 手机号码
+        .form-group.form-animate-text.col-md-12
+          input#age.form-text(name="age", type='text', required='',autocomplete="off")
+          span.bar
+          label 年龄
+        .form-group.form-animate-text.col-md-12
+          input#email.form-text(name="email", type='text', required='',autocomplete="off")
+          span.bar
+          label 邮箱
+        .form-group.clearfix.col-md-12
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-2
+            input#male(name="sex", type='radio', value="M" required='', autocomplete="off", title="不能为空" checked)
+            label(for="male") 男
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-2
+            input#female(name="sex", type='radio', value="F" required='', autocomplete="off", title="不能为空")
+            label(for="female") 女
+      .form.col-md-7.no-margin
+        .form-group.form-animate-text.col-md-12
+          textarea.textarea.med#details.form-text(name='details',type='text', required='',autocomplete="off")
+          span.bar
+          label 个人简介
+  .right-major-footer.animated.fadeInUp
+    .taskbar

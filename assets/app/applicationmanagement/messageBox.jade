@@ -1,0 +1,17 @@
+.messageBoxModule#messageBoxModule
+  from
+    .from-group.margin-bottom30
+      input.form-text.form-control.input-lg.init-keypad.password(type="text", placeholder="动态密码")
+    .from-group
+      .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+        input#cancelled(name="status", type='radio', value="cancelled" required='',autocomplete="off", title="不能为空")
+        label(for="cancelled") 已取消
+      .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+        input#complete(name="status", type='radio', value="complete" required='',autocomplete="off", title="不能为空")
+        label(for="complete") 已完成
+      .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+        input#rejected(name="status", type='radio', value="rejected" required='',autocomplete="off", title="不能为空")
+        label(for="rejected") 已拒绝
+      .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+        input#expire(name="status", type='radio', value="expire" required='',autocomplete="off", title="不能为空")
+        label(for="expire") 已过期

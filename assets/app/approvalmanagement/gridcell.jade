@@ -1,0 +1,72 @@
+- var statusLabel = "新建"
+-var typeText = application.flatType
+-var appStatus = application.status
+case status
+  when 'new'
+    if appStatus === 'expire'
+      - statusLabel = i18n["expire"]
+    else if appStatus === 'rejected'
+      - statusLabel = i18n['rejected']
+    else if appStatus === 'approved'
+      - statusLabel = i18n['approved']
+    else if appStatus === 'processed'
+      - statusLabel = i18n['processed']
+    else if appStatus === 'complete'
+      - statusLabel = i18n['complete']
+    else
+      - statusLabel = i18n['new']
+  when 'pending'
+    - statusLabel = i18n["pending"]
+  when 'rejected'
+    - statusLabel = i18n["rejected"]
+  when 'approved'
+    - statusLabel = i18n["approved"]
+  when 'processed'
+    - statusLabel = i18n["processed"]
+  when 'complete'
+    - statusLabel = ((typeText === 'storageGun') || (typeText === 'storageBullet') || (typeText === 'emergency') || (typeText === 'maintain') ? i18n["complete"] : i18n["completeReturn"])
+  when 'partial'
+    - statusLabel = i18n["partial"]
+  when 'expire'
+    - statusLabel = i18n["expire"]
+  when 'timeout'
+    - statusLabel = i18n["timeout"]
+  when 'cancelled'
+    - statusLabel = i18n['cancelled']
+  default
+    - statusLabel = i18n["error"]
+- var typeLabel = "用枪"
+if application
+  case application.flatType
+    when 'bullet'
+      - typeLabel = i18n["getBullet"]
+    when 'gun'
+      - typeLabel = i18n["usingGun"]
+    when 'both'
+      - typeLabel = i18n["usingGunWithGetBullet"]
+    when 'emergency'
+      - typeLabel = i18n["emergency"]
+    when 'storageGun'
+      - typeLabel = i18n["storageGun"]
+    when 'storageBullet'
+      - typeLabel = i18n["storageBullet"]
+    when 'maintain'
+      - typeLabel = i18n["maintain"]
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  if application
+    .grid-list-cell(class="status-#{ status }", data-id= (application ? application.id : null), data-pid=id, data-applicant=applicant.username, data-status = status,data-appstatus=application.status,data-cabinetid=application.cabinet)
+      .grid-list-cell-body
+        p.item-id #{localId}
+        h2.user-name #{applicant && applicant.alias ? applicant.alias : applicant.username}
+        h4 #{i18n["application"]} #{typeLabel}
+        small #{i18n["status"]} #{statusLabel}
+      .quick-btn-cont.pull-middle-center
+        if canViewApp && status === 'new' && application && application.status === 'pending'
+          span.approve-btn.quick-btn.h-margin-nicer(data-id=id)
+            span.glyphicon.glyphicon-check(aria-hidden='true')
+          span.deny-btn.quick-btn.h-margin-nicer(data-id=id)
+            span.glyphicon.glyphicon-remove(aria-hidden='true')
+  else
+    .grid-list-cell(class="status-#{ status }", data-id= (application ? application.id : null), data-pid=id)
+      .grid-list-cell-body
+        h4 #{i18n["appRemove"]}

@@ -1,0 +1,86 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-6.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden')
+        .form-group.form-animate-text.required.col-md-6
+          input#name.form-text.has-keyboard-all.has-keypad(name="name", type='text', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["gunName"]}
+        .form-group.form-animate-text.required.col-md-6
+          input#code.form-text.has-keyboard-all.has-keypad(name="code", type='text', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["gunCode"]}
+        .form-group.form-animate-text.required.col-md-6
+          input#cert.form-text.has-keyboard-all.has-keypad(name="cert", type='text', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["gunCert"]}
+        .form-group.form-animate-text.required.col-md-6.select
+          input#typeText.form-text(name="typeText", type='text', required='',autocomplete="off", title="不能为空")
+          input#type.form-text(name="type", type='hidden', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["gunType"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#typeTextClearBtn(type="button")
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.form-animate-text.required.col-md-6.select.associatedGunBox
+          input.form-text#associatedGunText(name="associatedGunText", required="",autocomplete="off")
+          input.form-text#associatedGun(type="hidden",name="associatedGun")
+          span.bar
+          label 关联枪支
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#associatedGunTextClearBtn(type="button")
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.form-animate-text.required.col-md-6
+          input.form-text#associatedBulletModuleText(name="associatedBulletModuleText",type="text", required="",autocomplete="off")
+          input.form-text#associatedBulletModule(name="associatedBullet", type="hidden" requried="", autocomplete="off")
+          span.bar
+          label 关联子弹模块
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#associatedBulletModuleTextClearBtn(type="button")
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.form-animate-text.col-md-6.required
+          input#lastMaintainDate.form-text(name="lastMaintainDate", type='text', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["prevMaintainTime"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#lastMaintainDateClearBtn(type="button")
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.form-animate-text.col-md-6.required
+          input#maintainInterval.form-text.has-keyboard-number.has-keypad(name="maintainInterval", min="0" ,required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["maintainDay"]}
+      .form.col-md-6.no-margin.required
+        .form-group.clearfix.storage-status_radio__group
+          label.form-group-label.col-sm-12 #{i18n["statusOnCabinet"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#awaitin(name="storageStatus", type='radio', value="awaitin" required='',autocomplete="off", title="不能为空" checked)
+            label(for="awaitin") #{i18n["awaitin"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#in(name="storageStatus", type='radio', value="in" required='',autocomplete="off", title="不能为空")
+            label(for="in") #{i18n["in"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#out(name="storageStatus", type='radio', value="out" required='',autocomplete="off", title="不能为空")
+            label(for="out") #{i18n["out"]}
+        .form-group.clearfix
+          label.form-group-label.col-sm-12 #{i18n["gunStatus"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#lost(name="gunStatus", type='radio', value="lost" required='',autocomplete="off", title="不能为空" checked)
+            label(for="lost") #{i18n["lost"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#scrapped(name="gunStatus", type='radio', value="scrapped" required='',autocomplete="off", title="不能为空")
+            label(for="scrapped") #{i18n["scrapped"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#normal(name="gunStatus", type='radio', value="normal" required='',autocomplete="off", title="不能为空")
+            label(for="normal") #{i18n["normal"]}
+        .form-group.clearfix
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+            input#isDisabled(name="isDisabled", type='checkbox', required='',autocomplete="off", title="不能为空" checked="checked",value="N")
+            label(for="isDisabled") #{i18n["disabledUsing"]}
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+            input#isPublic(name="isPublic", type='checkbox', required='',autocomplete="off", title="不能为空" checked="checked",value="Y")
+            label(for="isPublic") #{i18n["isPublic"]}
+        .form-group.form-animate-text
+          textarea#notes.textarea.small.form-text(name='notes',type='text', required='',autocomplete="off")
+          span.bar
+          label(for="notes") #{i18n["remarks"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

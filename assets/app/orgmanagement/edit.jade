@@ -1,0 +1,41 @@
+.animated.fadeIn.sm-delay-1
+  .col-sm-12
+    .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-6.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off", readyonly)
+        .form-group.form-animate-text.required
+          input#name.form-text.has-keypad-all.has-keyboard(name="name", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["orgName"]}
+        .form-group.form-animate-text.select#bulletTypeGroup
+          input#superiorText.form-text(name="superiorText", type='text', required='',autocomplete="off", title="不能为空")
+          input#superior.form-text(name="superior", type='hidden', required='',autocomplete="off", title="不能为空", readyonly)
+          span.bar
+          label #{i18n["superiorOrg"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#superiorClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+      .form.col-md-6.no-margin
+        .form-group.form-animate-text.required
+          input#host.form-text.has-keypad.has-keyboard(name="host", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["masterIP"]}
+        .form-group.form-animate-text.required
+          input#port.form-text.has-keypad.has-keyboard(name="port", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["masterPort"]}
+      .form.col-md-12.no-margin
+        .form-group
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white
+            input#isLocal(name="isLocal", type='checkbox', required='',autocomplete="off", title="不能为空" checked="checked",value="N")
+            label(for="isLocal") #{i18n["isLocalOrg"]}
+      .form.col-md-12.no-margin
+        .form-group.form-animate-text.required
+          textarea#detail.textarea.small.form-text.has-keypad-all.has-keyboard(name='notes',type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["otherInfo"]}
+
+  .right-major-footer.animated.fadeInUp
+    .taskbar

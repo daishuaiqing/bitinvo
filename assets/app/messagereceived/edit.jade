@@ -1,0 +1,17 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-10.no-margin
+        input#id.form-text(name="id", type='hidden', required='', autocomplete="off", readonly="readonly")
+        .form-group.form-animate-text.select.clearfix
+          input#typeText.form-text(name="typeText", type='text', required='', autocomplete="off", readonly="readonly")
+          input#type.form-text.read-only(name="type", type='hidden', required='', autocomplete="off", readonly="readonly")
+          span.bar
+          label #{i18n["sendTime"]}
+        .form-group.form-animate-text
+          textarea#detail.textarea.small.form-text.read-only(name='notes', type='text', required='', autocomplete="off", readonly="readonly")
+          span.bar
+          label #{i18n["mainContent"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

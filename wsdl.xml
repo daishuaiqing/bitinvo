@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.qg.dhht.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="DataSynServiceService" targetNamespace="http://webservice.qg.dhht.com/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://webservice.qg.dhht.com/" version="1.0">
+            <xs:complexType name="accessResult">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+                    <xs:element name="success" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="uploadAlarmMessageResponse">
+        <wsdl:part name="return" type="tns:accessResult">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="uploadOpenMessage">
+        <wsdl:part name="msg" type="xsd:string">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="uploadAlarmMessage">
+        <wsdl:part name="name" type="xsd:string">
+    </wsdl:part>
+        <wsdl:part name="arg1" type="xsd:string">
+    </wsdl:part>
+        <wsdl:part name="arg2" type="xsd:dateTime">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="uploadOpenMessageResponse">
+        <wsdl:part name="return" type="tns:accessResult">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="DataSynService">
+        <wsdl:operation name="uploadOpenMessage">
+            <wsdl:input message="tns:uploadOpenMessage" name="uploadOpenMessage">
+    </wsdl:input>
+            <wsdl:output message="tns:uploadOpenMessageResponse" name="uploadOpenMessageResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadAlarmMessage">
+            <wsdl:input message="tns:uploadAlarmMessage" name="uploadAlarmMessage">
+    </wsdl:input>
+            <wsdl:output message="tns:uploadAlarmMessageResponse" name="uploadAlarmMessageResponse">
+    </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="DataSynServiceServiceSoapBinding" type="tns:DataSynService">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="uploadOpenMessage">
+            <soap:operation soapAction="" style="rpc"/>
+            <wsdl:input name="uploadOpenMessage">
+                <soap:body namespace="http://webservice.qg.dhht.com/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="uploadOpenMessageResponse">
+                <soap:body namespace="http://webservice.qg.dhht.com/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadAlarmMessage">
+            <soap:operation soapAction="" style="rpc"/>
+            <wsdl:input name="uploadAlarmMessage">
+                <soap:body namespace="http://webservice.qg.dhht.com/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="uploadAlarmMessageResponse">
+                <soap:body namespace="http://webservice.qg.dhht.com/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="DataSynServiceService">
+        <wsdl:port binding="tns:DataSynServiceServiceSoapBinding" name="DataSynServicePort">
+            <soap:address location="http://192.168.1.103:8081/dataSynService/wsdl"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

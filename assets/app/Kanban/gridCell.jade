@@ -1,0 +1,12 @@
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(id=orgId, data-orgid=orgId, class= online? 'online': 'offline',data-name=orgName, data-guncount=gunCount, data-bulletcount=bulletCount)
+    .grid-list-cell-body
+      .col-md-12
+        h2.main-title.text-overflow.orgNameH2 #{ orgName }
+        p.updated-time.text-overflow.gridlist_gun_count 枪支总数 #{ gunCount ? gunCount : 0 }
+        p.updated-time.text-overflow.gridlist_bullet_count 子弹总数 #{ bulletCount ? bulletCount : 0 }
+    .quick-btn-cont.pull-middle-center
+      span.lock-cabient(class=lockCabinet? '':'hide')
+        span.glyphicon.glyphicon-lock
+      span.delete-btn.quick-btn.h-margin-nicer(data-id=id)
+        span.glyphicon.glyphicon-trash(aria-hidden='true')

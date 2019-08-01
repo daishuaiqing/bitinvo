@@ -1,0 +1,130 @@
+/* start of userhome index.less*/
+.userhome-screen{
+  .userhome-com-clock-box{
+    padding:16px;
+    position: absolute;
+  }
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled{
+  opacity: 0;
+  pointer-events: auto;
+}
+.avatar-cont{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px 0px #FFFFFF;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  overflow: hidden;
+  margin-top: 20px;
+  ~.user-name{
+    margin-top: -20px;
+  }
+}
+
+#modifyProfile{
+  position: absolute;
+  bottom: 80px;
+  left: 20%;
+  margin: auto 0;
+}
+
+.avatar-cont>img{
+  padding : 0;
+  margin: 0;
+}
+
+.user-status{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  height: 450px;
+  margin: 0 20px;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left{
+  border-radius: 10px;
+  background-image: none;
+  /*
+   background-image: linear-gradient(to left, rgba(73, 73, 73, 0), rgba(196, 70, 70, 0.22));
+  */
+}
+.swiper-container-3d .swiper-slide-shadow-right {
+  /*
+  background-image: linear-gradient(to right, rgba(72, 70, 155, 0.24), rgba(0, 0, 0, 0));
+  */
+  border-radius: 10px;
+  background-image: none;
+}
+
+.big-btn-cont{
+  height: 50%;
+  vertical-align: middle;
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  .menu-icon{
+    margin: 0 auto;
+    height: 80px;
+  }
+  >button{
+    font-size: 1.4em;
+    background: none;
+    border: transparent;
+    outline: none;
+    display: block;
+    height:100%;
+    width: 100%;
+    box-sizing: inherit;
+    background: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.28) 100%);
+  }
+}
+
+.big-btn-cont:last-child:before{
+  z-index: 100;
+  height: 1px;
+  content: "";
+  width: 300px;
+  margin:auto;
+  background-image: url(../../common/img/line.png);
+  background-size: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  display: inline-block;
+}
+
+.panel{
+  overflow: hidden;
+  position: relative;
+  /**
+      Add this to fixed overflow hidden bug when it is on 3d tranform ,
+      see http://stackoverflow.com/questions/17300806/overflow-hidden-with-border-radius-and-translate3d
+  */
+  transform: translate3d(0,0,1px);
+}
+
+.wrap h2{
+  color : #fefefe;
+  text-shadow: 0 0 10px #444;
+}
+/* end of userhome index.less*/

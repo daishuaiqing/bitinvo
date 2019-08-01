@@ -1,0 +1,69 @@
+.animated.fadeIn.sm-delay-1
+  .col-sm-12
+    .navbar-header.breadcrumbs-cont  
+  .col-sm-12.form-panelbody
+    form
+      .form.row.no-margin
+        .form-group.clearfix.col-md-7
+          label.form-group-label.col-sm-4 #{i18nForm["resetModuleType"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#gunmodule(name="type", checked,type='radio', value="gun" ,required='',autocomplete="off", title="不能为空")
+            label(for="gunmodule") #{i18nForm["gunPosition"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#bulletmodule(name="type", type='radio', value="bullet", required='',autocomplete="off", title="不能为空")
+            label(for="bulletmodule") #{i18nForm["bulletPosition"]}
+      .form.col-md-5.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.form-animate-text
+          input#name.form-text(name="name", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18nForm["moduleName"]}
+        .form-group.form-animate-text.required
+          input#cabinetText.form-text(name="cabinetText", type='text', required='',autocomplete="off", title="不能为空")
+          input#cabinet.form-text(name="cabinet", type='hidden', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18nForm["selectedCabinet"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#cabinetClearBtn(type="button")
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.form-animate-text.hide.required
+          input#capacity.form-text.has-keyboard(name="capacity", type='number', required='',autocomplete="off", value=1, min="0")
+          span.bar
+          label #{i18n["capacity"]}
+        .form-group.form-animate-text.hide.required
+          input#load.form-text.has-keyboard(name="load", type='number', required='',autocomplete="off", value=1, min="0")
+          span.bar
+          label #{i18n["load"]}
+        .form-group.form-animate-text.select
+          input#moduleId.form-text.has-keyboard(name="moduleId", type='number', required='',autocomplete="off", min="0")
+          span.bar
+          label #{i18nForm["gunCodeWithBulletCode"]}
+      .form.col-md-6.no-margin
+        .form-group.form-animate-text.select
+          input#canId.form-text.has-keyboard(name="canId", type='number', required='',autocomplete="off", min="0")
+          span.bar
+          label #{i18nForm["canId"]}
+        .form-group.form-animate-text
+          input#gunTypeText.form-text(name="gunTypeText", type='text', required='',autocomplete="off", title="不能为空")
+          input#gunType.form-text(name="gunType", type='hidden', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label 存放枪支类型
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer.hide#gunTypeClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.form-animate-text
+          input#gunText.form-text(name="gunText", type='text', required='',autocomplete="off", title="不能为空")
+          input#gun.form-text(name="gun", type='hidden', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18nForm["storageGun"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#gunClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+      .form.col-md-6.no-margin
+        .form-group.form-animate-text.hide
+          input#bulletTypeText.form-text(name="bulletTypeText", type='text', required='',autocomplete="off", title="不能为空")
+          input#bulletType.form-text(name="bulletType", type='hidden', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18nForm["storageBulletType"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#bulletTypeClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

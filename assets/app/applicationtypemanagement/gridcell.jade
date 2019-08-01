@@ -1,0 +1,10 @@
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(data-id=id)
+    .grid-list-cell-body
+      p.item-id #{localId}
+      p.user-role.truncate #{i18n["form"].appTypeName}
+      h2.user-name.truncate #{name}
+      p.detail.truncate #{detail}
+    .quick-btn-cont.pull-middle-center
+      span.delete-btn.quick-btn.h-margin-nicer(data-id=id)
+        span.glyphicon.glyphicon-trash(aria-hidden='true')

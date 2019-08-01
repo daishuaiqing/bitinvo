@@ -1,0 +1,218 @@
+
+.keypad-ui-component-box#keypad-ui-component
+  .keypad-ui-main.animated
+    .pinyinComponent#PinYinComponent.noCloseKeypad.animated.fadeIn
+      button.btn.btn-empty.noCloseKeypad.hide(name="prev")
+        | ←
+      .pinyin_box.noCloseKeypad
+      .pinyin_result
+      button.btn.btn-empty.noCloseKeypad.hide(name="next")
+        | →
+    .keypad-ui-box
+      .keypad-ui-type-number.keypad-ui-area
+        span.key-btn.keypad-ui-area.btn_value(data-id="1")
+          |1
+        span.key-btn.keypad-ui-area.btn_value(data-id="2")
+          |2
+        span.key-btn.keypad-ui-area.btn_value(data-id="3")
+          |3
+        span.key-btn.keypad-ui-area.btn_value(data-id="4")
+          |4
+        span.key-btn.keypad-ui-area.btn_value(data-id="5")
+          |5
+        span.key-btn.keypad-ui-area.btn_value(data-id="6")
+          |6
+        span.key-btn.keypad-ui-area.btn_value(data-id="7")
+          |7
+        span.key-btn.keypad-ui-area.btn_value(data-id="8")
+          |8
+        span.key-btn.keypad-ui-area.btn_value(data-id="9")
+          |9
+        span.key-btn.keypad-ui-area.btn_value(data-id="0")
+          |0
+        span.key-btn.keypad-ui-area.point-btn.hidden.btn_value(data-id='.')
+          |.
+        span.key-btn.keypad-ui-area.btn_text(data-id="remove")
+          |删除
+        span.key-btn.keypad-ui-area.btn_text.type-number_case(data-id="change")
+          |切换到字母
+      .keypad-ui-type-letter.keypad-ui-area.pull-middle-center.hide
+        span.key-btn.keypad-ui-area.btn_value(data-id="a")
+          b.Lowercase a
+          b.Uppercase.hide A
+        span.key-btn.keypad-ui-area.btn_value(data-id="b")
+          b.Lowercase b
+          b.Uppercase.hide B
+        span.key-btn.keypad-ui-area.btn_value(data-id="c")
+          b.Lowercase c
+          b.Uppercase.hide C
+        span.key-btn.keypad-ui-area.btn_value(data-id="d")
+          b.Lowercase d
+          b.Uppercase.hide D
+        span.key-btn.keypad-ui-area.btn_value(data-id="e")
+          b.Lowercase e
+          b.Uppercase.hide E
+        span.key-btn.keypad-ui-area.btn_value(data-id="f")
+          b.Lowercase f
+          b.Uppercase.hide F
+        span.key-btn.keypad-ui-area.btn_value(data-id="g")
+          b.Lowercase g
+          b.Uppercase.hide G
+        span.key-btn.keypad-ui-area.btn_value(data-id="h")
+          b.Lowercase h
+          b.Uppercase.hide H
+        span.key-btn.keypad-ui-area.btn_value(data-id="i")
+          b.Lowercase i
+          b.Uppercase.hide I
+        span.key-btn.keypad-ui-area.btn_value(data-id="j")
+          b.Lowercase j
+          b.Uppercase.hide J
+        span.key-btn.keypad-ui-area.btn_value(data-id="k")
+          b.Lowercase k
+          b.Uppercase.hide K
+        span.key-btn.keypad-ui-area.btn_value(data-id="l")
+          b.Lowercase l
+          b.Uppercase.hide L
+        span.key-btn.keypad-ui-area.btn_value(data-id="m")
+          b.Lowercase m
+          b.Uppercase.hide M
+        span.key-btn.keypad-ui-area.btn_value(data-id="n")
+          b.Lowercase n
+          b.Uppercase.hide N
+        span.key-btn.keypad-ui-area.btn_value(data-id="o")
+          b.Lowercase o
+          b.Uppercase.hide O
+        span.key-btn.keypad-ui-area.btn_value(data-id="p")
+          b.Lowercase p
+          b.Uppercase.hide P
+        span.key-btn.keypad-ui-area.btn_value(data-id="q")
+          b.Lowercase q
+          b.Uppercase.hide Q
+        span.key-btn.keypad-ui-area.btn_value(data-id="r")
+          b.Lowercase r
+          b.Uppercase.hide R
+        span.key-btn.keypad-ui-area.btn_value(data-id="s")
+          b.Lowercase s
+          b.Uppercase.hide S
+        span.key-btn.keypad-ui-area.btn_value(data-id="t")
+          b.Lowercase t
+          b.Uppercase.hide T
+        span.key-btn.keypad-ui-area.btn_value(data-id="u")
+          b.Lowercase u
+          b.Uppercase.hide U
+        span.key-btn.keypad-ui-area.btn_value(data-id="v")
+          b.Lowercase v
+          b.Uppercase.hide V
+        span.key-btn.keypad-ui-area.btn_value(data-id="w")
+          b.Lowercase w
+          b.Uppercase.hide W
+        span.key-btn.keypad-ui-area.btn_value(data-id="x")
+          b.Lowercase x
+          b.Uppercase.hide X
+        span.key-btn.keypad-ui-area.btn_value(data-id="y")
+          b.Lowercase y
+          b.Uppercase.hide Y
+        span.key-btn.keypad-ui-area.btn_value(data-id="z")
+          b.Lowercase z
+          b.Uppercase.hide Z
+        span.key-btn.keypad-ui-area.btn_text(data-id="case")
+            |大写
+        span.key-btn.keypad-ui-area.btn_text(data-id="remove")
+            |删除
+        span.key-btn.keypad-ui-area.btn_text.change-btn(data-id="change")
+            |切换到数字
+      .keypad-ui-type-all
+        div.keypad-ui-div
+          span.key-btn.keypad-ui-area.btn_text(data-id="case", id="case-btn")
+            |大写
+          span.key-btn.keypad-ui-area.btn_value(data-id="q")
+            b.Lowercase q
+            b.Uppercase.hide Q
+          span.key-btn.keypad-ui-area.btn_value(data-id="w")
+            b.Lowercase w
+            b.Uppercase.hide W
+          span.key-btn.keypad-ui-area.btn_value(data-id="e")
+            b.Lowercase e
+            b.Uppercase.hide E
+          span.key-btn.keypad-ui-area.btn_value(data-id="r")
+            b.Lowercase r
+            b.Uppercase.hide R
+          span.key-btn.keypad-ui-area.btn_value(data-id="t")
+            b.Lowercase t
+            b.Uppercase.hide T
+          span.key-btn.keypad-ui-area.btn_value(data-id="y")
+            b.Lowercase y
+            b.Uppercase.hide Y
+          span.key-btn.keypad-ui-area.btn_value(data-id="u")
+            b.Lowercase u
+            b.Uppercase.hide U
+          span.key-btn.keypad-ui-area.btn_value(data-id="i")
+            b.Lowercase i
+            b.Uppercase.hide I
+          span.key-btn.keypad-ui-area.btn_value(data-id="o")
+            b.Lowercase o
+            b.Uppercase.hide O
+          span.key-btn.keypad-ui-area.btn_value(data-id="p")
+            b.Lowercase p
+            b.Uppercase.hide P
+        div.keypad-ui-div
+          span.key-btn.keypad-ui-area.btn_value(data-id="a")
+            b.Lowercase a
+            b.Uppercase.hide A
+          span.key-btn.keypad-ui-area.btn_value(data-id="s")
+            b.Lowercase s
+            b.Uppercase.hide S
+          span.key-btn.keypad-ui-area.btn_value(data-id="d")
+            b.Lowercase d
+            b.Uppercase.hide D
+          span.key-btn.keypad-ui-area.btn_value(data-id="f")
+            b.Lowercase f
+            b.Uppercase.hide F
+          span.key-btn.keypad-ui-area.btn_value(data-id="g")
+            b.Lowercase g
+            b.Uppercase.hide G
+          span.key-btn.keypad-ui-area.btn_value(data-id="h")
+            b.Lowercase h
+            b.Uppercase.hide H
+          span.key-btn.keypad-ui-area.btn_value(data-id="j")
+            b.Lowercase j
+            b.Uppercase.hide J
+          span.key-btn.keypad-ui-area.btn_value(data-id="k")
+            b.Lowercase k
+            b.Uppercase.hide K
+          span.key-btn.keypad-ui-area.btn_value(data-id="l")
+            b.Lowercase l
+            b.Uppercase.hide L
+          span.key-btn.keypad-ui-area.hidden.colon-btn.btn_value(data-id=":")
+            |:
+        div.keypad-ui-div
+          span.key-btn.keypad-ui-area.btn_value(data-id="z")
+            b.Lowercase z
+            b.Uppercase.hide Z
+          span.key-btn.keypad-ui-area.btn_value(data-id="x")
+            b.Lowercase x
+            b.Uppercase.hide X
+          span.key-btn.keypad-ui-area.btn_value(data-id="c")
+            b.Lowercase c
+            b.Uppercase.hide C
+          span.key-btn.keypad-ui-area.btn_value(data-id="v")
+            b.Lowercase v
+            b.Uppercase.hide V
+          span.key-btn.keypad-ui-area.btn_value(data-id="b")
+            b.Lowercase b
+            b.Uppercase.hide B
+          span.key-btn.keypad-ui-area.btn_value(data-id="n")
+            b.Lowercase n
+            b.Uppercase.hide N
+          span.key-btn.keypad-ui-area.btn_value(data-id="m")
+            b.Lowercase m
+            b.Uppercase.hide M
+          span.key-btn.keypad-ui-area.hidden.oblique-btn.btn_value(data-id="/")
+            |/
+        div.keypad-ui-div
+          span.key-btn.keypad-ui-area.hidden.colon-btn.btn_value(data-id='?')
+            |?
+          span.key-btn.keypad-ui-area.btn_text(data-id='sure')
+            |确定输入
+          span.key-btn.keypad-ui-area.btn_text(data-id='close')
+            |关闭

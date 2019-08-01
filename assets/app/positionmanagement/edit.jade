@@ -1,0 +1,20 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-5.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.form-animate-text.required
+          input#name.form-text(name="name", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["positionName"]}
+        .form-group.form-animate-text.select
+          input#superiorText.form-text(name="superiorText", type='text', required='',autocomplete="off", title="不能为空")
+          input#superior.form-text(name="superior", type='hidden', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["superiorPosition"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#superiorClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

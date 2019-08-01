@@ -1,0 +1,26 @@
+- var typeLabel = ''
+case flatType
+  when 'bullet'
+    - typeLabel = "取子弹"
+  when 'gun'
+    - typeLabel = "用枪"
+  when 'both'
+    - typeLabel = "用枪和取子弹"
+  when 'emergency'
+    - typeLabel = "应急开启"
+  when 'storageGun'
+    - typeLabel = '存枪'
+  when 'storageBullet'
+    - typeLabel = '存子弹'
+  when 'maintain'
+    - typeLabel = '维护'
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(class="status-#{ status === 'pending' ? 'pending': 'reject' }", data-id=id, data-index=index)
+    .grid-list-cell-body
+      p.item-id #{localId}
+      .clearfix
+        h4.user-name.text-overflow_ellipsis #{ applicant ? applicant.alias ? applicant.alias : applicant.username : '没有申请人' }
+        .small 申请：#{typeLabel}
+        .small.text-overflow_ellipsis 机构：#{ org ? org.name : '没有机构信息' }
+        .small.updated-time 开始时间：#{ moment(start).locale("zh-cn").format('YYYY/MM/DD HH:mm:ss')}
+        .small.updated-time 结束时间：#{ moment(end).locale("zh-cn").format('YYYY/MM/DD HH:mm:ss') }

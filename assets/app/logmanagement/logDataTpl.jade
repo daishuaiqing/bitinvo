@@ -1,0 +1,35 @@
+- var type = ""
+- var typeLabel=''
+case data.approverOption
+  when 'none'
+    - type = "不需要审核"
+  when 'single'
+    - type = "直属领导审核"
+  when 'arbitary'
+    - type = '多人审核'
+
+
+case data.type
+  when 'bullet'
+    - typeLabel = i18n["getBullet"]
+  when 'gun'
+    - typeLabel = i18n["usingGun"]
+  when 'both'
+    - typeLabel = i18n["usingGunWithGetBullet"]
+  when 'emergency'
+    - typeLabel = i18n["emergency"]
+  when 'storageGun'
+    - typeLabel = i18n["storageGun"]
+  when 'storageBullet'
+    - typeLabel = i18n["storageBullet"]
+  when 'maintain'
+    - typeLabel = i18n["maintain"]
+
+if (data.name)
+  h4 工单名：　#{data.name}
+  h4 工单类型：#{typeLabel}
+  h4 工单ID: #{data.id}
+  h4 工单审核方式: #{type}
+  h4 远程工单:　#{data.remote ? '是': '否'}
+
+p #{log}

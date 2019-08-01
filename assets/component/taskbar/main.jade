@@ -1,0 +1,6 @@
+.comp-taskbar
+  ul.nav.navbar.navbar-default
+    each item, i in items
+      li(seq=i, class=item.className || "", id=item.id || "")
+        a.btn.btn-empty.med(href=item.target, callback=item.callbackId)
+          h2 #{item.name}

@@ -1,0 +1,8 @@
+- var typeLabel = ""
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class='sm-delay-' + index)
+  .grid-list-cell(data-id=id,data-type=type,data-canid=canId,data-cabinet=code,data-ismaster=isMaster?"true":"false")
+    .grid-list-cell-body
+      img.grid_icon(src=require('./img/safebox.png'))
+      .col-md-12
+        h2.user-name #{ (name ? name: '-' ) + typeLabel}
+        small.updated-time IP地址 #{ host}

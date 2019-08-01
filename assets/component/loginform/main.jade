@@ -1,0 +1,34 @@
+#password-panel.panel.text-center.animated.flipInYRefl.sm-delay-1
+    h2  #{i18n['Log In']}
+    button.btn-cancel.action-btn#close
+      span.glyphicon.glyphicon-remove(aria-hidden="true")
+    .panel-body.form-panelbody
+      form
+        .form.no-margin
+          .form-group.form-animate-text.required
+            input#username.form-text(type='text', required='',autocomplete="off", title="密码不能为空")
+            span.bar
+            label #{i18n['Police Code']}
+          .form-group.form-animate-text.required
+            input#password.form-text(type='password', required='',autocomplete="off", title="密码不能为空")
+            span.bar
+            label #{i18n['Password']}
+          p.error-info.hide #{'Invalide User/Password'}
+        .pull-bottom-center
+          .row
+            button.btn.btn-empty.big.highlight.seperate-before.action-btn#signin
+              h2 #{btnLabel2}
+#fingerprint-panel.panel.text-center.animated.flipInYRefl.sm-delay-1
+  .sanning-fingger-cont
+    canvas#canvas
+    h1.xxl.scan-fingerprint-label 请验证指纹
+    .row.v-margin-nicer
+      small 或者
+    .row.v-margin-nicer
+      button.btn.btn-empty.big.highlight.seperate-before#password-login
+        h3 #{btnLabel1}
+      .countdown-box.margin-top-20.hide
+        | 60
+      p
+       button.btn.btn-empty.big.highlight.seperate-before.hidden.margin-top-6#restart-prints
+        h3 重新指纹扫描

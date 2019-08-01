@@ -1,0 +1,134 @@
+.locklocation-screen{
+  .no-margin {
+    margin:0 !important;
+  }
+  input.can-id-input::-webkit-input-placeholder {
+    color: #fff;
+    font-size:26px;
+    position: relative;
+    top:5px;
+  }
+  .actions-bar {
+    padding: 30px 0;
+  }
+  .no-padding_right {
+    padding-right: 0 !important;
+  }
+  .radius-top_right__0 {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .can-id-input{
+    height: 50px;
+    font-size:20px;
+    line-height: 50px;
+  }
+  .margin-left-10{
+    margin-left: 10px;
+  }
+  .margin-left-14{
+    margin-left: 14px;
+  }
+  .grid-list{
+    .error-report,
+    .no-data{
+      margin:50px 0;
+      padding : 50px;
+    }
+    .inner-list{
+      padding-left: 0;
+      padding-right: 0;
+      .grid-list-cell-holder{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .grid-list-cell{
+      cursor: pointer;
+      overflow: hidden;
+      background: #6C54A8;
+      // background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+      border-radius: 10px;
+      height: 150px;
+      margin: 10px ;
+      // box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+      border-radius: 10px;
+      display: block;
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.20);
+      &:hover{
+        border: 1px solid #FFAA4B;
+      }
+
+      .grid-list-cell-body {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 10px;
+      }
+      .cell-id{
+        color: #F5A623;
+      }
+      .cell-id.disabled{
+        color: #999999;
+      }
+
+      .item-id{
+        margin-bottom: 0;
+        position: absolute;
+        font-size: 94px;
+        opacity: 0.4;
+        bottom: -45px;
+        left: 5px;
+      }
+      .user-name,
+      .main-title{
+        color:#F5A623;
+      }
+      .user-name{
+        width:90%;
+      }
+      .user-role{
+        margin-bottom: 0;
+      }
+
+      .main-title-suffix{
+        padding-top: 12px;
+        margin-left: 45px;
+      }
+
+      .avatar-cont{
+        background: #FFFFFF;
+        width: 50px;
+        height: 50px;
+        margin: 0 -25px;
+        border-radius: 50%;
+        border: 10px solid #fff;
+        overflow: hidden;
+        &>img{
+          padding : 0;
+          margin: 0;
+          width: 100%;
+        }
+      }
+
+      .quick-btn-cont{
+        position: absolute;
+        right: 0px;
+        left: auto;
+        padding: 10px;
+        color: #fff;
+        font-size: 20px;
+        .quick-btn{
+          &:hover{
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    .disabled{
+      background: rgba(168, 161, 161, 0.31) none repeat scroll 0% 0%;
+    }
+  }
+
+}

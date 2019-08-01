@@ -1,0 +1,12 @@
+---
+- hosts: hosts
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+  - name: transfer files
+    copy: src=../bitinvo_docker dest=/home/ubuntu owner=ubuntu group=ubuntu
+  - name: excute script
+    command: /bin/bash ./extract.sh
+    args:
+      chdir: /home/ubuntu/bitinvo_docker

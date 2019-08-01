@@ -1,0 +1,6 @@
+.comp-status-bar
+  each status, i in statuses
+    .status
+      img.status-icon(src="#{status.src}", alt='#{status.text}')
+      if showText
+        span #{status.text}

@@ -1,0 +1,9 @@
+.col-lg-4.col-lg-offset-3.clearfix.pull-middle-center
+  .panel.text-center.animated.flipInYRefl.sm-delay-1.h-300.w-500
+    .panel-body.pull-middle-center
+      h1.xl #{i18n.cabinetName}：#{info.cabinetName}
+      h1.xl #{i18n.appType}:#{info.type}
+      h1.xl(class=isHide) #{i18n.appDetail}:#{info.detail}
+      if (info.num)
+        h1.xl 数量: #{info.num}
+    

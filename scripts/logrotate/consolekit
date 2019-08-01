@@ -1,0 +1,6 @@
+/var/log/ConsoleKit/history {
+       monthly
+       rotate 0
+       notifempty
+       missingok
+}

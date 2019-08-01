@@ -1,0 +1,13 @@
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(data-id=id)
+    .grid-list-cell-body
+      p.item-id #{localId}
+      .clearfix
+        h1.user-name.text-overflow #{user ? (user.alias ? user.alias : user.username ): '无名'}
+      .updated-time
+        h4 开始 #{ moment(start).locale("zh-cn").format('YY/MM/DD HH:mm')}
+      .updated-time
+        h4 结束 #{moment(end).locale("zh-cn").format('YY/MM/DD HH:mm')}
+    .quick-btn-cont.pull-middle-center
+      span.delete-btn.quick-btn.h-margin-nicer(data-id=id)
+        span.glyphicon.glyphicon-trash(aria-hidden='true')

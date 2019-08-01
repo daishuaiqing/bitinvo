@@ -1,0 +1,24 @@
+.container-fluid.userfingerprint-screen.screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.comp-clock.comp-clock.text-center 采集用户指纹
+    .status-bar.text-left
+    .action-bar.text-right
+      span.fingerprintManagement#fingerprintManagement 指纹管理
+    //this is comp section
+  .col-md-4.col-sm-12.animated.fingerprint_list-main#fingerprintList
+    .div-li.clearfix
+      span.fingerprint_list_info_span
+        |指纹1
+      span.remove-fingerprint-button.btn.btn-empty
+        |删除
+  .col-md-12.pull-middle-center
+    .col-md-offset-4.col-md-4.col-sm-12.fingerprint_info
+      .panel.text-center.animated.flipInY.sm-delay-1
+        .sanning-fingger-cont
+          span
+            canvas#canvas.mrgT20
+          h2.xl#fingerprintTips 请将手指放在指纹扫描仪上进行第一次采集
+          p.mrgT20.tips 请保持手指干净，提高采集成功率。
+          h2.xxl.countdown-box.text-center
+          button.btn.btn-empty.big.btn-fixed-len-300.highligh.hide#fingerprint-btn
+            h1 重新开始扫描

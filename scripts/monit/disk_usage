@@ -1,0 +1,5 @@
+check device root with path /
+  if space usage > 80% then
+    exec "/usr/bin/curl 'localhost/monit/setdiskstate?state=danger'"
+  if space usage < 80% then
+    exec "/usr/bin/curl 'localhost/monit/setdiskstate?state=normal'"

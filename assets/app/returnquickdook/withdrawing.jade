@@ -1,0 +1,12 @@
+- var typeLabel = "枪仓"
+case module.type
+  when 'gun'
+    - typeLabel = "枪仓"
+  when 'bullet'
+    - typeLabel = "弹仓"
+.col-lg-4.col-lg-offset-3.clearfix.pull-middle-center
+  .panel.text-center.animated.flipInYRefl.sm-delay-1.h-300.w-500
+    .panel-body.pull-middle-center
+      h1.xl 请#{title}
+      h1.xl #{module.name}#{typeLabel}已经打开
+      h1.xl 请#{title}后关门

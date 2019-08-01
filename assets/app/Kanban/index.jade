@@ -1,0 +1,48 @@
+.container-fluid.Kanban-screen.screen
+  .detaile-cont
+  .row.Kanban-main
+    .col-md-3.leftModule
+      .computed_container.ful
+        .count.allGunCount 0
+        p 枪支总数
+      .computed_container
+        .count.allBulletCount 0
+        p 子弹总数
+      //- .computed_container
+      //-   .count.allOrgCount 0
+      //-   p 库房总数
+    .loginModule
+      .downloadModule
+        a.hide.btn.btn-empty.big.action-btn.btn-fixed-len-300.highlight.seperate-before.downloadIEBtn(target="_black", download="ie10") IE10浏览器下载
+        a.hide.btn.btn-empty.big.action-btn.btn-fixed-len-300.highlight.seperate-before.downloadVideoBtn(target="_black") 视频下载
+      form.login_panle
+        .form.form-signin
+          h1.mrgB30.loginTips 进入看板身份验证
+          .form-group.form-animate-text
+            input#username.form-text.has-keypad(type='text', required='',autocomplete="on", title="密码不能为空")
+            span.bar
+            label 账号
+          .form-group.form-animate-text
+            input#password.form-text.has-keypad(type='password', required='',autocomplete="off", title="密码不能为空")
+            span.bar
+            label 密码
+          .text-center
+            button(type="button").btn.btn-empty.big.action-btn.btn-fixed-len-300.highlight.seperate-before.login-btn
+              h4 登录    
+    .col-md-9.rightModule
+      .nav
+        div
+          button.btn.btn-empty.highlight.button-group__item.clickBtn(name="logout")
+            h4
+              | 退出
+              .glyphicon.glyphicon-log-out.h-margin-nicer        
+          button.btn.btn-empty.highlight.button-group__item.clickBtn(name="refresh")
+            h4
+              |刷新列表
+              .glyphicon.glyphicon-refresh.h-margin-nicer
+        .processTips.hide#processTips.clickBtn(name="processList")
+          i.glyphicon.glyphicon-volume-up.h-margin-nicer
+          h4.status-text
+          span <<<< 点击查看
+        .pageContainer
+      .list-cont

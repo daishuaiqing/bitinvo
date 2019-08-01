@@ -1,0 +1,7 @@
+/var/log/upstart/*.log {
+        daily
+        missingok
+        rotate 0
+        notifempty
+	nocreate
+}

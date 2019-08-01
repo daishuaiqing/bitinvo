@@ -1,0 +1,9 @@
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + data.index)
+  .grid-list-cell(data-id=data.id)
+    .grid-list-cell-body
+      p.item-id #{data.localId}
+      h1.user-name.truncate #{data.name}
+      p.detail.truncate.padding-right40 上级职位 #{data.superior ? data.superior.name : '无' }
+    .quick-btn-cont.pull-middle-center
+      span.delete-btn.quick-btn.h-margin-nicer(data-id=data.id)
+        span.glyphicon.glyphicon-trash(aria-hidden='true')

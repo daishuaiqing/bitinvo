@@ -1,0 +1,25 @@
+- var typeLabel = ''
+case flatType
+  when 'bullet'
+    - typeLabel = "取子弹"
+  when 'gun'
+    - typeLabel = "用枪"
+  when 'both'
+    - typeLabel = "用枪和取子弹"
+  when 'emergency'
+    - typeLabel = "应急开启"
+  when 'storageGun'
+    - typeLabel = '存枪'
+  when 'storageBullet'
+    - typeLabel = '存子弹'
+  when 'maintain'
+    - typeLabel = '维护'
+.col-lg-4.col-lg-offset-3.clearfix.pull-middle-center
+  .panel.text-center.animated.flipInYRefl.sm-delay-1.h-300.w-500
+    .panel-body.pull-middle-center
+      h4.xl 申 请 人: #{ applicant.alias ? applicant.alias : applicant.username }
+      h4.xl 机构名称: #{ org ? org.name : '没有机构信息' }
+      h4.xl 申请类型: #{ typeLabel }
+      h4.xl 申请详情: #{ detail }
+      h4.xl 开始时间: #{ moment(start).locale("zh-cn").format('LLL')}
+      h4.xl 结束时间: #{ moment(end).locale("zh-cn").format('LLL')}

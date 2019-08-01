@@ -1,0 +1,193 @@
+/* start of form.less*/
+.form-panelbody{
+  padding-bottom: 50px;
+  padding-top: 20px;
+  padding: 15px;
+  transition: all 0.2s;
+  position: relative;
+  top: 0;
+  min-height: 350px;
+}
+
+.form {
+  margin: 0 20px;
+  top: 40%;
+  .form-group{
+    &.form-animate-text {
+      position: relative;
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-bottom: 45px;
+      .bar{
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+      &.has-error{
+        .form-text{
+          background: #950F1E;
+        }
+      }
+      .form-text {
+        min-height: 50px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #ddd ;
+        border-radius: 5px ;
+        padding: 10px;
+        font-size: 16px;
+        box-shadow: none ;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        background: #5E4A95;
+        color : #fff;
+        outline: none;
+        &:read-only{
+          background: none;
+          border-radius: 0;
+        }
+        &:focus{
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.37) inset;
+        }
+        &:focus ~ label,
+        &:valid ~ label,
+        .read-only ~ label{
+          top: -26px;
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+      label {
+        color: #fff;
+        font-size: 26px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.2s ease all;
+      }
+      .read-only ~ label{
+        top: -26px;
+        font-size: 16px;
+        color:#fff;
+      }
+    }
+    margin-bottom: 40px ;
+
+    .form-group-label{
+      padding: 0 5px;
+      font-size: 16px;
+      line-height: 44px;
+      font-weight: normal;
+    }
+    &.required:after{
+      right: 10px;
+      top: 5px;
+      color: #FF6969;
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-font-smoothing: antialiased;
+      line-height: 40px;
+      content: "\5FC5\586B";
+      font-size: 20px;
+      pointer-events: none;
+    }
+    button.clear-btn{
+      position: absolute;
+      right: 1px;
+      height: 48px;
+      line-height: 22px;
+      top: 0;
+      background: #A30000;
+      z-index: 1;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: 1px solid transparent;
+      /* box-shadow: 0 2px 5px#333; */
+    }
+    &.select {
+      :before&{
+        right: 5px;
+        top: 0;
+        color: #FFF;
+        position: absolute;
+        display: inline-block;
+        font-family: 'FontAwesome';
+        font-style: normal;
+        font-weight: normal;
+        vertical-align: middle;
+        -webkit-font-smoothing: antialiased;
+        line-height: 40px;
+        /* display: inline; */
+        content: "\f142";
+      }
+    }
+    label {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}
+
+.task_detaile_box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  .in_task {
+    border-right: 1px solid #9371c8;
+  }
+  .out_task, .in_task {
+    .title {
+      margin-bottom:10px;
+      text-align: center;
+    }
+    .content {
+      text-align: center;
+      button {
+        background: rgb(94, 74, 149);
+        margin-right: 4px;
+        transition: all .3s;
+      }
+      button.action {
+        background: #aa5d72;
+      }
+    }
+  }
+  .flex_1 {
+    flex-basis: 50%;
+  }
+}
+
+.form-signup label {
+  color: #fff ;
+}
+
+.error-info{
+  color : #FF9D10;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+}
+
+/*
+set input default placeholder color
+*/
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff;
+}
+
+/* end of form.less*/

@@ -1,0 +1,24 @@
+- var typeLabel = ""
+case cmType
+  when 'gun'
+    - typeLabel = i18n["gunWarehouse"]
+  when 'bullet'
+    - typeLabel = i18n["bulletWarehouse"]
+- var gunlockLabel = i18n["normal"]
+case gunLock
+  when 'normal'
+    - gunlockLabel = i18n["gunPositionNormal"]
+  when 'broken'
+    - gunlockLabel = i18n["gunPositionAbnormal"]
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(data-id=cmId)
+    .grid-list-cell-body
+      .col-md-12
+        h2.main-title.text-overflow.fixed-height_33 #{ cmName }
+        p.updated-time.text-overflow #{  (cName ? cName: ' ') + ' / ' + ( cmModuleId + '号') }  #{typeLabel}
+        p.updated-time.text-overflow(class=(!cmLoad ? 'red_color': '')) #{i18n["capacity"]} #{cmCapacity} / #{i18n["stock"]} #{ cmLoad ? cmLoad : 0} / #{gunlockLabel}
+        - if (type === 'gun')
+          p.updated-time.text-overflow #{i18n["gunCode"]} #{ gCode }
+    .quick-btn-cont.pull-middle-center
+        span.delete-btn.quick-btn.h-margin-nicer(data-id=cmId)
+          span.glyphicon.glyphicon-trash(aria-hidden='true')

@@ -1,0 +1,22 @@
+{
+  "name": "easy-clock",
+  "authors": [
+    "beherca@gmail.com"
+  ],
+  "description": "Create a digital clock for u",
+  "main": "easy-clock.js",
+  "moduleType": [],
+  "keywords": [
+    "clock",
+    "easy-jq-plugin"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

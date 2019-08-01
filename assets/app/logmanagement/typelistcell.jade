@@ -1,0 +1,8 @@
+li.list-cell-body.clearfix(data-id=id, data-name=name,data-code=code, data-local=String(isLocal),data-master=String(isMaster), data-type=type)
+  .col-md-2
+    h4 #{localId}
+  .col-md-10
+    h4.cell-id.padding-right40.text-overflow #{name} #{isMaster && "/Master柜机" || ""} #{host && ' / ' + host}
+    .quick-btn-cont.pull-middle-center
+      span.check-btn.quick-btn.h-margin-nicer(data-id=id, data-name=name)
+        span.glyphicon.glyphicon-check(aria-hidden='true')

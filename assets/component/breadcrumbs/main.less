@@ -1,0 +1,21 @@
+/* start of breadcrubms.less*/
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 4px;
+  >li {
+    display: inline-block;
+    &.active{
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+  >li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+  }
+}
+/* end of breadcrubms.less*/

@@ -1,0 +1,86 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-two_cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-5.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.clearfix.form-animate-text.col-md-12.required
+          input#username.form-text.has-keypad-all.has-keyboard(name="username", type="text", required="", autocomplete="off")
+          label #{i18n["loginSystemUsername"]}
+          h1.hide#usernameText
+        .form-group.form-animate-text.col-md-8
+          input#username.form-text(name="username", type='hidden', required='', maxlength="18", autocomplete="off")
+          input#alias.form-text.has-keypad-all(name="alias", type='text', required='', maxlength="18", autocomplete="off")
+          span.bar
+          label #{i18n["name"]}
+        .form-group.form-animate-text.col-md-4.required
+          input#age.form-text.has-keypad.has-keyboard(name="age", type='text', required='', maxlength="3", autocomplete="off")
+          span.bar
+          label #{i18n["age"]}
+        .form-group.form-animate-text.select.col-md-12
+          input#gunText.form-text(name="gunText", type='text', required='',autocomplete="off")
+          input#guns.form-text(name="guns", type='hidden', required='',autocomplete="off")
+          span.bar
+          label #{i18n["gunText"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#gunClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.form-animate-text.required.select.col-md-12
+          input#roleText.form-text(name="roleText", type='text', required='',autocomplete="off")
+          input#roles.form-text(name="roles", type='hidden', required='',autocomplete="off")
+          span.bar
+          label #{i18n["roleName"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#roleClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.clearfix.col-md-12.mrgB20
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#male(name="sex", type='radio', value="M" required='',autocomplete="off", title="不能为空" checked)
+            label(for="male") #{i18n["male"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-3
+            input#female(name="sex", type='radio', value="F" required='',autocomplete="off", title="不能为空")
+            label(for="female") #{i18n["female"]}
+        .form-group.clearfix.disable-passwd_login__box
+          .checkbox3.checkbox-info.checkbox-inline.checkbox-check.checkbox-round.checkbox-light.checkbox-white.mrgLeft20
+            input#disablePasswdLogin(name="disablePasswdLogin", type='checkbox', required='',autocomplete="off", title="不能为空", value="")
+            label(for="disablePasswdLogin") #{i18n["disablePasswdLogin"]}
+      .form.col-md-7.no-margin
+        .form-group.form-animate-text.col-md-12.required
+          input#identityNumber.form-text.has-keypad-all.has-keyboard(name="identityNumber", type='text', maxlength="20", autocomplete="off", required='')
+          span.bar
+          label #{i18n["identityNumber"]}
+          button.btn.open-id-card-plugin.hide(type="button", id="open-id-card-plugin") #{i18n["scanIDCard"]}
+        .form-group.form-animate-text.col-md-6
+          input#email.form-text(name="email", type='text', required='', maxlength="50", autocomplete="off")
+          span.bar
+          label #{i18n["email"]}
+        .form-group.form-animate-text.col-md-6.required
+          input#phone.form-text.has-keypad.has-keyboard(name="phone", type='text', required='', maxlength="18", autocomplete="off")
+          span.bar
+          label #{i18n["phone"]}
+        .form-group.form-animate-text.select.col-md-6.required
+          input#positionText.form-text(name="positionText", type='text', required='',autocomplete="off")
+          input#position.form-text(name="position", type='hidden', required='',autocomplete="off")
+          span.bar
+          label #{i18n["positionText"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#positionClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.form-animate-text.select.col-md-6
+          input#superiorText.form-text(name="superiorText", type='text', required='',autocomplete="off")
+          input#superior.form-text(name="superior", type='hidden', required='',autocomplete="off")
+          span.bar
+          label #{i18n["superiorText"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#superiorClearBtn
+            span #{i18nButton["clearSelectedBtn"]}
+        .form-group.clearfix.col-md-12
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-4
+            input#active(name="status", type='radio', value="active" required='',autocomplete="off", title="不能为空" checked)
+            label(for="active") #{i18n["active"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-sm-5
+            input#deactive(name="status", type='radio', value="deactive" required='',autocomplete="off", title="不能为空")
+            label(for="deactive") #{i18n["deactive"]}
+        .form-group.form-animate-text.col-md-12
+          textarea.textarea.small#notes.form-text(name='notes',type='text', required='', maxlength="255", autocomplete="off")
+          span.bar
+          label #{i18n["otherInfo"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

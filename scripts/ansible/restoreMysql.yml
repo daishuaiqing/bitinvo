@@ -1,0 +1,16 @@
+---
+- hosts: hosts
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+  - name: transfer files
+    copy: src=./bitinvo_backup.sql dest=/home/ubuntu owner=ubuntu group=ubuntu
+  - name: stop pm2
+    command: sudo /usr/bin/pm2 stop app
+  - name: restore mysql
+    command: mysql -uroot -p123456 bitinvo -e 'source bitinvo_backup.sql'
+    args:
+      chdir: /home/ubuntu
+  - name: restart pm2
+    command: sudo /usr/bin/pm2 restart app

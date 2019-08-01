@@ -1,0 +1,9 @@
+.col-lg-12.col-md-12.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell
+    .grid-list-cell-body
+      h3 #{createdAt && moment(createdAt).format('YYYY-MM-DD HH:mm')}
+    .quick-btn-cont
+      .btn.btn-empty.highlight.button-group__item.lookVideoBtn.mrgR10(data-id=id, data-path=path)
+        | 查看
+      a.btn.btn-empty.highlight.button-group__item.downloadVideoBtn(href='/asset/play/#{id}', download='#{name}', target="_black")
+        | 下载

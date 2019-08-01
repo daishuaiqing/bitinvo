@@ -1,0 +1,15 @@
+.state-footer.bg.seperate-before
+  each status, i in statuses
+    .status_.animated.slideInUp(class="sm-delay-" + i, id=status.id)
+      .status-cont
+        .status-icon.status-ok
+        img.monitor-type(src="#{status.src}", alt='#{status.text}')
+      h4.status-text #{status.text}
+  .status_.animated.slideInUp#approvedIcon.approved_icon.hide
+    h4.status-text
+      span.text 待取工单
+      span.badge_tips
+  .status_.animated.slideInUp.return_application#returnApplication.hide
+    h4.status-text
+      span.text 待还工单
+      span.badge_tips

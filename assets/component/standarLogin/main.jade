@@ -1,0 +1,49 @@
+.col-md-offset-4.col-md-6.clearfix.pull-middle-center.loginModuleContainer
+  #fingerprint-panel.panel.text-center.animated.flipInYRefl.sm-delay-1
+    .sanning-fingger-cont
+      canvas#canvas
+      h1.xxl.scan-fingerprint-label 请验证指纹
+      .row.v-margin-nicer
+        small 或者
+      .row.v-margin-nicer
+        button.btn.btn-empty.big.highlight.seperate-before.switch-password
+          h3 #{btnLabel1}
+        .countdown-box.margin-top-20.hide
+          | 60
+        p
+        button.btn.btn-empty.big.highlight.seperate-before.hide.margin-top-6#restart-prints
+          h3 重新指纹扫描
+  #face-panel.panel.text-center.animated.flipInYRefl.sm-delay-1
+    h1 人脸登录
+    .faceIcon.mrgT40
+      img(width="150" height="150" src=faceIcon)
+    .row.v-margin-nicer
+      small 或者
+    .faceLoginBtn
+      button.switch-password.btn.btn-empty.big.highlight.seperate-before.action-btn
+        h3 通过密码解除
+      p.mrgT10
+        button.faceLogin-button.btn.btn-empty.big.highlight.seperate-before.action-btn.deepBg
+          h3
+            i.loader.hide
+            span 开始人脸识别
+  #password-panel.panel.text-center.animated.flipInYRefl.sm-delay-1
+    h1 #{i18n['Log In']}
+    button.btn-cancel.action-btn#close
+      span.glyphicon.glyphicon-remove(aria-hidden="true")
+    .panel-body.form-panelbody
+      form
+        .form.no-margin
+          .form-group.form-animate-text.required
+            input#username.form-text(type='text', required='',autocomplete="off", title="密码不能为空")
+            span.bar
+            label #{i18n['Police Code']}
+          .form-group.form-animate-text.required
+            input#password.form-text(type='password', required='',autocomplete="off", title="密码不能为空")
+            span.bar
+            label #{i18n['Password']}
+          p.error-info.hide #{'Invalide User/Password'}
+        .pull-bottom-center
+          .row
+            button.btn.btn-empty.big.highlight.seperate-before.action-btn#signin(type="button")
+              h2 #{btnLabel2}

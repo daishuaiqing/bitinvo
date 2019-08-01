@@ -1,0 +1,33 @@
+.simly-application
+  .simply-header
+  .line.seperate-before
+  include menu-entry.jade
+  .simply-main-home.pull-middle-center
+    .col-md-4.animated.fadeIn.sm-delay-1#simpleApplicationLeftPanel
+      .col-md-12
+        .row.bg.margin-bottom-6.border-radius.chart-container_gun
+          col-md-12
+            #cabinet-gun-number.cabinet-show-number-box.special-canvas_big
+              .number_container
+                .show-number-span 0
+                .title 正在加载枪支量
+    .col-md-8.animated.fadeIn.sm-delay-2.row.padding-right_0#simpleApplicationRightPanel
+        .button-list-ul
+            button.big-btn(name="getGun")
+              | #{i18n.entrance__getGun}
+            button.big-btn(name="returnGun")
+              | #{i18n.entrance__returnGun}
+            button.big-btn.seperate-before.mrgB12(name="saveGun")
+              | #{i18n.entrance__storageGun}
+            button.big-btn.seperate-before.mrgB12(name="maintain")
+              | #{i18n.entrance__maintain}
+            button.big-btn(name="returnmaintain")
+              | #{i18n.entrance__returnMaintain}
+            button.big-btn.seperate-before(name="moreMenu")
+              | 其他功能
+  .simply-main-authenticate
+  .simply-main-create-applition
+  .simply-main-application-authorized
+  .simply-main_login
+  .simply-main_signup
+  .simply-footer

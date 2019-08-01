@@ -1,0 +1,9 @@
+.info.text-center.animated.flipInYRefl
+  if html
+    div!= html
+  else
+    h1 #{text}
+  .pull-bottom-center
+    .row.buttons
+      button.btn.btn-empty.action-btn.big#confirm #{confirmBtnLabel}
+      button.lighter.btn.btn-transparent.action-btn.big#cancel #{cancelBtnLabel}

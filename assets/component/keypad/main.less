@@ -1,0 +1,166 @@
+.keypad-ui-main {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.66);
+  z-index: 99999999999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  animation-duration: .4s;
+  transform: translate3d(0,0,0);
+  .key-btn {
+    font-size:30px;
+    background-color: #7059AB;
+    border-radius: 5px;
+    text-shadow: 0 1px 2px #000;
+    display: inline-block;
+    margin:2px;
+    cursor: pointer;
+    &:active {
+      background-color: red;
+    }
+  }
+  .active_key_btn {
+    background-color: red;
+  }
+  .btn_text,.special-btn{
+    padding:0 25px;
+    height:55px;
+    line-height: 55px;
+  }
+  .btn_value{
+    width:76px;
+    height:55px;
+    text-align: center;
+    line-height: 55px;
+  }
+  .keypad-ui-type-number,
+  .keypad-ui-type-all {
+    text-align: center;
+  }
+  .keypad-ui-box {
+    text-align: center;
+  }
+  .hidden{
+    display: none;
+  }
+  .type-number_case {
+    display: none;
+  }
+}
+
+.pinyinComponent {
+  width:100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  z-index:99999;
+  animation-delay: .3s;
+  button[name="prev"] {
+    position: absolute;
+    left:20%;
+  }
+  button[name="next"] {
+    position: absolute;
+    right: 20%;
+  }
+  .pinyin_result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    span {
+      padding:0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      transition: all .2s;
+      animation-duration: .1s;
+      &:active {
+        background-color: red;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        top:0;
+        right:0;
+        bottom: 0;
+        left:0;
+        border-right: 1px solid #ccc;
+        transform: scaleY(.5);
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &:last-child {
+        &::before {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+
+//left显示的主题
+.keypad-ui_main-left{
+  width:30%;
+  position: fixed;
+  left:0;
+  top:0;
+  height: 100%;
+  .keypad-ui-type-number {
+    .key-btn{
+      font-size:80px;
+    }
+    .btn_value{
+      width:30%;
+      height:120px;
+      line-height: 120px;
+    }
+    .btn_text,.special-btn{
+      font-size:2em;
+      width:30%;
+      height: 120px;
+      line-height: 120px;
+      vertical-align: top;
+    }
+    .changeKey {
+      width: 100%;
+      background: #ff9800;
+      display: block;
+      padding:10px 0;
+      cursor: pointer;
+    }
+    .type-number_case {
+      width:91%;
+      height: 80px;
+      line-height: 80px;
+      font-size:50px;
+      display: inline-block;
+    }
+  }
+  //字母样式
+  .keypad-ui-type-letter {
+
+    .key-btn {
+      font-size: 1.4em;
+    }
+    .btn_value, .btn_text {
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
+    }
+    .change-btn {
+      width: 180px;
+    }
+    .btn_text {
+      font-size:14px;
+      vertical-align: top;
+    }
+  }
+}

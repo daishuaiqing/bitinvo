@@ -1,0 +1,49 @@
+- var statusLabel = "激活"
+case user.status
+  when 'active'
+    - statusLabel = "激活"
+  when 'deactive'
+    - statusLabel = "未激活"
+
+mixin menu(menu)
+  if(menu)
+    .row.big-btn-cont
+      button.menu-btn(name = menu.name)
+        .wrap
+          img.img-responsive.menu-icon(src = menu.img)
+          h1.xxl.text-shadow #{menu.label}
+  else
+    .row.big-btn-cont
+
+// User Home index.jade
+.container-fluid.userprofile-screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.comp-clock.comp-clock.text-center 修改个人资料
+    .status-bar.text-left
+    .action-bar.text-right
+  .row
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .panel.time.text-center.animated.sm-delay-1
+            .avatar-cont
+              img.img-responsive.badge(src=require('common/img/logo.jpeg'))
+            .pull-middle-center.text-shadow
+              h2.user-name #{user.alias}
+              p.user-name 登录账号 #{user.username}
+              p.role-name 账号权限 #{(roles && roles.length > 0) ? roles[0].name : "未设置权限"}
+              p.user-phone 手机：#{ user.phone }
+            .pull-bottom-center
+              h4.user-status.text-shadow 用户状态 #{statusLabel}
+
+        -for(var i = 0 ; i <items.length; i = i + 2){
+          .swiper-slide
+            .panel.time.text-center.animated.sm-delay-i
+              +menu(items[i])
+              +menu((i + 1) < items.length ? items[i + 1] : null)
+        -}
+      // Add Pagination
+      .swiper-pagination
+      .swiper-button-next
+      .swiper-button-prev
+// User Home index.jade

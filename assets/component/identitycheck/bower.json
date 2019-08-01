@@ -1,0 +1,18 @@
+{
+  "name": "identitycheck",
+  "authors": [
+    "zhangfu@nasetech.com"
+  ],
+  "description": "ID card checked component",
+  "main": "main.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

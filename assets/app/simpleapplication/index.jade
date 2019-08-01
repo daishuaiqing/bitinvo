@@ -1,0 +1,43 @@
+.simly-application.container-fluid.screen
+  .simply-header
+  .line.seperate-before
+  include menu-entry.jade
+  .simply-main-home.pull-middle-center
+    .col-md-4.animated.fadeIn.sm-delay-1#simpleApplicationLeftPanel
+      .col-md-12
+        .row.bg.chart-container_gun
+          col-md-12
+            #cabinet-gun-number.cabinet-show-number-box
+              .number_container
+                .show-number-span 0
+                .title 正在加载枪支量
+        .row.bg.chart-container_bullet
+          col-md-12
+            #cabinet-bullet-number.seperate-before.cabinet-show-number-box
+              .number_container
+                .show-number-span 0
+                .title 正在加载弹药量
+    .col-md-8.animated.fadeIn.sm-delay-2.row.padding-right_0#simpleApplicationRightPanel
+      .button-list-ul
+        button.big-btn(name="getGun")
+          | #{i18n.entrance__getGun}
+        button.big-btn(name="getBullet")
+          | #{i18n.entrance__getBullet}
+        button.big-btn.seperate-before(name="returnGun")
+          | #{i18n.entrance__returnGun}
+        button.big-btn.seperate-before(name="returnBullet")
+          | #{i18n.entrance__returnBullet}
+        button.big-btn.seperate-before.mrgB15(name="saveGun")
+          | #{i18n.entrance__storageGun}
+        button.big-btn.seperate-before.mrgB15(name="saveBullet")
+          | #{i18n.entrance__storageBullet}
+        button(name="moreMenu")
+          | 其他功能
+        button.empty-text
+          | 暂时未开放
+  .simply-main-authenticate
+  .simply-main-create-applition
+  .simply-main-application-authorized
+  .simply-main_login
+  .simply-main_signup
+  .simply-footer

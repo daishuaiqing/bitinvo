@@ -1,0 +1,76 @@
+/* start of boxlogin.less*/
+.boxlogin-screen{
+  .login-module_container {
+    .panel {
+      padding: 10px;
+    }
+  }
+  .fingerprint{
+    max-width:244px;
+    max-height: 180px;
+  }
+  .passwordLogin {
+    font-size: 24px;
+    border-left: 1px solid #959595;
+    height: 58px;
+    line-height: 58px;
+    width: 200px;
+    top: 0;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      top: 0px;
+      bottom: -5px;
+      right: -1px;
+      left: 0;
+      border-right: 1px solid #343434;
+      content: "";
+    }
+  }
+  canvas {
+    background: none;
+    margin-top:20px;
+  }
+  .facePerceptionComponent {
+    padding-top:30px;
+  }
+  .faceBox {
+    padding: 20px;
+  }
+  .loader {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    top: 30px;
+    font-size: 10px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: load6 1.7s infinite ease;
+  }
+  
+  @keyframes load6 {
+    0% {
+      transform: rotate(0deg);
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+    }
+    5%,
+    95% {
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+    }
+    30% {
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.51em -0.66em 0 -0.42em #ffffff, -0.75em -0.36em 0 -0.44em #ffffff, -0.83em -0.03em 0 -0.46em #ffffff, -0.81em 0.21em 0 -0.477em #ffffff;
+    }
+    55% {
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.29em -0.78em 0 -0.42em #ffffff, -0.43em -0.72em 0 -0.44em #ffffff, -0.52em -0.65em 0 -0.46em #ffffff, -0.57em -0.61em 0 -0.477em #ffffff;
+    }
+    100% {
+      transform: rotate(360deg);
+      box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+    }
+  }
+}
+/* end of boxlogin.less*/

@@ -1,0 +1,3 @@
+00 02 * * * /bin/bash /home/bitinvo/scripts/backup.sh &
+45 00 * * * /bin/bash /home/bitinvo/scripts/video_rotate.sh &
+30 00 * * * /usr/sbin/logrotate /etc/logrotate.conf &

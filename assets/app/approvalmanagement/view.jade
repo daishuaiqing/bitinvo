@@ -1,0 +1,43 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-5.no-margin
+        input#id.form-text(name="id", type='hidden', required='', autocomplete="off", readonly="readonly")
+        .form-group.form-animate-text.select.clearfix
+          input#typeText.form-text(name="typeText", type='text', required='', autocomplete="off", readonly="readonly")
+          input#type.form-text.read-only(name="type", type='hidden', required='', autocomplete="off", readonly="readonly")
+          span.bar
+          label #{i18n["selectedAppType"]}
+        .form-group.clearfix.hide#bulletAppTypeGroup
+          label.form-group-label.col-sm-12 #{i18n["bulletType"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-7
+            input#privategun(name="bulletAppType", type='radio', value="privategun" required='',autocomplete="off", title="不能为空", checked="checked", readonly="readonly")
+            label(for="privategun") #{i18n["specialGunBullet"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-7
+            input#specific(name="bulletAppType", type='radio', value="specific" required='',autocomplete="off", title="不能为空", readonly="readonly")
+            label(for="specific") #{i18n["assignationBulletType"]}
+        .form-group.form-animate-text.hide#bulletTypeGroup
+          input#bulletTypeText.form-text(name="bulletTypeText", type='text', required='', autocomplete="off", title="不能为空", readonly="readonly")
+          input#bulletType.form-text.read-only(name="bulletType", type='hidden', required='', autocomplete="off", title="不能为空", readonly="readonly")
+          span.bar
+          label #{i18n["bulletType"]}
+        .form-group.form-animate-text.hide#numGroup
+          input#num.form-text.read-only(name="num", type='number', required='', autocomplete="off", title="不能为空", readonly="readonly")
+          span.bar
+          label #{i18n["bulletNumber"]}
+      .form.col-md-7.no-margin
+        .form-group.form-animate-text
+          input#start.form-text.read-only(name="start", type='text', required='', autocomplete="off", readonly="readonly")
+          span.bar
+          label #{i18n["startTime"]}
+        .form-group.form-animate-text
+          input#end.form-text.read-only(name="end", type='text', required='', autocomplete="off", readonly="readonly")
+          span.bar
+          label #{i18n["endTime"]}
+        .form-group.form-animate-text
+          textarea#detail.textarea.small.form-text.read-only(name='notes', type='text', required='', autocomplete="off", readonly="readonly")
+          span.bar
+          label #{i18n["appDetail"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

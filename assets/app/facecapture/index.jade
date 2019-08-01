@@ -1,0 +1,19 @@
+.container-fluid.facecapture-screen.screen
+  .navbar.navbar-default.navbar-fixed-top.animated.fadeInDown
+    .container.comp-clock.comp-clock.text-center 人脸采集
+    .status-bar.text-left
+    .action-bar.text-right
+      span.faceManagement#faceManagementBtn 人脸管理
+  .right-menu.animated#faceManagement
+  .col-md-12.pull-middle-center
+    .col-md-offset-4.col-md-4.col-sm-12.fingerprint_info
+      .panel.text-center.animated.flipInY.sm-delay-1.facecapture-panel
+        .sanning-fingger-cont.pull-middle-center
+          .loading-box
+            .loader
+            span 正在加载
+          h1.xl#fingerprintTips 请对准摄像头进行采集
+          div.facePicture
+            video.canvas-video#videoElement(style="width:640px;height:360px;",muted,autoplay)
+          button.btn.btn-empty.big.btn-fixed-len-300.highligh#facecapture-btn
+            h1 开始人脸采集

@@ -1,0 +1,61 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form(method="post", enctype="multipart/form-data").applicationManagementForm
+      .form.col-md-5.no-margin
+        p.error-info.hide 发生了错误
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.form-animate-text.select.clearfix
+          input#typeText.form-text.read-only(name="typeText", type='text', required='',autocomplete="off" readonly="readonly")
+          input#type.form-text(name="type", type='hidden', required='',autocomplete="off")
+          span.bar
+          label #{i18n["selectedAppType"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#typeClearBtn
+            span #{i18n["clearSelected"]}
+        .form-group.form-animate-text.required#gunCodeFormGroup.hide
+          input#gunCode.form-text.read-only(required='',autocomplete="off", title="不能为空", readonly="readonly")
+          span.bar
+          label 枪号
+        .form-group.form-animate-text.select.clearfix.file_list_box
+        .form-group.form-animate-text.select.clearfix.file_input_box.hide
+          input#input_file(type="file",name="attachment")
+        .form-group.clearfix.hide#bulletAppTypeGroup
+          label.form-group-label.col-sm-12 #{i18n["bulletType"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5.read-only
+            input#privategun(name="bulletAppType", type='radio', value="privategun" required='',autocomplete="off", title="不能为空" checked, readonly="readonly")
+            label(for="privategun") #{i18n["specialGunBullet"]}
+          .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4.read-only
+            input#specific(name="bulletAppType", type='radio', value="specific" required='',autocomplete="off", title="不能为空", readonly="readonly")
+            label(for="specific") #{i18n["assignationBulletType"]}
+        .form-group.form-animate-text.required.hide#bulletTypeGroup
+          input#bulletTypeText.form-text.read-only(name="bulletTypeText", type='text', required='',autocomplete="off", title="不能为空", readonly="readonly")
+          input#bulletType.form-text.read-only(name="bulletType", type='hidden', required='',autocomplete="off", title="不能为空", readonly="readonly")
+          span.bar
+          label #{i18n["bulletType"]}
+        .form-group.form-animate-text.required.hide#numGroup
+          input#num.form-text.read-only(name="num", type='number', required='',autocomplete="off", title="不能为空", readonly="readonly")
+          span.bar
+          label #{i18n["bulletNumber"]}
+      .form.col-md-7.no-margin
+        .form-group.form-animate-text.required
+          input#start.form-text.read-only(name="start", type='text', required='',autocomplete="off" readonly="readonly")
+          span.bar
+          label #{i18n["startTime"]}
+        .form-group.form-animate-text.required
+          input#end.form-text.read-only(name="end", type='text', required='',autocomplete="off" readonly="readonly")
+          span.bar
+          label #{i18n["endTime"]}
+        .form-group.form-animate-text.required
+          textarea#detail.textarea.small.form-text.read-only(name='notes',type='text', required='',autocomplete="off" readonly="readonly")
+          span.bar
+          label #{i18n["appDetail"]}
+        //- .form-group
+        //-   label.form-group-label 申请原因描述
+        //-   button.btn.btn-empty.h-margin-nicer.quick-note(name="外出执勤")
+        //-     span 外出执勤
+        //-   button.btn.btn-empty.h-margin-nicer.quick-note(name="常规任务")
+        //-     span 常规任务
+        //-   button.btn.btn-empty.h-margin-nicer.quick-note(name="紧急任务")
+        //-     span 紧急任务
+  .right-major-footer.animated.fadeInUp
+    .taskbar

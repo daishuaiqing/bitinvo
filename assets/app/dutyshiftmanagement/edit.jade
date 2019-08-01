@@ -1,0 +1,25 @@
+.animated.fadeIn.sm-delay-1
+  .navbar-header.breadcrumbs-cont
+  .col-sm-12.form-panelbody
+    form
+      .form.col-md-5.no-margin
+        p.error-info.hide #{i18n["error"]}
+        input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+        .form-group.form-animate-text.required#bulletTypeGroup
+          input#userText.form-text(name="userText", type='text', required='',autocomplete="off", title="不能为空")
+          input#user.form-text(name="user", type='hidden', required='',autocomplete="off", title="不能为空")
+          span.bar
+          label #{i18n["dutyshiftUser"]}
+          button.hide.btn.btn-empty.clear-btn.h-margin-nicer#userClearBtn
+            span #{i18nButton["clearSelected"]}
+      .form.col-md-7.no-margin
+        .form-group.form-animate-text.required
+          input#start.form-text(name="start", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["startTime"]}
+        .form-group.form-animate-text.required
+          input#end.form-text(name="end", type='text', required='',autocomplete="off")
+          span.bar
+          label #{i18n["endTime"]}
+  .right-major-footer.animated.fadeInUp
+    .taskbar

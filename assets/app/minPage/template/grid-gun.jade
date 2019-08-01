@@ -1,0 +1,25 @@
+- var gunlockLabel = "正常"
+case gunLock
+  when 'normal'
+    - gunlockLabel = "枪位正常"
+  when 'broken'
+    - gunlockLabel = "枪位异常"
+.grid-list-cell-holder.animated.fadeInUp.gun_grid_cell(class='sm-delay-' + index)
+  .grid-list-cell(id=id,data-id=id,data-type=type,data-canid=canId,data-cabinetmoduleid=cabinetmoduleId, class=disabled?'disbaled': '')
+    .grid-list-cell-body
+      .col-md-10
+        h5.user-role 枪名 #{ (name ? name: '-' )}
+        p.user-name #{ code } 
+      col-md-2.quick-btn-cont.pull-middle-center
+        span.eye-btn.quick-btn.h-margin-nicer(data-id=id)
+          .glyphicon.glyphicon-eye-open
+
+    .some_content
+      .col-md-12
+        h5.user-role 枪名 #{ (name ? name: '-' )}
+        .user-name #{ code } 
+        small.updated-time 型号 #{ type.name ? type.name : '枪支'} / #{gunlockLabel}
+        div
+          small.updated-time 柜机IP: #{ cabinetIp }
+        div
+          small.updated-time 柜机名: #{ cabinetName }

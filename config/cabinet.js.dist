@@ -1,0 +1,9 @@
+/**
+ * 这个是本柜机的基本参数设置
+ */
+
+module.exports.cabinet = {
+  id: '0a5bc3c5-be11-4bcd-9dfe-b2100732d7a8', // 使用 uuid.js来生成
+  heartbeat : 2 * 1000, // set the service heartbeat interval (defaults to 2min)
+  sdPort : 12000, //service discovery Port
+};

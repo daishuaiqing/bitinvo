@@ -1,0 +1,90 @@
+div
+  .leftmenu-holder-create.animated.fadeInLeft
+      .leftmenu-create
+  .row.right-major-create.pull-middle-center.mT--20
+    .create-application-bullet-last-info-box.hide
+    .col-sm-12.form-panelbody.pull-middle-center
+      form#js-createApplication(method="post", enctype="multipart/form-data")
+        .form.col-md-12.no-margin.slide-1
+          input#id.form-text(name="id", type='hidden', required='',autocomplete="off")
+          .form-group.form-animate-text.select.clearfix
+            input#typeText.form-text(name="typeText", type='text', required='',autocomplete="off")
+            input#type.form-text(name="type", type='hidden', required='',autocomplete="off")
+            span.bar
+            label 选择申请类型
+            button.hide.btn.btn-empty.clear-btn.h-margin-nicer#typeClearBtn
+              span 清除选择
+          .form-group.clearfix.hide#bulletAppTypeGroup
+            label.form-group-label.col-sm-12 子弹类型
+            .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-5#spotBulletType
+              input#privategun(name="bulletAppType", type='radio', value="privategun", required='',autocomplete="off", title="不能为空", checked)
+              label(for="privategun") 为专用枪取弹
+            .radio3.radio-info.radio-inline.radio-check.radio-round.radio-light.radio-white.col-lg-4
+              input#specific(name="bulletAppType", type='radio', value="specific", required='',autocomplete="off", title="不能为空")
+              label(for="specific") 或者指定子弹类型
+          .form-group.form-animate-text.required.hide#bulletTypeGroup
+            input#bulletTypeText.form-text(name="bulletTypeText", type='text', required='',autocomplete="off", title="不能为空")
+            input#bulletType.form-text(name="bulletType", type='hidden', required='',autocomplete="off", title="不能为空")
+            span.bar
+            label 子弹类型
+            button.hide.btn.btn-empty.clear-btn.h-margin-nicer#bulletTypeClearBtn
+              span 清除选择
+          .form-group.form-animate-text.required.hide#numGroup
+            input#num.vk.form-text(name="num", type='number', required='',autocomplete="off", title="不能为空", min="1")
+            span.bar
+            label 子弹数目
+        .form.col-md-12.no-margin.slide-2.hide
+          .share-guns-list
+        input#share-gun-id(name="gun", type="hidden")
+        input#share-gun-cabinet-module(name="cabinetModule", type="hidden")
+        input#cabinet(name="cabinet", type="hidden")
+        .form.col-md-12.no-margin.slide-3.hide
+          .col-md-12
+            .form-group.form-animate-text.required
+              input#start.form-text(name="start", type='text', required='',autocomplete="off")
+              span.bar
+              label 开始时间
+            .form-group.form-animate-text.required
+              input#end.form-text(name="end", type='text', required='',autocomplete="off")
+              span.bar
+              label 结束时间
+            .form-group.form-animate-text.required
+              textarea#detail.textarea.small.form-text(name='notes',type='text', required='', autocomplete="off", maxlength=200)
+              span.bar
+              label 申请原因描述
+            .form-group.marginB10.task_detaile_box
+              .in_task.flex_1
+                .title 内部工作
+                .content
+                  button.btn(name="枪支保养",type="button")
+                    |枪支保养
+                  button.btn(name="内部安全检测",type="button")
+                    |内部安全检测
+                  button.btn(name="存储子弹",type="button")
+                    |存储子弹
+                  button.btn(name="存储枪支",type="button")
+                    |存储枪支
+              .out_task.flex_1
+                .title 外部工作
+                .content
+                  button.btn(name="外出执勤",type="button")
+                    |外出执勤
+                  button.btn(name="常规任务",type="button")
+                    |常规任务
+                  button.btn(name="紧急任务",type="button")
+                    |紧急任务
+                  button.btn(name="狱警任务",type="button")
+                    | 狱警任务
+        .form-group.form-animate-text.select.clearfix.file_input_box.hide
+          input#input_file(type="file",name="attachment")                    
+        .form.col-md-12.no-margin.slide-4.hide
+          .col-md-12.text-align
+            .appcation-img_tips
+              h1.text-align.xxl 点击添加附件,进行附件高拍
+            .captureApplication_cp__box
+        .form.col-md-12.no-margin.pull-middle-center.slide-5.hide
+            .panel.blank.text-center.animated.flipInYRefl.sm-delay-1
+              .panel-body.pull-middle-center.h-300.w-500
+                h1 工单创建成功, 可进行现场授权。
+  .right-major-footer-create.animated.fadeInUp
+    .taskbar-create

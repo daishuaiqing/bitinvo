@@ -1,0 +1,46 @@
+-var result = status
+  case result
+    when 'active'
+      .col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp.active-box(class="sm-delay-" + index)
+        .grid-list-cell(data-id=id)
+          .grid-list-cell-body
+            .col-md-12.v-margin-nicer
+              .col-md-2
+                .avatar-cont
+                  img.img-responsive.avatar(src=require('common/img/logo.jpeg'))
+              .col-md-10
+                h2.user-name.truncate.text-overflow #{alias ? alias : username}
+            .col-md-12
+              p.user-role.truncate.text-overflow #{roles && roles[0] ? roles[0].name : "未分配角色"}
+              p.updated-time.truncate.text-overflow 配枪信息 #{guns && guns[0] ? guns[0].name : "未配枪"}
+          .quick-btn-cont.pull-middle-center.is-disable-btn
+            span.disable-btn.quick-btn.h-margin-nicer(data-id=id)
+              span.glyphicon.glyphicon-ban-circle(aria-hidden='true')
+          .quick-btn-cont.pull-middle-center.edit-button
+            span.quick-btn.h-margin-nicer(data-id=id)
+              span.glyphicon.glyphicon-edit(aria-hidden='true')
+          .quick-btn-cont.pull-middle-center.remove-button(class=!isSuperAdmin && 'hide')
+            span.delete-btn.quick-btn.h-margin-nicer(data-id=id)
+              span.glyphicon.glyphicon-trash(aria-hidden='true')              
+    when 'deactive'
+      .col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp.deactive-box(class="sm-delay-" + index)
+        .grid-list-cell(data-id=id)
+          .grid-list-cell-body
+            .col-md-12.v-margin-nicer
+              .col-md-2
+                .avatar-cont
+                  img.img-responsive.avatar(src=require('common/img/logo.jpeg'))
+              .col-md-10
+                h2.user-name.truncate.text-overflow #{alias}
+            .col-md-10
+              p.user-role.truncate.text-overflow #{roles && roles[0] ? roles[0].name : "未分配角色"}
+              p.updated-time.truncate.text-overflow 配枪信息 #{guns && guns[0] ? guns[0].name : "未配枪"}
+          .quick-btn-cont.pull-middle-center.is-disable-btn
+            span.enable-btn.quick-btn.h-margin-nicer(data-id=id)
+              span.glyphicon.glyphicon-ok-circle(aria-hidden='true')
+          .quick-btn-cont.pull-middle-center.edit-button
+            span.quick-btn.h-margin-nicer(data-id=id)
+              span.glyphicon.glyphicon-edit(aria-hidden='true')
+          .quick-btn-cont.pull-middle-center.remove-button(class=!isSuperAdmin && 'hide')
+            span.delete-btn.quick-btn.h-margin-nicer(data-id=id)
+              span.glyphicon.glyphicon-trash(aria-hidden='true')

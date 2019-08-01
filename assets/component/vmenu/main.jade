@@ -1,0 +1,11 @@
+.comp-vmenu
+  ul.nav.nav-list
+    each item, i in items
+      if i == defaultItem
+        li.active(seq=i, class=item.clsName, id=item.id)
+          a.target-link(href=item.target) #{item.name}
+          .bg
+      else
+        li(seq=i, class=item.clsName, id=item.id)
+          a.target-link(href=item.target) #{item.name}
+          .bg

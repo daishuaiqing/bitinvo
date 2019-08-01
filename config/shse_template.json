@@ -1,0 +1,54 @@
+{
+  "name": "SHANGHAI SECURITY ESCORT CO",
+  "version": "1.0.0",
+  "debug": false,
+  "header": {
+  },
+  "footer": {
+    "font": {
+      "name": "./assets/song.ttf",
+      "size": 10,
+      "color": "#000000"
+    },
+    "format": {
+      "align": "left",
+      "height": 20
+    },
+    "data": "备注：公务用枪 “批准领导” 以公司 “枪弹使用标准书” 及 “枪弹变更调拨单” 为准"
+  },
+  "options": {
+    "pages": [
+      {
+        "layout": {
+          "size": "A4",
+          "layout": "landscape",
+          "header": false,
+          "footer": false,
+          "margins": {
+            "top": 20,
+            "left": 0,
+            "bottom": 50,
+            "right": 0
+          }
+        },
+        "sections": {
+          "content": {
+            "font": {
+              "name": "./assets/song.ttf",
+              "size": 12,
+              "color": "#000000"
+            },
+            "format": {
+              "align": "center",
+              "left": 20,
+              "right": 15,
+              "top": 30,
+              "width": 810,
+              "height": 600
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+case type
+  when 'noJob'
+    .col-lg-12.clearfix.pull-middle-center
+      .panel.blank.text-center.animated.flipInYRefl.sm-delay-1.h-300
+        .panel-body.pull-middle-center
+          h1.xxl #{errorObject.error}
+          a.btn.btn-empty.big#apply-btn(data-type= type, data-buttontype="noJob")
+            h2 #{i18n['toSubmitApp']}
+  when 'pending'
+    .col-lg-12.clearfix.pull-middle-center
+      .panel.blank.text-center.animated.flipInYRefl.sm-delay-1.h-300
+        .panel-body.pull-middle-center
+          h1.xxl #{i18n.youAppWaitReview}
+          a.btn.btn-empty.big#apply-btn(data-type= type, data-buttontype="pendingMore")
+            h2 #{i18n.toReview}
+  when 'pendingMore'
+    .col-lg-12.clearfix.pull-middle-center
+      .panel.blank.text-center.animated.flipInYRefl.sm-delay-1.h-300
+        .panel-body.pull-middle-center
+          h1.xxl #{i18n.needMoreAdminReview}
+          a.btn.btn-empty.big#apply-btn(data-type= type, data-buttontype="pendingMore")
+            h2 #{i18n.toReview}
+  when 'rejected'
+    .col-lg-12.clearfix.pull-middle-center
+      .panel.blank.text-center.animated.flipInYRefl.sm-delay-1.h-300
+        .panel-body.pull-middle-center
+          h1.xxl #{i18n.youAppReject}
+          a.btn.btn-empty.big#apply-btn(data-type= type,data-buttontype="rejected")
+            h2 #{i18n.toSubmitApp}
+  when 'notLocalApplication'
+    .col-lg-12.clearfix.pull-middle-center
+      .panel.blank.text-center.animated.flipInYRefl.sm-delay-1.h-300
+        .panel-body.pull-middle-center
+        if cabinetName && ip
+          h1 #{i18n.assignationCabinetManipulateApp}
+          h1 #{i18n.cabinetIP}: #{ip}
+          h1 #{i18n.cabientName}：#{cabinetName}
+        else
+          h1.xxl #{errorObject.error}

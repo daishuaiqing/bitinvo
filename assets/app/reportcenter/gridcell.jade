@@ -1,0 +1,21 @@
+- var typeLabel = "枪"
+case cmType
+  when 'gun'
+    - typeLabel = i18n["gunWarehouse"]
+  when 'bullet'
+    - typeLabel = i18n["bulletWarehouse"]
+.col-lg-4.col-md-6.col-sm-12.grid-list-cell-holder.animated.fadeInUp(class="sm-delay-" + index)
+  .grid-list-cell(data-id=id)
+    .grid-list-cell-body
+      .col-md-12
+        //- p.item-id #{localId}
+        .main-title.text-overflow #{typeLabel + '/' + (cmName ? cmName: '-')}
+        p.updated-time.text-overflow #{i18n["type"]} #{typeLabel}
+        p.updated-time.text-overflow #{i18n["capacity"]} #{cmCapacity} / #{i18n["currentStorageCount"]} #{ cmLoad ? cmLoad : 0}
+        p.updated-time.text-overflow #{i18n["ownCabinet"]} #{cName}
+        if cmType ===  'gun'
+          p.updated-time.text-overflow #{i18n["gunProof"]} #{gCert || '无'}
+          p.updated-time.text-overflow #{i18n["gunNumber"]} #{gCode || '无'}
+          img.gun-with-bullet-img(src= imgUrl)
+        else
+          img.gun-with-bullet-img(src= imgUrl)
